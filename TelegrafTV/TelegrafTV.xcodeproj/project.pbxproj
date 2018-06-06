@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7A20C854B400F39009 /* AppDelegate.swift */; };
+		071AFE7D20C854B400F39009 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7C20C854B400F39009 /* HomeViewController.swift */; };
+		071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7E20C854B400F39009 /* TelegrafTV.xcdatamodeld */; };
+		071AFE8320C854B400F39009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071AFE8120C854B400F39009 /* Main.storyboard */; };
+		071AFE8520C854B600F39009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071AFE8420C854B600F39009 /* Assets.xcassets */; };
+		071AFE9020C854B700F39009 /* TelegrafTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */; };
+		071AFE9B20C854B700F39009 /* TelegrafTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */; };
+		071AFEAA20C857A300F39009 /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFEA920C857A300F39009 /* Cells.swift */; };
+		071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		071AFE8C20C854B700F39009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071AFE6F20C854B400F39009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071AFE7620C854B400F39009;
+			remoteInfo = TelegrafTV;
+		};
+		071AFE9720C854B700F39009 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 071AFE6F20C854B400F39009 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 071AFE7620C854B400F39009;
+			remoteInfo = TelegrafTV;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		071AFE7720C854B400F39009 /* TelegrafTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegrafTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AFE7A20C854B400F39009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		071AFE7C20C854B400F39009 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		071AFE7F20C854B400F39009 /* TelegrafTV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TelegrafTV.xcdatamodel; sourceTree = "<group>"; };
+		071AFE8220C854B400F39009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		071AFE8420C854B600F39009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		071AFE8620C854B600F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AFE8B20C854B700F39009 /* TelegrafTVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegrafTVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegrafTVTests.swift; sourceTree = "<group>"; };
+		071AFE9120C854B700F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AFE9620C854B700F39009 /* TelegrafTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegrafTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegrafTVUITests.swift; sourceTree = "<group>"; };
+		071AFE9C20C854B700F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		071AFEA920C857A300F39009 /* Cells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		071AFE7420C854B400F39009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE8820C854B700F39009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE9320C854B700F39009 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071AFE6E20C854B400F39009 = {
+			isa = PBXGroup;
+			children = (
+				071AFE7920C854B400F39009 /* TelegrafTV */,
+				071AFE8E20C854B700F39009 /* TelegrafTVTests */,
+				071AFE9920C854B700F39009 /* TelegrafTVUITests */,
+				071AFE7820C854B400F39009 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		071AFE7820C854B400F39009 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				071AFE7720C854B400F39009 /* TelegrafTV.app */,
+				071AFE8B20C854B700F39009 /* TelegrafTVTests.xctest */,
+				071AFE9620C854B700F39009 /* TelegrafTVUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		071AFE7920C854B400F39009 /* TelegrafTV */ = {
+			isa = PBXGroup;
+			children = (
+				071AFEA820C8578F00F39009 /* Cells */,
+				071AFE7A20C854B400F39009 /* AppDelegate.swift */,
+				071AFE7C20C854B400F39009 /* HomeViewController.swift */,
+				071AFE8120C854B400F39009 /* Main.storyboard */,
+				071AFE8420C854B600F39009 /* Assets.xcassets */,
+				071AFE8620C854B600F39009 /* Info.plist */,
+				071AFE7E20C854B400F39009 /* TelegrafTV.xcdatamodeld */,
+			);
+			path = TelegrafTV;
+			sourceTree = "<group>";
+		};
+		071AFE8E20C854B700F39009 /* TelegrafTVTests */ = {
+			isa = PBXGroup;
+			children = (
+				071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */,
+				071AFE9120C854B700F39009 /* Info.plist */,
+			);
+			path = TelegrafTVTests;
+			sourceTree = "<group>";
+		};
+		071AFE9920C854B700F39009 /* TelegrafTVUITests */ = {
+			isa = PBXGroup;
+			children = (
+				071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */,
+				071AFE9C20C854B700F39009 /* Info.plist */,
+			);
+			path = TelegrafTVUITests;
+			sourceTree = "<group>";
+		};
+		071AFEA820C8578F00F39009 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				071AFEAB20C85A0B00F39009 /* cellItems */,
+				071AFEA920C857A300F39009 /* Cells.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		071AFEAB20C85A0B00F39009 /* cellItems */ = {
+			isa = PBXGroup;
+			children = (
+				071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */,
+			);
+			path = cellItems;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		071AFE7620C854B400F39009 /* TelegrafTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AFE9F20C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTV" */;
+			buildPhases = (
+				071AFE7320C854B400F39009 /* Sources */,
+				071AFE7420C854B400F39009 /* Frameworks */,
+				071AFE7520C854B400F39009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelegrafTV;
+			productName = TelegrafTV;
+			productReference = 071AFE7720C854B400F39009 /* TelegrafTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+		071AFE8A20C854B700F39009 /* TelegrafTVTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AFEA220C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTVTests" */;
+			buildPhases = (
+				071AFE8720C854B700F39009 /* Sources */,
+				071AFE8820C854B700F39009 /* Frameworks */,
+				071AFE8920C854B700F39009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071AFE8D20C854B700F39009 /* PBXTargetDependency */,
+			);
+			name = TelegrafTVTests;
+			productName = TelegrafTVTests;
+			productReference = 071AFE8B20C854B700F39009 /* TelegrafTVTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		071AFE9520C854B700F39009 /* TelegrafTVUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 071AFEA520C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTVUITests" */;
+			buildPhases = (
+				071AFE9220C854B700F39009 /* Sources */,
+				071AFE9320C854B700F39009 /* Frameworks */,
+				071AFE9420C854B700F39009 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				071AFE9820C854B700F39009 /* PBXTargetDependency */,
+			);
+			name = TelegrafTVUITests;
+			productName = TelegrafTVUITests;
+			productReference = 071AFE9620C854B700F39009 /* TelegrafTVUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		071AFE6F20C854B400F39009 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Pedja Jevtic";
+				TargetAttributes = {
+					071AFE7620C854B400F39009 = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					071AFE8A20C854B700F39009 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 071AFE7620C854B400F39009;
+					};
+					071AFE9520C854B700F39009 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 071AFE7620C854B400F39009;
+					};
+				};
+			};
+			buildConfigurationList = 071AFE7220C854B400F39009 /* Build configuration list for PBXProject "TelegrafTV" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 071AFE6E20C854B400F39009;
+			productRefGroup = 071AFE7820C854B400F39009 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				071AFE7620C854B400F39009 /* TelegrafTV */,
+				071AFE8A20C854B700F39009 /* TelegrafTVTests */,
+				071AFE9520C854B700F39009 /* TelegrafTVUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		071AFE7520C854B400F39009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
+				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE8920C854B700F39009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE9420C854B700F39009 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		071AFE7320C854B400F39009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AFE7D20C854B400F39009 /* HomeViewController.swift in Sources */,
+				071AFEAA20C857A300F39009 /* Cells.swift in Sources */,
+				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
+				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
+				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE8720C854B700F39009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AFE9020C854B700F39009 /* TelegrafTVTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		071AFE9220C854B700F39009 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				071AFE9B20C854B700F39009 /* TelegrafTVUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		071AFE8D20C854B700F39009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071AFE7620C854B400F39009 /* TelegrafTV */;
+			targetProxy = 071AFE8C20C854B700F39009 /* PBXContainerItemProxy */;
+		};
+		071AFE9820C854B700F39009 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 071AFE7620C854B400F39009 /* TelegrafTV */;
+			targetProxy = 071AFE9720C854B700F39009 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		071AFE8120C854B400F39009 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				071AFE8220C854B400F39009 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		071AFE9D20C854B700F39009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+			};
+			name = Debug;
+		};
+		071AFE9E20C854B700F39009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TVOS_DEPLOYMENT_TARGET = 11.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		071AFEA020C854B700F39009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		071AFEA120C854B700F39009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		071AFEA320C854B700F39009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegrafTV.app/TelegrafTV";
+			};
+			name = Debug;
+		};
+		071AFEA420C854B700F39009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTVTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTVTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TelegrafTV.app/TelegrafTV";
+			};
+			name = Release;
+		};
+		071AFEA620C854B700F39009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = TelegrafTV;
+			};
+			name = Debug;
+		};
+		071AFEA720C854B700F39009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TelegrafTVUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.edu.codeacademy.TelegrafTVUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TEST_TARGET_NAME = TelegrafTV;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		071AFE7220C854B400F39009 /* Build configuration list for PBXProject "TelegrafTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AFE9D20C854B700F39009 /* Debug */,
+				071AFE9E20C854B700F39009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AFE9F20C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AFEA020C854B700F39009 /* Debug */,
+				071AFEA120C854B700F39009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AFEA220C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTVTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AFEA320C854B700F39009 /* Debug */,
+				071AFEA420C854B700F39009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		071AFEA520C854B700F39009 /* Build configuration list for PBXNativeTarget "TelegrafTVUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				071AFEA620C854B700F39009 /* Debug */,
+				071AFEA720C854B700F39009 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		071AFE7E20C854B400F39009 /* TelegrafTV.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				071AFE7F20C854B400F39009 /* TelegrafTV.xcdatamodel */,
+			);
+			currentVersion = 071AFE7F20C854B400F39009 /* TelegrafTV.xcdatamodel */;
+			path = TelegrafTV.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 071AFE6F20C854B400F39009 /* Project object */;
+}
