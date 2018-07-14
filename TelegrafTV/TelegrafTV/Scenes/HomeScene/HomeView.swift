@@ -33,6 +33,9 @@ class HomeView: UIView {
         homeView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     
     }
-    
+    func updateUI() {
+        
+        self.homeView.backgroundColor = .red
+    }
 
 }
