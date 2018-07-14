@@ -14,6 +14,8 @@
 		071AFE9020C854B700F39009 /* TelegrafTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */; };
 		071AFE9B20C854B700F39009 /* TelegrafTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */; };
 		071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */; };
+		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
+		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegrafTVUITests.swift; sourceTree = "<group>"; };
 		071AFE9C20C854B700F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		0E83AF0220FA610200D9518A /* CategoryItems */ = {
 			isa = PBXGroup;
 			children = (
+				0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */,
 			);
 			path = CategoryItems;
 			sourceTree = "<group>";
@@ -179,6 +184,7 @@
 		0E83AF0720FA61A000D9518A /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				0E83AF0B20FA635D00D9518A /* HomeViewController.swift */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -338,6 +344,8 @@
 				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
+				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
+				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
