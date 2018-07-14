@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-M9-7d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2003" y="3775"/>
+            <point key="canvasLocation" x="-2003" y="3916"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="jMe-Dj-PTK">
@@ -84,9 +84,9 @@
         <!--Navigation Controller-->
         <scene sceneID="RNW-vu-NUY">
             <objects>
-                <navigationController id="88S-43-QCr" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="88S-43-QCr" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQY-Wk-aKm">
-                        <rect key="frame" x="0.0" y="0.0" width="634" height="145"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -100,7 +100,7 @@
         <!--Split View Controller-->
         <scene sceneID="caO-3h-GO1">
             <objects>
-                <splitViewController id="sIz-hX-y8b" sceneMemberID="viewController">
+                <splitViewController preferredPrimaryColumnWidthFraction="0.20000000000000001" id="sIz-hX-y8b" sceneMemberID="viewController">
                     <connections>
                         <segue destination="88S-43-QCr" kind="relationship" relationship="masterViewController" id="Lzg-ne-qDR"/>
                         <segue destination="ZbO-Dt-dWM" kind="relationship" relationship="detailViewController" id="uvW-Kb-lMG"/>
@@ -148,6 +148,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fmX-Wb-1zl"/>
+        <segue reference="uvW-Kb-lMG"/>
     </inferredMetricsTieBreakers>
 </document>
