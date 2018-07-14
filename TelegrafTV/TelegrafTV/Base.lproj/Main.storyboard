@@ -18,13 +18,16 @@
                         <viewControllerLayoutGuide type="top" id="np2-HB-qZf"/>
                         <viewControllerLayoutGuide type="bottom" id="uLB-EB-xAI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AlJ-6v-eba">
+                    <view key="view" contentMode="scaleToFill" id="AlJ-6v-eba" customClass="HomeView" customModule="TelegrafTV" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="f5a-e3-m64"/>
                     </view>
                     <navigationItem key="navigationItem" id="eCc-eo-Jfi"/>
+                    <connections>
+                        <outlet property="homeView" destination="AlJ-6v-eba" id="qxd-7G-FoO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-M9-7d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
