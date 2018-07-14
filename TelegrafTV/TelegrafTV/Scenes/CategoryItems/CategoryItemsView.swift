@@ -31,5 +31,9 @@ class CategoryItemsView: UIView {
     
     }
     
+    func updateUI() {
+        
+        self.categoryItemsView.backgroundColor = .blue
+    }
     
 }
