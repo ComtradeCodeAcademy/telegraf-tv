@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="6T8-gL-oBu">
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="6T8-gL-oBu" customClass="MenuTableViewCell" customModule="TelegrafTV" customModuleProvider="target">
                                 <rect key="frame" x="90" y="66" width="499" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6T8-gL-oBu" id="Yu4-qu-ZfN">
@@ -73,12 +73,15 @@
                         <viewControllerLayoutGuide type="top" id="gOP-r2-9lv"/>
                         <viewControllerLayoutGuide type="bottom" id="hEB-4x-2bB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TiR-2f-VBJ">
+                    <view key="view" contentMode="scaleToFill" id="TiR-2f-VBJ" customClass="CategoryItemsView" customModule="TelegrafTV" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="h4K-q1-r2K"/>
                     </view>
                     <navigationItem key="navigationItem" id="E1h-LU-PL5"/>
+                    <connections>
+                        <outlet property="categoryItemsView" destination="TiR-2f-VBJ" id="ILa-aD-KSX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWF-bo-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,6 +154,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uvW-Kb-lMG"/>
+        <segue reference="fmX-Wb-1zl"/>
     </inferredMetricsTieBreakers>
 </document>
