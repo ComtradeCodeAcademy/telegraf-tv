@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7A20C854B400F39009 /* AppDelegate.swift */; };
-		071AFE7D20C854B400F39009 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7C20C854B400F39009 /* HomeViewController.swift */; };
 		071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE7E20C854B400F39009 /* TelegrafTV.xcdatamodeld */; };
 		071AFE8320C854B400F39009 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 071AFE8120C854B400F39009 /* Main.storyboard */; };
 		071AFE8520C854B600F39009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071AFE8420C854B600F39009 /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		071AFE7720C854B400F39009 /* TelegrafTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegrafTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		071AFE7A20C854B400F39009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		071AFE7C20C854B400F39009 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		071AFE7F20C854B400F39009 /* TelegrafTV.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TelegrafTV.xcdatamodel; sourceTree = "<group>"; };
 		071AFE8220C854B400F39009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		071AFE8420C854B600F39009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			children = (
 				071AFEA820C8578F00F39009 /* Cells */,
 				071AFE7A20C854B400F39009 /* AppDelegate.swift */,
-				071AFE7C20C854B400F39009 /* HomeViewController.swift */,
 				071AFE8120C854B400F39009 /* Main.storyboard */,
 				071AFE8420C854B600F39009 /* Assets.xcassets */,
 				071AFE8620C854B600F39009 /* Info.plist */,
@@ -277,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071AFE7D20C854B400F39009 /* HomeViewController.swift in Sources */,
 				071AFEAA20C857A300F39009 /* Cells.swift in Sources */,
 				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
