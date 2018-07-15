@@ -23,6 +23,7 @@
 		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
 		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
+		A69680EF20FB53BB00F13965 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* APIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
+		A69680EE20FB53BB00F13965 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				0E83AF0A20FA627A00D9518A /* Services */,
-				0E83AF0920FA626400D9518A /* Utility */,
 				0E83AF0620FA617E00D9518A /* Scenes */,
 				071AFEA820C8578F00F39009 /* Cells */,
 				071AFE7A20C854B400F39009 /* AppDelegate.swift */,
+				A69680ED20FB52FF00F13965 /* Utilities */,
 				071AFE8120C854B400F39009 /* Main.storyboard */,
 				071AFE8420C854B600F39009 /* Assets.xcassets */,
 				071AFE8620C854B600F39009 /* Info.plist */,
@@ -217,19 +219,20 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		0E83AF0920FA626400D9518A /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		0E83AF0A20FA627A00D9518A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				0E83AF0820FA623B00D9518A /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		A69680ED20FB52FF00F13965 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				A69680EE20FB53BB00F13965 /* APIClient.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,6 +371,7 @@
 				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
+				A69680EF20FB53BB00F13965 /* APIClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
