@@ -57,6 +57,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="cMm-H4-WqH"/>
                     <connections>
+                        <outlet property="categoryTableView" destination="fEt-Xw-tcT" id="rjs-k8-ex6"/>
                         <segue destination="ZbO-Dt-dWM" kind="showDetail" identifier="openHomeView" id="fmX-Wb-1zl"/>
                         <segue destination="LaA-aM-DBD" kind="showDetail" identifier="openCategoryItemsView" id="7qk-yP-FRI"/>
                     </connections>

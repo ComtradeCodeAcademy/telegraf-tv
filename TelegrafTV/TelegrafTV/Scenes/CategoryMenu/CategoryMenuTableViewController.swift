@@ -10,15 +10,17 @@ import UIKit
 
 class CategoryMenuTableViewController: UITableViewController {
 
+    @IBOutlet var categoryTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     
+      
+     categoryTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
 
     // MARK: - Table view data source
@@ -34,25 +36,52 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 1 {
+     
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
-        cell.textLabel?.text =  "mika"
+        switch indexPath.row{
+        case 0:
+        cell.textLabel?.text =  "UŽIVO"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        case 1:
+        cell.textLabel?.text =  "VESTI"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        case 2:
+        cell.textLabel?.text =  "JETSET"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        case 3:
+        cell.textLabel?.text =  "HI-TECH"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        case 4:
+        cell.textLabel?.text =  "ZANIMLJIVOSTI"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        default:
+        cell.textLabel?.text =  "ŽIVOT & STIL"
+        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        }
+      
         
         return cell
-        } else if indexPath.row
+        }
         
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 1:
-            return 100
-            
+        case 0 :
+              self.performSegue(withIdentifier: "openHomeView", sender: self)
         default:
-            return 100
+            self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
         }
     }
 
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 130
+            
+        default:
+            return 130
+        }
+       
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
@@ -108,4 +137,5 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     */
 
+}
 }
