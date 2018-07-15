@@ -1,105 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIz-hX-y8b">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="dDx-Ce-uKe">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="q7U-vZ-KbX" customClass="HomeViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="np2-HB-qZf"/>
+                        <viewControllerLayoutGuide type="bottom" id="uLB-EB-xAI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                    <view key="view" contentMode="scaleToFill" id="AlJ-6v-eba" customClass="HomeView" customModule="TelegrafTV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="x3I-ZC-f4B">
-                                <rect key="frame" x="110" y="136" width="1700" height="864"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="csz-rs-AvD">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="featuredVideo" id="FG0-Eh-uui" customClass="FeaturedVideoCollectionViewCell" customModule="TelegrafTV" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6dj-R0-ZLA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
-                                                    <color key="backgroundColor" red="0.99875766040000002" green="0.2016049325" blue="0.59210711719999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReK-28-AGT">
-                                                    <rect key="frame" x="98" y="172" width="214" height="40"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="40" id="byl-KC-dJI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <size key="shadowOffset" width="0.0" height="1"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="ReK-28-AGT" secondAttribute="trailing" id="7IQ-sp-NoL"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="ReK-28-AGT" secondAttribute="bottom" id="HuE-jq-pOZ"/>
-                                            <constraint firstItem="ReK-28-AGT" firstAttribute="leading" secondItem="FG0-Eh-uui" secondAttribute="leadingMargin" id="KUL-ft-QHu"/>
-                                            <constraint firstAttribute="trailing" secondItem="6dj-R0-ZLA" secondAttribute="trailing" id="djJ-xU-26p"/>
-                                            <constraint firstItem="6dj-R0-ZLA" firstAttribute="leading" secondItem="FG0-Eh-uui" secondAttribute="leading" id="lS3-Mm-9J9"/>
-                                            <constraint firstItem="ReK-28-AGT" firstAttribute="top" secondItem="6dj-R0-ZLA" secondAttribute="bottom" constant="5" id="npu-AQ-4sx"/>
-                                            <constraint firstItem="6dj-R0-ZLA" firstAttribute="top" secondItem="FG0-Eh-uui" secondAttribute="top" id="z0v-I5-kee"/>
-                                        </constraints>
-                                        <size key="customSize" width="320" height="220"/>
-                                        <connections>
-                                            <outlet property="imageView" destination="6dj-R0-ZLA" id="JwW-6x-EmG"/>
-                                            <outlet property="titleLbl" destination="ReK-28-AGT" id="dEH-4e-E2g"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="NqF-RY-uvS"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9S5-PX-qd1"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Telegraf TV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muj-Mm-EBL">
-                                <rect key="frame" x="100" y="70" width="1720" height="46"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="x3I-ZC-f4B" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="20" id="2i7-s1-1Qd"/>
-                            <constraint firstItem="x3I-ZC-f4B" firstAttribute="top" secondItem="muj-Mm-EBL" secondAttribute="bottom" constant="20" id="2z3-45-eD2"/>
-                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="muj-Mm-EBL" secondAttribute="trailing" constant="10" id="IU8-Sh-vGz"/>
-                            <constraint firstItem="muj-Mm-EBL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Uso-3U-ZtW"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="x3I-ZC-f4B" secondAttribute="bottom" constant="20" id="Y8Q-Jf-WfK"/>
-                            <constraint firstItem="wu6-TO-1qx" firstAttribute="trailing" secondItem="x3I-ZC-f4B" secondAttribute="trailing" constant="20" id="aEv-ZC-B5G"/>
-                            <constraint firstItem="muj-Mm-EBL" firstAttribute="leading" secondItem="wu6-TO-1qx" secondAttribute="leading" constant="10" id="vYu-l6-AHH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="wu6-TO-1qx"/>
+                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="f5a-e3-m64"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eCc-eo-Jfi"/>
+                    <connections>
+                        <outlet property="homeView" destination="AlJ-6v-eba" id="qxd-7G-FoO"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-M9-7d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2003" y="3916"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="jMe-Dj-PTK">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="YaL-DI-3LZ" customClass="CategoryMenuTableViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="fEt-Xw-tcT">
+                        <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="6T8-gL-oBu" customClass="MenuTableViewCell" customModule="TelegrafTV" customModuleProvider="target">
+                                <rect key="frame" x="90" y="66" width="499" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6T8-gL-oBu" id="Yu4-qu-ZfN">
+                                    <rect key="frame" x="0.0" y="0.0" width="499" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YaL-DI-3LZ" id="W1h-mx-c9Q"/>
+                            <outlet property="delegate" destination="YaL-DI-3LZ" id="elV-7P-516"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="cMm-H4-WqH"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="fEt-Xw-tcT" id="rjs-k8-ex6"/>
+                        <segue destination="ZbO-Dt-dWM" kind="showDetail" identifier="openHomeView" id="fmX-Wb-1zl"/>
+                        <segue destination="LaA-aM-DBD" kind="showDetail" identifier="openCategoryItemsView" id="7qk-yP-FRI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpt-xf-KTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="-55"/>
+        </scene>
+        <!--Category Items View Controller-->
+        <scene sceneID="iId-mD-k6i">
+            <objects>
+                <viewController id="OOx-dt-K3c" customClass="CategoryItemsViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gOP-r2-9lv"/>
+                        <viewControllerLayoutGuide type="bottom" id="hEB-4x-2bB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TiR-2f-VBJ" customClass="CategoryItemsView" customModule="TelegrafTV" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="h4K-q1-r2K"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="E1h-LU-PL5"/>
+                    <connections>
+                        <outlet property="categoryItemsView" destination="TiR-2f-VBJ" id="ILa-aD-KSX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWF-bo-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="3916"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RNW-vu-NUY">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="88S-43-QCr" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gQY-Wk-aKm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YaL-DI-3LZ" kind="relationship" relationship="rootViewController" id="T0Z-Rn-COU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nqe-wM-htt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1918" y="-1902"/>
+        </scene>
+        <!--Split View Controller-->
+        <scene sceneID="caO-3h-GO1">
+            <objects>
+                <splitViewController preferredPrimaryColumnWidthFraction="0.20000000000000001" id="sIz-hX-y8b" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="88S-43-QCr" kind="relationship" relationship="masterViewController" id="Lzg-ne-qDR"/>
+                        <segue destination="ZbO-Dt-dWM" kind="relationship" relationship="detailViewController" id="uvW-Kb-lMG"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYh-Dm-sm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4364" y="-362"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ari-cz-lRf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZbO-Dt-dWM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CLK-hc-Uen">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="q7U-vZ-KbX" kind="relationship" relationship="rootViewController" id="vSf-ki-ows"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h7T-7k-75A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2003" y="2067"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0xm-Vv-CmG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LaA-aM-DBD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZTs-zr-o57">
+                        <rect key="frame" x="0.0" y="0.0" width="1285" height="145"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OOx-dt-K3c" kind="relationship" relationship="rootViewController" id="kxG-4A-jbd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1a-jI-dKJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2303" y="2067"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="fmX-Wb-1zl"/>
+    </inferredMetricsTieBreakers>
 </document>
