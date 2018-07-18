@@ -15,6 +15,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
        homeView.updateUI()
+
+        self.loadVideoNavigation()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,5 +35,35 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+    // Call to API for retrieving data
+
+    func loadVideoNavigation() {
+        let apiManager = TFApiClient()
+
+        do {
+            let request = try TFRequest.init(path: .navigation)
+
+            apiManager.fetch(request: request, completion: { (result) in
+
+                switch result {
+                case .success(let data):
+                        print("Success:", data)
+                        
+                    break
+                case .errorWithDictionary(let responseObj):
+                    print("Error:", responseObj)
+                    break
+
+                case .error(let message):
+                    print("error: \(message)")
+                    break
+                }
+            })
+
+        } catch let error {
+            print("Error \(error.localizedDescription)")
+        }
+    }
 
 }
