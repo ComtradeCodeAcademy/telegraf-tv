@@ -14,6 +14,8 @@
 		071AFE9020C854B700F39009 /* TelegrafTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */; };
 		071AFE9B20C854B700F39009 /* TelegrafTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */; };
 		071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */; };
+		078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A79BD20FB555800AB43ED /* TFRequest.swift */; };
+		078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */; };
 		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
@@ -23,7 +25,7 @@
 		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
 		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
-		A69680EF20FB53BB00F13965 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* APIClient.swift */; };
+		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegrafTVUITests.swift; sourceTree = "<group>"; };
 		071AFE9C20C854B700F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
+		078A79BD20FB555800AB43ED /* TFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFRequest.swift; sourceTree = "<group>"; };
+		078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiRoutes.swift; sourceTree = "<group>"; };
 		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -66,7 +70,7 @@
 		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
-		A69680EE20FB53BB00F13965 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,16 @@
 			path = cellItems;
 			sourceTree = "<group>";
 		};
+		078A79BC20FB549D00AB43ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A69680EE20FB53BB00F13965 /* TFApiClient.swift */,
+				078A79BD20FB555800AB43ED /* TFRequest.swift */,
+				078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		0E83AF0220FA610200D9518A /* CategoryItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,17 +226,10 @@
 			path = HomeScene;
 			sourceTree = "<group>";
 		};
-		0E83AF0820FA623B00D9518A /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
 		0E83AF0A20FA627A00D9518A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0E83AF0820FA623B00D9518A /* Networking */,
+				078A79BC20FB549D00AB43ED /* Networking */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,7 +237,6 @@
 		A69680ED20FB52FF00F13965 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A69680EE20FB53BB00F13965 /* APIClient.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -371,13 +377,15 @@
 				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
-				A69680EF20FB53BB00F13965 /* APIClient.swift in Sources */,
+				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
+				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,
+				078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
