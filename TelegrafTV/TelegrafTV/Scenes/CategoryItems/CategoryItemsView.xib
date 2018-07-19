@@ -36,7 +36,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="8Ux-Dn-3Y9" secondAttribute="bottom" id="5rD-AM-Ymh"/>
                 <constraint firstItem="Pmt-tb-8Ig" firstAttribute="trailing" secondItem="8Ux-Dn-3Y9" secondAttribute="trailing" id="EEQ-me-ZUo"/>
-                <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="top" secondItem="Pmt-tb-8Ig" secondAttribute="top" id="gUY-jd-zgV"/>
+                <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="drX-Dg-THX"/>
                 <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="leading" secondItem="Pmt-tb-8Ig" secondAttribute="leading" constant="90" id="wpz-ya-BMz"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
