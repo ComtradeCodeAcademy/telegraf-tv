@@ -13,6 +13,7 @@ class CategoryItemsView: UIView {
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     override init(frame:CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -36,6 +37,11 @@ class CategoryItemsView: UIView {
         
         self.categoryItemsView.backgroundColor = .blue
         self.collectionView.backgroundColor = .yellow
+        
+        //MARK: Registar UI CV item cell 
+        
+        let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
+        collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
     }
     
 }
