@@ -51,7 +51,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = 10
+        let inset = 48
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
     
@@ -66,7 +66,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 308 , height: 308)
+        return CGSize.init(width: 250 , height: 250)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,15 +74,15 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         cell.dateLbl.text = "28.februar.2018"
         cell.timeLbl.text = "5:40"
-        cell.titleLbl.text = "Grupa IOS programera iz Comtrade postigla uspeh"
+        cell.titleLbl.text = "Djoković izjavio pred svima izjavi na televiziji, drhtavim glasom da ne može više ovako"
 
         return cell
     }
 
     func updateUI() {
 
-        self.categoryItemsView.backgroundColor = .blue
-        self.collectionView.backgroundColor = .yellow
+        self.categoryItemsView.backgroundColor = .clear
+        self.collectionView.backgroundColor = .clear
 
      
         
