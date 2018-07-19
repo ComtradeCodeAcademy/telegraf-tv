@@ -10,6 +10,10 @@ import UIKit
 
 class MyCollectionViewCell: UICollectionViewCell {
   
+
+    @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
     
     
     override func awakeFromNib() {

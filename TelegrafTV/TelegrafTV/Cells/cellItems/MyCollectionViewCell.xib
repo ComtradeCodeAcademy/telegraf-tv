@@ -69,6 +69,11 @@
                 <constraint firstAttribute="bottom" secondItem="Jjf-lD-teN" secondAttribute="bottom" id="cDR-9S-869"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
+            <connections>
+                <outlet property="dateLbl" destination="rIj-fp-qrK" id="Mrc-Cv-KkO"/>
+                <outlet property="timeLbl" destination="xMT-Ut-bX6" id="WJZ-eg-8Gj"/>
+                <outlet property="titleLbl" destination="HAz-kd-Ezc" id="xyK-5e-ff5"/>
+            </connections>
         </collectionViewCell>
     </objects>
 </document>
