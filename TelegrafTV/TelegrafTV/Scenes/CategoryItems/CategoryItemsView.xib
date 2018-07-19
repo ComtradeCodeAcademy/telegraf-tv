@@ -13,13 +13,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoryItemsView" customModule="TelegrafTV" customModuleProvider="target">
             <connections>
                 <outlet property="categoryItemsView" destination="iN0-l3-epB" id="v3Q-G1-cPx"/>
+                <outlet property="collectionView" destination="8Ux-Dn-3Y9" id="Xw8-pi-YBF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8Ux-Dn-3Y9">
+                    <rect key="frame" x="180" y="60" width="1650" height="1020"/>
+                    <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IWP-wD-fYO">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="8Ux-Dn-3Y9" secondAttribute="bottom" id="5rD-AM-Ymh"/>
+                <constraint firstItem="Pmt-tb-8Ig" firstAttribute="trailing" secondItem="8Ux-Dn-3Y9" secondAttribute="trailing" id="EEQ-me-ZUo"/>
+                <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="top" secondItem="Pmt-tb-8Ig" secondAttribute="top" id="gUY-jd-zgV"/>
+                <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="leading" secondItem="Pmt-tb-8Ig" secondAttribute="leading" constant="90" id="wpz-ya-BMz"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
         </view>
     </objects>

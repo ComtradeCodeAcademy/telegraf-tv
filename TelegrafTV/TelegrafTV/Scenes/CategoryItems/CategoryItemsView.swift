@@ -11,6 +11,7 @@ import UIKit
 class CategoryItemsView: UIView {
 
     @IBOutlet var categoryItemsView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override init(frame:CGRect) {
         super.init(frame: frame)
@@ -34,6 +35,7 @@ class CategoryItemsView: UIView {
     func updateUI() {
         
         self.categoryItemsView.backgroundColor = .blue
+        self.collectionView.backgroundColor = .yellow
     }
     
 }
