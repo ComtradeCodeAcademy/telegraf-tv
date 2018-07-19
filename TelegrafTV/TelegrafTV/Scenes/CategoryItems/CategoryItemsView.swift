@@ -15,6 +15,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     
      let MyCollectionViewCellId: String = "MyCollectionViewCell"
     
+    //MARK: Registar UI CV item cell
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
@@ -77,7 +78,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         self.categoryItemsView.backgroundColor = .blue
         self.collectionView.backgroundColor = .yellow
 
-        //MARK: Registar UI CV item cell
+     
         
       
         
