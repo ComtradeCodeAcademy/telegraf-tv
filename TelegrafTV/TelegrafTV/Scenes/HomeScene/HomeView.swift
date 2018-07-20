@@ -35,7 +35,7 @@ class HomeView: UIView {
     }
     func updateUI() {
         
-        self.homeView.backgroundColor = .blue
+        self.homeView.backgroundColor = .gray
         
     }
 

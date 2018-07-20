@@ -83,7 +83,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
     func updateUI() {
 
-        self.categoryItemsView.backgroundColor = .clear
+        self.categoryItemsView.backgroundColor = .gray
         self.collectionView.backgroundColor = .clear
 
      
