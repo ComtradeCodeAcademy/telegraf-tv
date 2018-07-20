@@ -17,6 +17,7 @@
 		078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */; };
 		0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01BED02101080700504180 /* MyCollectionViewCell.swift */; };
 		0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E01BED12101080700504180 /* MyCollectionViewCell.xib */; };
+		0E01BED5210188D200504180 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01BED4210188D200504180 /* SplitViewController.swift */; };
 		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
@@ -63,6 +64,7 @@
 		078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiRoutes.swift; sourceTree = "<group>"; };
 		0E01BED02101080700504180 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		0E01BED12101080700504180 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		0E01BED4210188D200504180 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */,
+				0E01BED4210188D200504180 /* SplitViewController.swift */,
 			);
 			path = CategoryMenu;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
+				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
 				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,
 				078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */,

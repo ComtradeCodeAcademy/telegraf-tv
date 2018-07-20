@@ -16,6 +16,11 @@ class CategoryMenuTableViewController: UITableViewController {
         super.viewDidLoad()
       
      categoryTableView.reloadData()
+//    tableView.layer.borderWidth = 5.0
+    tableView.backgroundColor = .black
+//    tableView.layer.borderColor = UIColor.red.cgColor
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
