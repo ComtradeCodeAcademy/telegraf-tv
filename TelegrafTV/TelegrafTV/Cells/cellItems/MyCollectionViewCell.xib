@@ -23,22 +23,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIj-fp-qrK">
-                                <rect key="frame" x="0.0" y="150" width="47" height="36"/>
+                                <rect key="frame" x="0.0" y="150" width="37" height="25"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="19" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="15" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAz-kd-Ezc">
-                                <rect key="frame" x="0.0" y="186" width="240" height="54"/>
+                                <rect key="frame" x="0.0" y="175" width="240" height="65"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="25" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="17" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -51,11 +51,11 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-Ut-bX6">
-                                <rect key="frame" x="193" y="150" width="47" height="36"/>
+                                <rect key="frame" x="203" y="150" width="37" height="25"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="19" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="15" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -66,21 +66,22 @@
                         <constraints>
                             <constraint firstItem="uMk-Vv-w9l" firstAttribute="leading" secondItem="Jjf-lD-teN" secondAttribute="leading" id="0Sw-AZ-hRN"/>
                             <constraint firstItem="uMk-Vv-w9l" firstAttribute="trailing" secondItem="HAz-kd-Ezc" secondAttribute="trailing" id="2g5-U2-8qo"/>
-                            <constraint firstItem="uMk-Vv-w9l" firstAttribute="leading" secondItem="rIj-fp-qrK" secondAttribute="leading" id="3Cw-GR-nHA"/>
+                            <constraint firstAttribute="bottom" secondItem="HAz-kd-Ezc" secondAttribute="bottom" id="4hD-b0-jvL"/>
                             <constraint firstAttribute="trailing" secondItem="uMk-Vv-w9l" secondAttribute="trailing" id="B9v-Ag-cWi"/>
-                            <constraint firstAttribute="trailing" secondItem="xMT-Ut-bX6" secondAttribute="trailing" id="J7T-4A-nRB"/>
-                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" constant="36" id="Lcw-Bm-Ejc"/>
-                            <constraint firstItem="xMT-Ut-bX6" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" id="TKm-CV-T2g"/>
-                            <constraint firstItem="rIj-fp-qrK" firstAttribute="leading" secondItem="Jjf-lD-teN" secondAttribute="leading" id="TuC-Lt-pxV"/>
-                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="rIj-fp-qrK" secondAttribute="bottom" id="Uu7-h2-fO9"/>
+                            <constraint firstItem="rIj-fp-qrK" firstAttribute="leading" secondItem="Jjf-lD-teN" secondAttribute="leading" id="BwZ-n1-r5k"/>
+                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="rIj-fp-qrK" secondAttribute="bottom" id="OL3-l7-pUg"/>
+                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="leading" secondItem="Jjf-lD-teN" secondAttribute="leading" id="Q3o-mt-DC0"/>
+                            <constraint firstAttribute="trailing" secondItem="xMT-Ut-bX6" secondAttribute="trailing" id="Vyy-d6-bZ7"/>
+                            <constraint firstItem="rIj-fp-qrK" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" id="W80-JT-KSu"/>
                             <constraint firstAttribute="trailing" secondItem="HAz-kd-Ezc" secondAttribute="trailing" id="YEw-PF-GEV"/>
+                            <constraint firstItem="xMT-Ut-bX6" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" id="atn-Ye-6bs"/>
                             <constraint firstAttribute="bottom" secondItem="HAz-kd-Ezc" secondAttribute="bottom" id="eTk-eY-2Q0"/>
-                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="xMT-Ut-bX6" secondAttribute="bottom" id="iJb-71-Zvm"/>
+                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" constant="25" id="fLi-eE-LZ7"/>
+                            <constraint firstItem="HAz-kd-Ezc" firstAttribute="top" secondItem="xMT-Ut-bX6" secondAttribute="bottom" id="fU4-t8-5Im"/>
                             <constraint firstItem="uMk-Vv-w9l" firstAttribute="top" secondItem="Jjf-lD-teN" secondAttribute="top" id="iKl-7V-Dow"/>
-                            <constraint firstItem="uMk-Vv-w9l" firstAttribute="trailing" secondItem="xMT-Ut-bX6" secondAttribute="trailing" id="ndf-ua-5mS"/>
+                            <constraint firstAttribute="trailing" secondItem="HAz-kd-Ezc" secondAttribute="trailing" id="pMM-zM-S2j"/>
                             <constraint firstItem="uMk-Vv-w9l" firstAttribute="leading" secondItem="HAz-kd-Ezc" secondAttribute="leading" id="pg3-Z8-DPa"/>
                             <constraint firstItem="HAz-kd-Ezc" firstAttribute="leading" secondItem="Jjf-lD-teN" secondAttribute="leading" id="wVV-fg-RKl"/>
-                            <constraint firstItem="rIj-fp-qrK" firstAttribute="top" secondItem="uMk-Vv-w9l" secondAttribute="bottom" id="xso-Od-9tT"/>
                         </constraints>
                     </view>
                 </subviews>
