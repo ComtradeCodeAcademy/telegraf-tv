@@ -206,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */,
-				0E01BED4210188D200504180 /* SplitViewController.swift */,
 			);
 			path = CategoryMenu;
 			sourceTree = "<group>";
@@ -214,6 +213,7 @@
 		0E83AF0620FA617E00D9518A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0EF832A32102ABC3004451AD /* SplitVC */,
 				0E83AF0720FA61A000D9518A /* HomeScene */,
 				0E83AF0220FA610200D9518A /* CategoryItems */,
 				0E83AF0420FA610F00D9518A /* CategoryMenu */,
@@ -238,6 +238,14 @@
 				078A79BC20FB549D00AB43ED /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0EF832A32102ABC3004451AD /* SplitVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E01BED4210188D200504180 /* SplitViewController.swift */,
+			);
+			path = SplitVC;
 			sourceTree = "<group>";
 		};
 		A69680ED20FB52FF00F13965 /* Utilities */ = {
