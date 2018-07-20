@@ -37,9 +37,10 @@
         <scene sceneID="jMe-Dj-PTK">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="YaL-DI-3LZ" customClass="CategoryMenuTableViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="fEt-Xw-tcT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="fEt-Xw-tcT">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="6T8-gL-oBu" customClass="MenuTableViewCell" customModule="TelegrafTV" customModuleProvider="target">
                                 <rect key="frame" x="90" y="66" width="499" height="66"/>
@@ -107,7 +108,7 @@
         <!--Split View Controller-->
         <scene sceneID="caO-3h-GO1">
             <objects>
-                <splitViewController preferredPrimaryColumnWidthFraction="0.20000000000000001" id="sIz-hX-y8b" sceneMemberID="viewController">
+                <splitViewController preferredPrimaryColumnWidthFraction="0.20000000000000001" id="sIz-hX-y8b" customClass="SplitViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="88S-43-QCr" kind="relationship" relationship="masterViewController" id="Lzg-ne-qDR"/>
                         <segue destination="ZbO-Dt-dWM" kind="relationship" relationship="detailViewController" id="uvW-Kb-lMG"/>
@@ -155,6 +156,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fmX-Wb-1zl"/>
+        <segue reference="uvW-Kb-lMG"/>
     </inferredMetricsTieBreakers>
 </document>
