@@ -47,21 +47,28 @@ class CategoryMenuTableViewController: UITableViewController {
         case 0:
         cell.textLabel?.text =  "UŽIVO"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
+            
         case 1:
         cell.textLabel?.text =  "VESTI"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
         case 2:
         cell.textLabel?.text =  "JETSET"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
         case 3:
         cell.textLabel?.text =  "HI-TECH"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
         case 4:
         cell.textLabel?.text =  "ZANIMLJIVOSTI"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
         default:
         cell.textLabel?.text =  "ŽIVOT & STIL"
         cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.textColor = .white
         }
       
         
