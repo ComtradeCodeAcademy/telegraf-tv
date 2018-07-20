@@ -23,36 +23,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMT-Ut-bX6">
-                                <rect key="frame" x="203" y="201" width="37" height="18"/>
+                                <rect key="frame" x="210" y="207" width="30" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="15" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="12" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIj-fp-qrK">
-                                <rect key="frame" x="0.0" y="201" width="37" height="18"/>
+                                <rect key="frame" x="0.0" y="207" width="30" height="14"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="15" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="12" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uMk-Vv-w9l">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="201"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uMk-Vv-w9l">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="207"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAz-kd-Ezc">
-                                <rect key="frame" x="0.0" y="219" width="240" height="21"/>
+                                <rect key="frame" x="0.0" y="221" width="240" height="19"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Label">
                                         <attributes>
-                                            <font key="NSFont" size="18" name="SFMono-Regular"/>
+                                            <font key="NSFont" size="16" name="SFMono-Regular"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>

@@ -14,7 +14,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var collectionView: UICollectionView!
     
      let MyCollectionViewCellId: String = "MyCollectionViewCell"
-    
+    let imageArray: [String] = ["img1", "img2", "img3"]
     //MARK: Registar UI CV item cell
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -71,10 +71,12 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
-
+        
         cell.dateLbl.text = "28.februar.2018"
         cell.timeLbl.text = "5:40"
-        cell.titleLbl.text = "Djoković izjavio pred svima izjavi na televiziji, drhtavim glasom da ne može više ovako"
+        cell.titleLbl.text = "Djoković izjavio pred svima na televiziji drhtavim glasom da ne može više ovako"
+        
+        cell.itemImage.image = UIImage.init(named: "img1")
 
         return cell
     }
