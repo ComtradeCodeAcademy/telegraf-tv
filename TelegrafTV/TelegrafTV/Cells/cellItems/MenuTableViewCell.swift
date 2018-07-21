@@ -10,7 +10,7 @@ import UIKit
 
 class MenuTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var selectionImgView: UIImageView!
+//    @IBOutlet weak var selectionImgView: UIImageView!
     @IBOutlet weak var titleLbl: UILabel!
     
     override func awakeFromNib() {
