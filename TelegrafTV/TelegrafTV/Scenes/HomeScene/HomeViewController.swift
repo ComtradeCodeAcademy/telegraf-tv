@@ -8,12 +8,42 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
+    
+    var liveImage = ["LukaModric"]
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 7
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = self.homeView.collectionView.dequeueReusableCell(withReuseIdentifier: "cellIdentifier", for: indexPath) as! LiveCollectionViewCell
+   
+        
+        //cell.liveImage.image = UIImage(named: liveImage[indexPath.row])
+        return cell
+        
+    }
+    
 
     @IBOutlet var homeView: HomeView!
+  
+    
+     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+       
+        self.homeView.collectionView?.backgroundColor = UIColor.blue
+        
+        self.homeView.collectionView?.register(LiveCollectionViewCell.self, forCellWithReuseIdentifier: "cellIdentifier")
+        
+        self.homeView.collectionView.delegate = self
+        self.homeView.collectionView.dataSource = self
        homeView.updateUI()
 
         self.loadVideoNavigation()

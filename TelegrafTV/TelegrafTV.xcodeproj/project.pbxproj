@@ -26,6 +26,8 @@
 		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
+		C123029820FFD0FA00FC9558 /* LiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C123029620FFD0FA00FC9558 /* LiveCollectionViewCell.swift */; };
+		C123029920FFD0FA00FC9558 /* LiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C123029720FFD0FA00FC9558 /* LiveCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
+		C123029620FFD0FA00FC9558 /* LiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		C123029720FFD0FA00FC9558 /* LiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		071AFE6E20C854B400F39009 = {
 			isa = PBXGroup;
 			children = (
+				C123029620FFD0FA00FC9558 /* LiveCollectionViewCell.swift */,
+				C123029720FFD0FA00FC9558 /* LiveCollectionViewCell.xib */,
 				071AFE7920C854B400F39009 /* TelegrafTV */,
 				071AFE8E20C854B700F39009 /* TelegrafTVTests */,
 				071AFE9920C854B700F39009 /* TelegrafTVUITests */,
@@ -190,13 +196,6 @@
 			path = CategoryItems;
 			sourceTree = "<group>";
 		};
-		0E83AF0320FA610700D9518A /* VPlayer and Category details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "VPlayer and Category details";
-			sourceTree = "<group>";
-		};
 		0E83AF0420FA610F00D9518A /* CategoryMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +210,6 @@
 				0E83AF0720FA61A000D9518A /* HomeScene */,
 				0E83AF0220FA610200D9518A /* CategoryItems */,
 				0E83AF0420FA610F00D9518A /* CategoryMenu */,
-				0E83AF0320FA610700D9518A /* VPlayer and Category details */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -347,6 +345,7 @@
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
+				C123029920FFD0FA00FC9558 /* LiveCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
 				0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */,
 				0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */,
@@ -379,6 +378,7 @@
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
+				C123029820FFD0FA00FC9558 /* LiveCollectionViewCell.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,

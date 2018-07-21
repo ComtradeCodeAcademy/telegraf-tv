@@ -13,6 +13,8 @@ class HomeView: UIView {
 
     @IBOutlet var homeView: UIView!
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
