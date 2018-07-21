@@ -51,7 +51,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = 48
+        let inset = 50
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
     
@@ -66,7 +66,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 250 , height: 250)
+        return CGSize.init(width: 308 , height: 308)
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,7 +74,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         cell.dateLbl.text = "28.februar.2018"
         cell.timeLbl.text = "5:40"
-        cell.titleLbl.text = "Djoković izjavio pred svima na televiziji drhtavim glasom da ne može više ovako"
+        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
         
         cell.itemImage.image = UIImage.init(named: "img1")
 
