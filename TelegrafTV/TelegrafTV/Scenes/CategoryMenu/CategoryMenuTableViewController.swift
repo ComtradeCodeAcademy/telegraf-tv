@@ -12,10 +12,18 @@ class CategoryMenuTableViewController: UITableViewController {
 
     @IBOutlet var categoryTableView: UITableView!
     
+    var arrayDataCell = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        let nib = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        
+        tableView.register(nib, forCellReuseIdentifier: "menuCell")
+
+        
      categoryTableView.reloadData()
+        arrayDataCell = ["Uzivo", "Vesti"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,32 +40,15 @@ class CategoryMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 5
+        return arrayDataCell.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
      
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
-        switch indexPath.row{
-        case 0:
-        cell.textLabel?.text =  "UŽIVO"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        case 1:
-        cell.textLabel?.text =  "VESTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        case 2:
-        cell.textLabel?.text =  "JETSET"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        case 3:
-        cell.textLabel?.text =  "HI-TECH"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        case 4:
-        cell.textLabel?.text =  "ZANIMLJIVOSTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        default:
-        cell.textLabel?.text =  "ŽIVOT & STIL"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
-        }
+        
+        cell.titleLbl.text = arrayDataCell[indexPath.row]
+     
       
         
         return cell
