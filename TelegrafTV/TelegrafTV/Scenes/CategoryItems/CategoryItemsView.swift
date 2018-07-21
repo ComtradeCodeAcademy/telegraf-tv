@@ -17,11 +17,12 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 //    let baseURL = "http://tv.tf.rs/"
 //    var categorys = [[String: AnyObject]]()
     
-    //MARK: Registar UI CV item cell
+    //MARK: Registar UI CV item cell and SectionHeader
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
+//        collectionView.register(SectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
     }
     override init(frame:CGRect) {
         super.init(frame: frame)
@@ -83,6 +84,15 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//
+//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
+//        header.frame.size.height = 100
+//        header.headerLbl.text =  "SPORT"
+//
+//        return header
+//    }
 
     func updateUI() {
 
@@ -118,4 +128,5 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 //        task.resume()
 //    }
     
+
 }
