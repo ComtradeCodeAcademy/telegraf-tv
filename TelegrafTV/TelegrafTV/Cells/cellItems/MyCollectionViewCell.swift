@@ -19,6 +19,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        itemImage.adjustsImageWhenAncestorFocused = true
+        
     }
 }

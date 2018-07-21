@@ -46,33 +46,33 @@ class CategoryMenuTableViewController: UITableViewController {
         switch indexPath.row{
         case 0:
         cell.textLabel?.text =  "UŽIVO"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .left
         
         case 1:
         cell.textLabel?.text =  "VESTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .left
         case 2:
         cell.textLabel?.text =  "JETSET"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .left
         case 3:
         cell.textLabel?.text =  "HI-TECH"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .left
         case 4:
         cell.textLabel?.text =  "ZANIMLJIVOSTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
              cell.textLabel?.textAlignment = .left
         default:
         cell.textLabel?.text =  "ŽIVOT & STIL"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 12)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
         cell.textLabel?.textColor = .white
         cell.textLabel?.textAlignment = .left
         }
