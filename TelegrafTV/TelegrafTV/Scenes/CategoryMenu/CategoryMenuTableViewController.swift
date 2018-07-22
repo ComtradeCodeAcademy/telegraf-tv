@@ -16,6 +16,11 @@ class CategoryMenuTableViewController: UITableViewController {
         super.viewDidLoad()
       
      categoryTableView.reloadData()
+//    tableView.layer.borderWidth = 5.0
+    tableView.backgroundColor = .black
+//    tableView.layer.borderColor = UIColor.red.cgColor
+    
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,7 +37,7 @@ class CategoryMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 5
+        return 6
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -41,22 +46,35 @@ class CategoryMenuTableViewController: UITableViewController {
         switch indexPath.row{
         case 0:
         cell.textLabel?.text =  "UŽIVO"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .left
+        
         case 1:
         cell.textLabel?.text =  "VESTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .left
         case 2:
         cell.textLabel?.text =  "JETSET"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .left
         case 3:
         cell.textLabel?.text =  "HI-TECH"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .left
         case 4:
         cell.textLabel?.text =  "ZANIMLJIVOSTI"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+             cell.textLabel?.textAlignment = .left
         default:
         cell.textLabel?.text =  "ŽIVOT & STIL"
-        cell.textLabel?.font = UIFont(name: "Avenir-Light", size: 25)
+        cell.textLabel?.font = UIFont(name: "Avenir-Light-Bold", size: 10)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .left
         }
       
         
