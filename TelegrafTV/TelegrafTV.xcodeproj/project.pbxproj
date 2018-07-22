@@ -32,6 +32,7 @@
 		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
 		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
+		B319DAF721050F7A00D5C095 /* VPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319DAF621050F7A00D5C095 /* VPlayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
+		B319DAF621050F7A00D5C095 /* VPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,13 +209,6 @@
 			path = CategoryItems;
 			sourceTree = "<group>";
 		};
-		0E83AF0320FA610700D9518A /* VPlayer and Category details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "VPlayer and Category details";
-			sourceTree = "<group>";
-		};
 		0E83AF0420FA610F00D9518A /* CategoryMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,11 +220,11 @@
 		0E83AF0620FA617E00D9518A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B319DAF521050EE700D5C095 /* VPlayer and Category details */,
 				0EF832A32102ABC3004451AD /* SplitVC */,
 				0E83AF0720FA61A000D9518A /* HomeScene */,
 				0E83AF0220FA610200D9518A /* CategoryItems */,
 				0E83AF0420FA610F00D9518A /* CategoryMenu */,
-				0E83AF0320FA610700D9518A /* VPlayer and Category details */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -265,6 +260,14 @@
 			children = (
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		B319DAF521050EE700D5C095 /* VPlayer and Category details */ = {
+			isa = PBXGroup;
+			children = (
+				B319DAF621050F7A00D5C095 /* VPlayerViewController.swift */,
+			);
+			path = "VPlayer and Category details";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +412,7 @@
 				0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
+				B319DAF721050F7A00D5C095 /* VPlayerViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
