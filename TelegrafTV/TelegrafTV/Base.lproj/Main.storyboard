@@ -89,6 +89,38 @@
             </objects>
             <point key="canvasLocation" x="2303" y="3916"/>
         </scene>
+        <!--Player View Controller-->
+        <scene sceneID="Z62-0q-SJk">
+            <objects>
+                <viewController id="tQ5-lh-0FK" customClass="VPlayerViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LGe-Wy-csV"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ose-IP-yQM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="krV-pN-zTf">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEf-YP-LSw">
+                                <rect key="frame" x="830" y="497" width="260" height="86"/>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="tQ5-lh-0FK" eventType="primaryActionTriggered" id="TwF-6j-WBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="wEf-YP-LSw" firstAttribute="centerX" secondItem="krV-pN-zTf" secondAttribute="centerX" id="Lrx-KG-T3K"/>
+                            <constraint firstItem="wEf-YP-LSw" firstAttribute="centerY" secondItem="krV-pN-zTf" secondAttribute="centerY" id="gAN-Fq-35c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ar-bn-oJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="6042"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RNW-vu-NUY">
             <objects>
