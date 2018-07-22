@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIz-hX-y8b">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14111" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIz-hX-y8b">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
@@ -36,18 +36,20 @@
         <!--Root View Controller-->
         <scene sceneID="jMe-Dj-PTK">
             <objects>
-                <tableViewController clearsSelectionOnViewWillAppear="NO" id="YaL-DI-3LZ" customClass="CategoryMenuTableViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="fEt-Xw-tcT">
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="YaL-DI-3LZ" customClass="MenuTableViewController" customModule="TelegrafTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="cjJ-Ra-jnh">
                         <rect key="frame" x="0.0" y="0.0" width="634" height="1080"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <connections>
-                            <outlet property="dataSource" destination="YaL-DI-3LZ" id="W1h-mx-c9Q"/>
-                            <outlet property="delegate" destination="YaL-DI-3LZ" id="elV-7P-516"/>
+                            <outlet property="dataSource" destination="YaL-DI-3LZ" id="yBa-oV-VqD"/>
+                            <outlet property="delegate" destination="YaL-DI-3LZ" id="H4O-nb-ekc"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="cMm-H4-WqH"/>
                     <connections>
-                        <outlet property="categoryTableView" destination="fEt-Xw-tcT" id="rjs-k8-ex6"/>
+                        <outlet property="menuTableView" destination="cjJ-Ra-jnh" id="0Jf-ea-SDa"/>
+                        <outlet property="tableView" destination="cjJ-Ra-jnh" id="3Sw-75-y8F"/>
                         <segue destination="ZbO-Dt-dWM" kind="showDetail" identifier="openHomeView" id="fmX-Wb-1zl"/>
                         <segue destination="LaA-aM-DBD" kind="showDetail" identifier="openCategoryItemsView" id="7qk-yP-FRI"/>
                     </connections>
