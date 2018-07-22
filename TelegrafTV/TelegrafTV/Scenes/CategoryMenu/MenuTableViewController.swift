@@ -12,16 +12,15 @@ class MenuTableViewController: UITableViewController {
     
     
     @IBOutlet var menuTableView: UITableView!
-    
+
+    var cellData = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        menuTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        menuTableView.reloadData()
+        cellData = ["UZIVO", "VESTI", "SPORT", "JETSET", "HI-TECH", "ZANIMJIVOSTI", "ZIVOT I STIL"]
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,25 +30,47 @@ class MenuTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
+    // override func numberOfSections(in tableView: UITableView) -> Int {
+    // #warning Incomplete implementation, return the number of sections
+    //   return 0
+    //}
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return cellData.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? MenuTableViewCell else {
+           return MenuTableViewCell.fromNib()
+        }
 
-        // Configure the cell...
+        cell.textLbl.text = cellData[indexPath.row]
+        cell.imgView.image = UIImage.init(named: "underline")
 
         return cell
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0 :
+            self.performSegue(withIdentifier: "openHomeView", sender: self)
+        default:
+            self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 130
+            
+        default:
+            return 130
+        }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -96,4 +117,5 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
+}
 }

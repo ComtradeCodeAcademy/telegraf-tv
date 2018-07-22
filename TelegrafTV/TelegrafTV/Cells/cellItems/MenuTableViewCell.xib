@@ -22,16 +22,18 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-MB-11c">
                         <rect key="frame" x="0.0" y="0.0" width="168" height="702"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-4M-Vvw">
                         <rect key="frame" x="0.0" y="702" width="168" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="C4d-lh-ckn"/>
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="r1I-4M-Vvw" secondAttribute="trailing" id="GFg-uZ-Uq5"/>
                     <constraint firstItem="YCa-MB-11c" firstAttribute="leading" secondItem="S0Q-fX-qc8" secondAttribute="leading" id="Lkb-DP-a7G"/>
@@ -42,6 +44,7 @@
                     <constraint firstItem="YCa-MB-11c" firstAttribute="top" secondItem="S0Q-fX-qc8" secondAttribute="top" id="srh-0J-6Fz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="1ks-Xo-ai1"/>
             <connections>
                 <outlet property="imgView" destination="r1I-4M-Vvw" id="Eho-dA-2FG"/>
