@@ -23,10 +23,10 @@
 		0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492720FA715700F2CCF2 /* HomeView.xib */; };
 		0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */; };
 		0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */; };
-		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
-		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
-		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
+		D0C2FF902104DD1100753E94 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2FF8F2104DD1100753E94 /* MenuTableViewController.swift */; };
+		D0C2FF932104DD6E00753E94 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C2FF912104DD6E00753E94 /* MenuTableViewCell.swift */; };
+		D0C2FF942104DD6E00753E94 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C2FF922104DD6E00753E94 /* MenuTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +69,10 @@
 		0EBD492720FA715700F2CCF2 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsView.swift; sourceTree = "<group>"; };
 		0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemsView.xib; sourceTree = "<group>"; };
-		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
-		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
+		D0C2FF8F2104DD1100753E94 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D0C2FF912104DD6E00753E94 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		D0C2FF922104DD6E00753E94 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */,
-				0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */,
-				0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */,
+				D0C2FF912104DD6E00753E94 /* MenuTableViewCell.swift */,
+				D0C2FF922104DD6E00753E94 /* MenuTableViewCell.xib */,
 			);
 			path = cellItems;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 		0E83AF0420FA610F00D9518A /* CategoryMenu */ = {
 			isa = PBXGroup;
 			children = (
-				0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */,
+				D0C2FF8F2104DD1100753E94 /* MenuTableViewController.swift */,
 			);
 			path = CategoryMenu;
 			sourceTree = "<group>";
@@ -359,7 +359,7 @@
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
-				0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */,
+				D0C2FF942104DD6E00753E94 /* MenuTableViewCell.xib in Resources */,
 				0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,12 +389,12 @@
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
-				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
-				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
+				D0C2FF902104DD1100753E94 /* MenuTableViewController.swift in Sources */,
+				D0C2FF932104DD6E00753E94 /* MenuTableViewCell.swift in Sources */,
 				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,
 				078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */,
 				07EAEE4021039F4A00C0D70F /* UITableViewCell.swift in Sources */,
