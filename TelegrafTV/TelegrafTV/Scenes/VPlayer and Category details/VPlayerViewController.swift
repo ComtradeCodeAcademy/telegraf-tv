@@ -13,12 +13,14 @@ import AVKit
 
 class VPlayerViewController: UIViewController {
 
+    @IBOutlet weak var videoCategoryDetailsView: VideoCategoryDetailsView!
+    
     let controller = AVPlayerViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-    
+     //videoCategoryDetailsView.updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +41,7 @@ class VPlayerViewController: UIViewController {
             present(controller, animated: true) {
             player.play()
             
+                
         }
         
     }
