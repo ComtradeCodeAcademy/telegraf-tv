@@ -13,9 +13,11 @@
 		071AFE8520C854B600F39009 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 071AFE8420C854B600F39009 /* Assets.xcassets */; };
 		071AFE9020C854B700F39009 /* TelegrafTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE8F20C854B700F39009 /* TelegrafTVTests.swift */; };
 		071AFE9B20C854B700F39009 /* TelegrafTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */; };
-		071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */; };
 		078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A79BD20FB555800AB43ED /* TFRequest.swift */; };
 		078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */; };
+		0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01BED02101080700504180 /* MyCollectionViewCell.swift */; };
+		0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E01BED12101080700504180 /* MyCollectionViewCell.xib */; };
+		0E01BED5210188D200504180 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01BED4210188D200504180 /* SplitViewController.swift */; };
 		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
@@ -25,6 +27,10 @@
 		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
 		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
+		0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B3E2102E08600D3C955 /* itemData.swift */; };
+		0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */; };
+		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
+		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,9 +64,11 @@
 		071AFE9620C854B700F39009 /* TelegrafTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegrafTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		071AFE9A20C854B700F39009 /* TelegrafTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegrafTVUITests.swift; sourceTree = "<group>"; };
 		071AFE9C20C854B700F39009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedVideoCollectionViewCell.swift; sourceTree = "<group>"; };
 		078A79BD20FB555800AB43ED /* TFRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFRequest.swift; sourceTree = "<group>"; };
 		078A79BF20FB55E400AB43ED /* TFApiRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiRoutes.swift; sourceTree = "<group>"; };
+		0E01BED02101080700504180 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		0E01BED12101080700504180 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		0E01BED4210188D200504180 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -70,6 +78,10 @@
 		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
+		0EDA6B3E2102E08600D3C955 /* itemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemData.swift; sourceTree = "<group>"; };
+		0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,9 +175,10 @@
 		071AFEAB20C85A0B00F39009 /* cellItems */ = {
 			isa = PBXGroup;
 			children = (
-				071AFEAC20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift */,
 				0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */,
 				0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */,
+				0E01BED02101080700504180 /* MyCollectionViewCell.swift */,
+				0E01BED12101080700504180 /* MyCollectionViewCell.xib */,
 			);
 			path = cellItems;
 			sourceTree = "<group>";
@@ -186,6 +199,10 @@
 				0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */,
 				0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */,
 				0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */,
+				0EDA6B3E2102E08600D3C955 /* itemData.swift */,
+				0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */,
+				0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */,
+				0EDA6B442103009400D3C955 /* HeaderLayout.swift */,
 			);
 			path = CategoryItems;
 			sourceTree = "<group>";
@@ -208,6 +225,7 @@
 		0E83AF0620FA617E00D9518A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				0EF832A32102ABC3004451AD /* SplitVC */,
 				0E83AF0720FA61A000D9518A /* HomeScene */,
 				0E83AF0220FA610200D9518A /* CategoryItems */,
 				0E83AF0420FA610F00D9518A /* CategoryMenu */,
@@ -232,6 +250,14 @@
 				078A79BC20FB549D00AB43ED /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0EF832A32102ABC3004451AD /* SplitVC */ = {
+			isa = PBXGroup;
+			children = (
+				0E01BED4210188D200504180 /* SplitViewController.swift */,
+			);
+			path = SplitVC;
 			sourceTree = "<group>";
 		};
 		A69680ED20FB52FF00F13965 /* Utilities */ = {
@@ -346,7 +372,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
+				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
+				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
 				0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */,
 				0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */,
@@ -374,15 +402,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				071AFEAD20C85A3100F39009 /* FeaturedVideoCollectionViewCell.swift in Sources */,
+				0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
+				0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */,
+				0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
+				0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
+				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
 				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,
 				078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */,
