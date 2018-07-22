@@ -19,15 +19,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="152" height="722"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-MB-11c">
-                        <rect key="frame" x="0.0" y="0.0" width="168" height="702"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCa-MB-11c">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="702"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-4M-Vvw">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redline" translatesAutoresizingMaskIntoConstraints="NO" id="r1I-4M-Vvw">
                         <rect key="frame" x="0.0" y="702" width="168" height="20"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="C4d-lh-ckn"/>
                         </constraints>
@@ -53,4 +54,7 @@
             <point key="canvasLocation" x="-41" y="-232"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="redline" width="2500" height="1700"/>
+    </resources>
 </document>

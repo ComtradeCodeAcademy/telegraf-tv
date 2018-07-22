@@ -47,7 +47,7 @@ class MenuTableViewController: UITableViewController {
         }
 
         cell.textLbl.text = cellData[indexPath.row]
-        cell.imgView.image = UIImage.init(named: "underline")
+        cell.imgView.image = UIImage.init(named: "redline")
 
         return cell
     }
@@ -65,10 +65,10 @@ class MenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 130
+            return 100
             
         default:
-            return 130
+            return 100
         }
     
 
