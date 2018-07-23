@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionReusableView opaque="NO" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MyCollectionViewHeader" reuseIdentifier="" id="7wu-8X-Iab" customClass="MyCollectionReusableView" customModule="TelegrafTV" customModuleProvider="target">
+        <collectionReusableView opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionReusableView" id="7wu-8X-Iab" customClass="MyCollectionReusableView" customModule="TelegrafTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -28,6 +28,9 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" header="YES"/>
+                    </accessibility>
                 </view>
             </subviews>
             <constraints>

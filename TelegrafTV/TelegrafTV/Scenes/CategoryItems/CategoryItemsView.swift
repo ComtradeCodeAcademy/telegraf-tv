@@ -17,7 +17,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
   
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
-     let MyCollectionViewHeaderId: String = "MyCollectionViewHeader"
+    let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
 //    let baseURL = "http://tv.tf.rs/"
 //    var categorys = [[String: AnyObject]]()
@@ -26,10 +26,10 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
-        let nibHeader = UINib(nibName: MyCollectionViewHeaderId, bundle: nil)
+        let nibHeader = UINib(nibName: MyColectionViewHeaderId, bundle: nil)
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
-        collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyCollectionViewHeaderId)
+        collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
         
 
     }
@@ -94,20 +94,20 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionViewHeader", for: indexPath as IndexPath)
-//
-//        headerView.frame.size.height = 100
-//        headerView.backgroundColor = .red
-//
-//        return headerView
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//
-//
-//     return CGSize.init(width: 120 , height: 100)
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath)
+
+        headerView.frame.size.height = 100
+        headerView.backgroundColor = .red
+
+        return headerView
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+
+     return CGSize.init(width: 120 , height: 100)
+    }
 
     func updateUI() {
 
