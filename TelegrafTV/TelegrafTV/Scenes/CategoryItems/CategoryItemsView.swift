@@ -91,14 +91,14 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
-//        header.frame.size.height = 100
-//        header.headerLbl.text =  "SPORT"
-//
-//        return header
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyCollectionViewHeaderId, for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
+        header.frame.size.height = 100
+        header.headerLbl.text =  "SPORT"
+
+        return header
+    }
 
     func updateUI() {
 
