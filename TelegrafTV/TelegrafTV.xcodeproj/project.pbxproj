@@ -28,8 +28,8 @@
 		0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
 		0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B3E2102E08600D3C955 /* itemData.swift */; };
-		0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */; };
-		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
+		0EDA6B422102F4F000D3C955 /* MyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */; };
+		0EDA6B432102F4F000D3C955 /* MyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */; };
 		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 /* End PBXBuildFile section */
@@ -79,8 +79,8 @@
 		0EBD493220FA80D700F2CCF2 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
 		0EDA6B3E2102E08600D3C955 /* itemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemData.swift; sourceTree = "<group>"; };
-		0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
-		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionReusableView.swift; sourceTree = "<group>"; };
+		0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionReusableView.xib; sourceTree = "<group>"; };
 		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -200,8 +200,8 @@
 				0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */,
 				0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */,
 				0EDA6B3E2102E08600D3C955 /* itemData.swift */,
-				0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */,
-				0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */,
+				0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */,
+				0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */,
 				0EDA6B442103009400D3C955 /* HeaderLayout.swift */,
 			);
 			path = CategoryItems;
@@ -372,7 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
-				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
+				0EDA6B432102F4F000D3C955 /* MyCollectionReusableView.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
@@ -402,7 +402,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */,
+				0EDA6B422102F4F000D3C955 /* MyCollectionReusableView.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */,

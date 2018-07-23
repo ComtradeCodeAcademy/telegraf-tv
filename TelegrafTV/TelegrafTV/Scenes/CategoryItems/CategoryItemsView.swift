@@ -12,8 +12,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+
     
-     let MyCollectionViewCellId: String = "MyCollectionViewCell"
+  
+    
+    let MyCollectionViewCellId: String = "MyCollectionViewCell"
      let MyCollectionViewHeaderId: String = "MyCollectionViewHeader"
     
 //    let baseURL = "http://tv.tf.rs/"
@@ -91,24 +94,26 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-
-        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyCollectionViewHeaderId, for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
-     
-        
-        header.headerLbl.text =  "SPORT"
-
-        return header
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-
-     return CGSize.init(width: 120 , height: 60)
-    }
+//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//
+//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionViewHeader", for: indexPath as IndexPath)
+//
+//        headerView.frame.size.height = 100
+//        headerView.backgroundColor = .red
+//
+//        return headerView
+//    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//
+//
+//     return CGSize.init(width: 120 , height: 100)
+//    }
 
     func updateUI() {
 
         self.categoryItemsView.backgroundColor = .gray
         self.collectionView.backgroundColor = .clear
+
         
     }
 //    func loadApi() {
