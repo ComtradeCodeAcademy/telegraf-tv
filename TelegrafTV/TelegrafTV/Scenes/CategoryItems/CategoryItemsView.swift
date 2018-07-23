@@ -23,11 +23,12 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
-        
+        let nibHeader = UINib(nibName: MyCollectionViewHeaderId, bundle: nil)
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
+        collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyCollectionViewHeaderId)
         
-//        collectionView.register(SectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
+
     }
     override init(frame:CGRect) {
         super.init(frame: frame)
