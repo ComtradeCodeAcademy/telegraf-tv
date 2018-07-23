@@ -94,10 +94,15 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyCollectionViewHeaderId, for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
-        header.frame.size.height = 100
+     
+        
         header.headerLbl.text =  "SPORT"
 
         return header
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+     return CGSize.init(width: 120 , height: 60)
     }
 
     func updateUI() {
