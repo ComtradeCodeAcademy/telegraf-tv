@@ -14,6 +14,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var collectionView: UICollectionView!
     
      let MyCollectionViewCellId: String = "MyCollectionViewCell"
+     let MyCollectionViewHeaderId: String = "MyCollectionViewHeader"
+    
 //    let baseURL = "http://tv.tf.rs/"
 //    var categorys = [[String: AnyObject]]()
     
@@ -21,7 +23,10 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
+        
+        
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
+        
 //        collectionView.register(SectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
     }
     override init(frame:CGRect) {
