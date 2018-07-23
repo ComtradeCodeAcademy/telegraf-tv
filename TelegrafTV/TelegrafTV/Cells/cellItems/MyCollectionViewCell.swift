@@ -11,6 +11,7 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
   
     @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var cellView: UIView!
     
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
