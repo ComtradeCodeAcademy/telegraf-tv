@@ -13,14 +13,15 @@ import AVKit
 
 class VPlayerViewController: UIViewController {
 
-    @IBOutlet weak var videoCategoryDetailsView: VideoCategoryDetailsView!
+    @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
     let controller = AVPlayerViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-     //videoCategoryDetailsView.updateUI()
+       
+        
+     videoCategoryDetailsView.updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +41,7 @@ class VPlayerViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: controller.player?.currentItem)
             present(controller, animated: true) {
             player.play()
-            
+            self.controller.contentOverlayView?.addSubview(self.videoCategoryDetailsView)
                 
         }
         
