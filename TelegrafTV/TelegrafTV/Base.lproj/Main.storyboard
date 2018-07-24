@@ -97,7 +97,7 @@
                         <viewControllerLayoutGuide type="top" id="LGe-Wy-csV"/>
                         <viewControllerLayoutGuide type="bottom" id="Ose-IP-yQM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="krV-pN-zTf">
+                    <view key="view" contentMode="scaleToFill" id="krV-pN-zTf" customClass="VideoCategoryDetailsView" customModule="TelegrafTV" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -109,23 +109,15 @@
                                     <action selector="playVideo:" destination="tQ5-lh-0FK" eventType="primaryActionTriggered" id="TwF-6j-WBM"/>
                                 </connections>
                             </button>
-                            <view userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jnZ-Ss-XeF">
-                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <constraints>
                             <constraint firstItem="wEf-YP-LSw" firstAttribute="centerX" secondItem="krV-pN-zTf" secondAttribute="centerX" id="Lrx-KG-T3K"/>
-                            <constraint firstItem="jnZ-Ss-XeF" firstAttribute="leading" secondItem="7fq-fD-r3i" secondAttribute="leading" id="RAN-kt-vX7"/>
-                            <constraint firstItem="jnZ-Ss-XeF" firstAttribute="top" secondItem="LGe-Wy-csV" secondAttribute="bottom" id="WYc-97-PiG"/>
                             <constraint firstItem="wEf-YP-LSw" firstAttribute="centerY" secondItem="krV-pN-zTf" secondAttribute="centerY" id="gAN-Fq-35c"/>
-                            <constraint firstItem="7fq-fD-r3i" firstAttribute="trailing" secondItem="jnZ-Ss-XeF" secondAttribute="trailing" id="gGx-W3-2YB"/>
-                            <constraint firstItem="Ose-IP-yQM" firstAttribute="top" secondItem="jnZ-Ss-XeF" secondAttribute="bottom" id="vnN-td-fAe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
                     <connections>
-                        <outlet property="videoCategoryDetailsView" destination="jnZ-Ss-XeF" id="epU-P6-edZ"/>
+                        <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ar-bn-oJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
