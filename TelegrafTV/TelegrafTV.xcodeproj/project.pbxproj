@@ -31,6 +31,8 @@
 		0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */; };
 		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
 		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
+		690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */; };
+		690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
+		690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveCollectionViewCell.swift; sourceTree = "<group>"; };
+		690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = liveCollectionViewCell.xib; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +244,8 @@
 				0E83AF0B20FA635D00D9518A /* HomeViewController.swift */,
 				0EBD492520FA714800F2CCF2 /* HomeView.swift */,
 				0EBD492720FA715700F2CCF2 /* HomeView.xib */,
+				690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */,
+				690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -373,6 +379,7 @@
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
+				690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
@@ -403,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */,
+				690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */,
