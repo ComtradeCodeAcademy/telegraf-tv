@@ -1,17 +1,20 @@
 //
-//  MenuTableViewCell.swift
+//  CategoryMenuHeader.swift
 //  TelegrafTV
 //
-//  Created by O on 7/14/18.
+//  Created by aleksandar lalic on 24/07/2018.
 //  Copyright © 2018 Pedja Jevtic. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewCell: UITableViewCell {
+class CategoryMenuHeader: UITableViewCell {
 
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var selectionImg: UIImageView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var logoImgView: UIImageView!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
