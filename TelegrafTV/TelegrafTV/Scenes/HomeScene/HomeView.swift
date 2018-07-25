@@ -85,7 +85,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "liveCell", for: indexPath) as! liveCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "liveCollectionViewCell", for: indexPath) as! liveCollectionViewCell
             cell.configureCell()
             return  cell
         default:
