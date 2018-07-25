@@ -18,6 +18,7 @@ class liveCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell() {
-        liveImage.backgroundColor = UIColor.blue
+        liveImage.image = UIImage.init(named:"img3")
+        liveTitle.text = "UZIOVO PRENOST UTAKMICE"
     }
 }
