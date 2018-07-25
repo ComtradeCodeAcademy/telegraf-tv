@@ -15,6 +15,8 @@ class liveCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+     liveImage.adjustsImageWhenAncestorFocused = true
     }
     
     func configureCell() {
