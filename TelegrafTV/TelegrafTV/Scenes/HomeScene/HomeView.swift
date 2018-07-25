@@ -11,7 +11,7 @@ import UIKit
 class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var categories = ["UŽIVO", "VESTI", "SPORT", "JET SET", "HI-TECH", "ZANIMLJIVOSTI", "ŽIVOT I STIL"]
-    let liveCellID: String = "liveCell"
+    let liveCellID: String = "liveCollectionViewCell"
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
   
     
