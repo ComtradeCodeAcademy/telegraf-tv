@@ -83,25 +83,7 @@ class CategoryMenuTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 200
-        }
-    
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = Bundle.main.loadNibNamed("CategoryMenuHeader", owner: self, options: nil)?.first as! CategoryMenuHeader
-        
-    
-        headerView.frame = CGRect(x:0, y:0, width: view.frame.width, height: 200)
-        
-        headerView.logoImgView.image = UIImage.init(named: "telegrafLogo")
-        
-        
-        
-        return headerView
-        
-    }
-    
-    
+   
     
 }
 
