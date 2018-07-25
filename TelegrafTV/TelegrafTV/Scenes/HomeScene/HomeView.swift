@@ -90,7 +90,11 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
             return  cell
         default:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
+            cell.dateLbl.text = "28.Februar.2018"
+            cell.timeLbl.text = "5:40"
+            cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
             
+            cell.itemImage.image = UIImage.init(named: "img1")
             return cell
         }
     }
