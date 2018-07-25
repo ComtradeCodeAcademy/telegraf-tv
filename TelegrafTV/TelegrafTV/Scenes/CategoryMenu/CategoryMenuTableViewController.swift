@@ -87,6 +87,12 @@ class CategoryMenuTableViewController: UITableViewController {
         
         return CGRect(x: x, y: y, width: width, height: height)
     }
+    
+    func headerImage() {
+        let frame = CGRectMake(0, 0, self.view.frame.size.width , 200)
+        let headerImageView = UIImageView(frame: frame)
+        let image: UIImage = UIImage(named: "telegrafLogo")!
+    }
 }
 
 
