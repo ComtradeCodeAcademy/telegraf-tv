@@ -26,7 +26,7 @@ class CategoryMenuTableViewController: UITableViewController {
         tableView.backgroundColor = .black
         tableView.layer.borderColor = UIColor.red.cgColor
         //tableView.sectionIndexColor = UIColor.clear
-        
+        headerImage()
         
     }
     
@@ -92,6 +92,8 @@ class CategoryMenuTableViewController: UITableViewController {
         let frame = CGRectMake(0, 0, self.view.frame.size.width , 200)
         let headerImageView = UIImageView(frame: frame)
         let image: UIImage = UIImage(named: "telegrafLogo")!
+        headerImageView.image = image
+        categoryTableView.tableHeaderView = headerImageView
     }
 }
 
