@@ -25,7 +25,7 @@ class CategoryMenuTableViewController: UITableViewController {
         tableView.layer.borderWidth = 5.0
         tableView.backgroundColor = .black
         tableView.layer.borderColor = UIColor.red.cgColor
-        //tableView.sectionIndexColor = UIColor.clear
+        tableView.sectionIndexColor = UIColor.clear
         headerImage()
         
     }
@@ -63,13 +63,16 @@ class CategoryMenuTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0 :
-            self.performSegue(withIdentifier: "openHomeView", sender: self)
-            
-        default:
-            self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
-        }
+        
+        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
+        
+//        switch indexPath.row {
+//        case 0 :
+//            self.performSegue(withIdentifier: "openHomeView", sender: self)
+//            
+//        default:
+//            self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
+//        }
         showImageIndex = indexPath.row
         self.categoryTableView.reloadData()
     }
