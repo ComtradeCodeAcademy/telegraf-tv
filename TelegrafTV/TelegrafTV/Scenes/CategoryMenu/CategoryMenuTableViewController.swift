@@ -22,9 +22,9 @@ class CategoryMenuTableViewController: UITableViewController {
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
         categoryTableView.reloadData()
-        tableView.layer.borderWidth = 5.0
+       // tableView.layer.borderWidth = 5.0
         tableView.backgroundColor = .black
-        tableView.layer.borderColor = UIColor.red.cgColor
+        //tableView.layer.borderColor = UIColor.red.cgColor
         tableView.sectionIndexColor = UIColor.clear
         headerImage()
         

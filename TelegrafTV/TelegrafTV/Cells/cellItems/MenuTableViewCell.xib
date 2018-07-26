@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yb9-l5-asG">
-                        <rect key="frame" x="20" y="30" width="128" height="46"/>
+                        <rect key="frame" x="5" y="30" width="123" height="46"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -34,9 +34,9 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Yb9-l5-asG" firstAttribute="leading" secondItem="dhm-O3-CC1" secondAttribute="leading" constant="20" id="3tP-dR-XCj"/>
+                    <constraint firstItem="Yb9-l5-asG" firstAttribute="leading" secondItem="dhm-O3-CC1" secondAttribute="leading" constant="5" id="3tP-dR-XCj"/>
                     <constraint firstItem="Yb9-l5-asG" firstAttribute="top" secondItem="dhm-O3-CC1" secondAttribute="top" constant="30" id="81C-aj-jQk"/>
-                    <constraint firstAttribute="trailing" secondItem="Yb9-l5-asG" secondAttribute="trailing" constant="20" id="XvH-Ab-aVI"/>
+                    <constraint firstAttribute="trailing" secondItem="Yb9-l5-asG" secondAttribute="trailing" constant="40" id="XvH-Ab-aVI"/>
                     <constraint firstItem="VgU-4V-b13" firstAttribute="leading" secondItem="dhm-O3-CC1" secondAttribute="leadingMargin" constant="20" id="om5-QV-Xc8"/>
                     <constraint firstItem="VgU-4V-b13" firstAttribute="top" secondItem="Yb9-l5-asG" secondAttribute="bottom" constant="3" id="wQb-0u-2XY"/>
                 </constraints>

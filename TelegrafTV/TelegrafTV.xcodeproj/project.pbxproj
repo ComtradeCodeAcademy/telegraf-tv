@@ -31,8 +31,6 @@
 		0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */; };
 		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
 		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
-		20B18E2B21077C8D00E3AD41 /* CategoryMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B18E2921077C8D00E3AD41 /* CategoryMenuHeader.swift */; };
-		20B18E2C21077C8D00E3AD41 /* CategoryMenuHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B18E2A21077C8D00E3AD41 /* CategoryMenuHeader.xib */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +82,6 @@
 		0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
 		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
-		20B18E2921077C8D00E3AD41 /* CategoryMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuHeader.swift; sourceTree = "<group>"; };
-		20B18E2A21077C8D00E3AD41 /* CategoryMenuHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryMenuHeader.xib; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,8 +218,6 @@
 			isa = PBXGroup;
 			children = (
 				0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */,
-				20B18E2921077C8D00E3AD41 /* CategoryMenuHeader.swift */,
-				20B18E2A21077C8D00E3AD41 /* CategoryMenuHeader.xib */,
 			);
 			path = CategoryMenu;
 			sourceTree = "<group>";
@@ -380,7 +374,6 @@
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
-				20B18E2C21077C8D00E3AD41 /* CategoryMenuHeader.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
 				0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */,
@@ -423,7 +416,6 @@
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
 				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
-				20B18E2B21077C8D00E3AD41 /* CategoryMenuHeader.swift in Sources */,
 				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,
 				078A79BE20FB555800AB43ED /* TFRequest.swift in Sources */,
 			);
