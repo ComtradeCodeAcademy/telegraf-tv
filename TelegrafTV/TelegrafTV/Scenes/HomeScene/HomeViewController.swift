@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
 
        homeView.updateUI()
 
-        self.loadVideoNavigation()
+        HomeViewController.loadVideoNavigation()
 
     }
 
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController {
 
     // Call to API for retrieving data
 
-    func loadVideoNavigation() {
+   static func loadVideoNavigation() {
         let apiManager = TFApiClient()
 
         do {
