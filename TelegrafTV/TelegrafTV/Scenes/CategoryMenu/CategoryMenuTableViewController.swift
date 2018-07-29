@@ -19,15 +19,21 @@ class CategoryMenuTableViewController: UITableViewController {
         super.viewDidLoad()
         
         categoryTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "menuCell")
+        
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
+        HomeViewController.loadVideoNavigation()
+        
         categoryTableView.reloadData()
-       // tableView.layer.borderWidth = 5.0
+      
         tableView.backgroundColor = .black
-        //tableView.layer.borderColor = UIColor.red.cgColor
+      
         tableView.sectionIndexColor = UIColor.clear
+        
         headerImage()
         
+        //let service = TFApiClient()
+    
     }
     
     override func didReceiveMemoryWarning() {
