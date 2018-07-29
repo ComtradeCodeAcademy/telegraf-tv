@@ -12,8 +12,13 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
+
     
-     let MyCollectionViewCellId: String = "MyCollectionViewCell"
+  
+    
+    let MyCollectionViewCellId: String = "MyCollectionViewCell"
+    let MyColectionViewHeaderId: String = "MyCollectionReusableView"
+    
 //    let baseURL = "http://tv.tf.rs/"
 //    var categorys = [[String: AnyObject]]()
     
@@ -21,8 +26,12 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
+        let nibHeader = UINib(nibName: MyColectionViewHeaderId, bundle: nil)
+        
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
-//        collectionView.register(SectionHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView")
+        collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
+        
+
     }
     override init(frame:CGRect) {
         super.init(frame: frame)
@@ -85,19 +94,27 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//
-//        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerView", for: indexPath as IndexPath) as! SectionHeaderCollectionReusableView
-//        header.frame.size.height = 100
-//        header.headerLbl.text =  "SPORT"
-//
-//        return header
-//    }
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
+
+        headerView.frame.size.height = 60
+        headerView.headerLbl.text = "SPORT"
+        headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
+        headerView.headerLbl.textColor = .white
+        return headerView
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+
+
+     return CGSize.init(width: 120 , height: 60)
+    }
 
     func updateUI() {
 
         self.categoryItemsView.backgroundColor = .gray
         self.collectionView.backgroundColor = .clear
+
         
     }
 //    func loadApi() {
