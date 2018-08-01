@@ -36,6 +36,12 @@ class CategoryMenuTableViewController: UITableViewController {
     
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
@@ -52,36 +58,21 @@ class CategoryMenuTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
         
-        if indexPath.row == 0{
-            cell.isSelected = true
-        }
-        
         cell.titleLbl.text = arrayDataCell[indexPath.row]
-        
-        cell.selectionImg.image = UIImage.init(named: "selectionLine")
-        
-        if showImageIndex == indexPath.row {
-            cell.selectionImg.isHidden = false
-        }else{
-            cell.selectionImg.isHidden = true
-        }
         
         return cell
     }
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
-        
-//        switch indexPath.row {
-//        case 0 :
-//            self.performSegue(withIdentifier: "openHomeView", sender: self)
-//            
-//        default:
-//            self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
-//        }
-        showImageIndex = indexPath.row
-        self.categoryTableView.reloadData()
     }
+    
+    override func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
+        cell.selectionImg.isHidden = true
+    }
+    
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
@@ -105,12 +96,3 @@ class CategoryMenuTableViewController: UITableViewController {
         categoryTableView.tableHeaderView = headerImageView
     }
 }
-
-
-
-
-
-
-
-
-
