@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder.AppleTV.XIB" version="3.0" toolsVersion="14306.4" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -26,7 +25,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="highlightedColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o0w-RZ-Lh4">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="selectionLine" highlightedImage="selectionLine" translatesAutoresizingMaskIntoConstraints="NO" id="o0w-RZ-Lh4">
                         <rect key="frame" x="126" y="79" width="200" height="20"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="200" id="ZIP-Ur-AEr"/>
@@ -34,7 +33,7 @@
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="27T-UK-WZ9" firstAttribute="leading" secondItem="qp1-lF-uOl" secondAttribute="leading" constant="5" id="H8i-au-8G5"/>
                     <constraint firstItem="o0w-RZ-Lh4" firstAttribute="top" secondItem="27T-UK-WZ9" secondAttribute="bottom" constant="3" id="Qmy-uT-imb"/>
@@ -44,6 +43,7 @@
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="selectionImg" destination="o0w-RZ-Lh4" id="nL0-dN-GhJ"/>
                 <outlet property="titleLbl" destination="27T-UK-WZ9" id="9oK-bO-H8U"/>
@@ -51,4 +51,7 @@
             <point key="canvasLocation" x="-73" y="140.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="selectionLine" width="235" height="27"/>
+    </resources>
 </document>
