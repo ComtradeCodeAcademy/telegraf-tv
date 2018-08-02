@@ -59,6 +59,17 @@ class CategoryMenuTableViewController: UITableViewController {
         }
         return nil
     }
+        // MARK: - SaveCategoryList
+    
+    private func saveInCategotyList(array: [[String: AnyObject]]) {
+        _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
+        do {
+            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+        } catch let error {
+            print(error)
+        }
+    }
+    
     
     // MARK: - Table view data source
     
@@ -108,4 +119,5 @@ class CategoryMenuTableViewController: UITableViewController {
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
     }
+
 }
