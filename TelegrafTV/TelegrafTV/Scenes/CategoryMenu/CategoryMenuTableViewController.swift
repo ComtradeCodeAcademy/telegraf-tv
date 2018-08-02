@@ -23,7 +23,7 @@ class CategoryMenuTableViewController: UITableViewController {
         
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
-        HomeViewController.loadVideoNavigation()
+       
         
         categoryTableView.reloadData()
       
@@ -47,28 +47,7 @@ class CategoryMenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         
     }
-    // MARK: - Create CategoryList Entity
     
-    private func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject?  {
-        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
-        if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
-            categoryListEntity.name = categorys ["name"] as? String
-            categoryListEntity.url = categorys ["url"] as? String
-            categoryListEntity.image = categorys ["image"] as? String
-            return categoryListEntity
-        }
-        return nil
-    }
-        // MARK: - SaveCategoryList
-    
-    private func saveInCategotyList(array: [[String: AnyObject]]) {
-        _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
-        do {
-            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
-        } catch let error {
-            print(error)
-        }
-    }
     
     
     // MARK: - Table view data source
