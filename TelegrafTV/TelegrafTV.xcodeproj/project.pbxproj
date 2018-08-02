@@ -137,6 +137,7 @@
 		071AFE7920C854B400F39009 /* TelegrafTV */ = {
 			isa = PBXGroup;
 			children = (
+				0EA30BAB2113CEC200EC3325 /* Extensions */,
 				0EA30BA42113A79A00EC3325 /* Model */,
 				0E83AF0A20FA627A00D9518A /* Services */,
 				0E83AF0620FA617E00D9518A /* Scenes */,
@@ -272,6 +273,13 @@
 				0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		0EA30BAB2113CEC200EC3325 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0EF832A32102ABC3004451AD /* SplitVC */ = {
