@@ -15,7 +15,7 @@ class CategoryMenuTableViewController: UITableViewController {
     
     var showImageIndex : Int?
     var arrayDataCell = [String]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,8 +23,9 @@ class CategoryMenuTableViewController: UITableViewController {
         
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
+        loadVideoNavigation()
        
-        
+      
         categoryTableView.reloadData()
       
         tableView.backgroundColor = .black
@@ -33,7 +34,7 @@ class CategoryMenuTableViewController: UITableViewController {
         
         headerImage()
         
-        //let service = TFApiClient()
+       
     
     }
     
@@ -47,24 +48,92 @@ class CategoryMenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         
     }
+    // MARK: - NSFetchResultController
     
+    lazy var fetchedhResultController: NSFetchedResultsController<NSFetchRequestResult> = {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: CategoryList.self))
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.sharedInstance.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+        // frc.delegate = self
+        return frc
+    }()
     
+    // MARK: - Create CategoryList Entity
+    
+   private func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject?  {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
+            categoryListEntity.name = categorys ["name"] as? String
+            categoryListEntity.url = categorys ["url"] as? String
+            categoryListEntity.image = categorys ["image"] as? String
+            return categoryListEntity
+        }
+        return nil
+    }
+    // MARK: - SaveCategoryList
+    
+     private func saveInCategotyList(array: [[String: AnyObject]]) {
+        _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
+        do {
+            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+        } catch let error {
+            print(error)
+        }
+    }
+    // MARK: - Load VideoNavigation
+    
+   private func loadVideoNavigation() {
+        let apiManager = TFApiClient()
+        
+        do {
+            let request = try TFRequest.init(path: .navigation)
+            
+            apiManager.fetch(request: request, completion: { (result) in
+                
+                switch result {
+                case .success(let data):
+                    print("Success:", data)
+                    self.saveInCategotyList(array: [data])
+                    
+                    break
+                case .errorWithDictionary(let responseObj):
+                    print("Error:", responseObj)
+                    break
+                    
+                case .error(let message):
+                    print("error: \(message)")
+                    break
+                }
+            })
+            
+        } catch let error {
+            print("Error \(error.localizedDescription)")
+        }
+    }
+
     
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return arrayDataCell.count
+        if let categorList = fetchedhResultController.sections?.first?.numberOfObjects {
+            return categorList
+        }
+        
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
         
-        cell.titleLbl.text = arrayDataCell[indexPath.row]
+        if let category = fetchedhResultController.object(at: indexPath) as? CategoryList {
+            cell.setCategoryListCellWith(category:category)
+        }
         
         return cell
     }
+    
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
