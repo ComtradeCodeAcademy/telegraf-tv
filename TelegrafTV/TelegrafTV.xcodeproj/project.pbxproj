@@ -22,6 +22,7 @@
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 		0EA30BA72113A7D600EC3325 /* CategoryList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BA52113A7D600EC3325 /* CategoryList+CoreDataClass.swift */; };
 		0EA30BA82113A7D600EC3325 /* CategoryList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */; };
+		0EA30BAA2113A84700EC3325 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BA92113A84700EC3325 /* CoreDataStack.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
 		0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492720FA715700F2CCF2 /* HomeView.xib */; };
 		0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */; };
@@ -74,6 +75,7 @@
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		0EA30BA52113A7D600EC3325 /* CategoryList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryList+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0EA30BA92113A84700EC3325 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0EBD492720FA715700F2CCF2 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsView.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		0EA30BA32113A49A00EC3325 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
+				0EA30BA92113A84700EC3325 /* CoreDataStack.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0EA30BA82113A7D600EC3325 /* CategoryList+CoreDataProperties.swift in Sources */,
+				0EA30BAA2113A84700EC3325 /* CoreDataStack.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
