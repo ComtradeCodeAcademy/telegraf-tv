@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class CategoryMenuTableViewController: UITableViewController {
     
@@ -45,6 +46,18 @@ class CategoryMenuTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
+    }
+    // MARK: - Create CategoryList Entity
+    
+    private func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject?  {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
+            categoryListEntity.name = categorys ["name"] as? String
+            categoryListEntity.url = categorys ["url"] as? String
+            categoryListEntity.image = categorys ["image"] as? String
+            return categoryListEntity
+        }
+        return nil
     }
     
     // MARK: - Table view data source
