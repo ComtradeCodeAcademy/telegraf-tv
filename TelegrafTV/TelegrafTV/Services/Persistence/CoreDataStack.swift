@@ -9,8 +9,12 @@
 import Foundation
 import CoreData
 
+
 class CoreDataStack: NSObject {
     // MARK: - Core Data stack
+    
+    static let sharedInstance = CoreDataStack()
+    private override init() {}
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*
