@@ -58,4 +58,31 @@ class CoreDataStack: NSObject {
             }
         }
     }
+    func applicationDocumentsDirectory() {
+        if let url = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last {
+            print(url.absoluteString)
+        }
+    }
+    // MARK: - Create CategoryList Entity
+    
+    static func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject?  {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
+            categoryListEntity.name = categorys ["name"] as? String
+            categoryListEntity.url = categorys ["url"] as? String
+            categoryListEntity.image = categorys ["image"] as? String
+            return categoryListEntity
+        }
+        return nil
+    }
+    // MARK: - SaveCategoryList
+    
+    static func saveInCategotyList(array: [[String: AnyObject]]) {
+        _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
+        do {
+            try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+        } catch let error {
+            print(error)
+        }
+    }
 }
