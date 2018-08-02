@@ -26,5 +26,9 @@ class MenuTableViewCell: UITableViewCell {
         
         self.selectionImg.isHidden = !selected
     }
-
+    func setCategoryListCellWith(category: CategoryList) {
+        DispatchQueue.main.async {
+            self.titleLbl.text = category.name
+        }
+    }
 }
