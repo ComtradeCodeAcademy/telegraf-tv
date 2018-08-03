@@ -23,19 +23,11 @@ class CategoryMenuTableViewController: UITableViewController {
         
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
-        do {
-            try self.fetchedhResultController.performFetch()
-            print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
-        } catch let error  {
-            print("ERROR: \(error)")
-        }
-        loadVideoNavigation()
        
-      
+        loadVideoNavigation()
+        clearData()
         categoryTableView.reloadData()
-      
         tableView.backgroundColor = .black
-      
         tableView.sectionIndexColor = UIColor.clear
         
         headerImage()
@@ -105,6 +97,12 @@ class CategoryMenuTableViewController: UITableViewController {
     // MARK: - Load VideoNavigation
     
    private func loadVideoNavigation() {
+    do {
+        try self.fetchedhResultController.performFetch()
+        print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
+    } catch let error  {
+        print("ERROR: \(error)")
+    }
         let apiManager = TFApiClient()
         
         do {
