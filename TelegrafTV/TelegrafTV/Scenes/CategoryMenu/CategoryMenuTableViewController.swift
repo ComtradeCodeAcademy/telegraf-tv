@@ -23,6 +23,12 @@ class CategoryMenuTableViewController: UITableViewController {
         
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
+        do {
+            try self.fetchedhResultController.performFetch()
+            print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
+        } catch let error  {
+            print("ERROR: \(error)")
+        }
         loadVideoNavigation()
        
       
@@ -80,6 +86,22 @@ class CategoryMenuTableViewController: UITableViewController {
             print(error)
         }
     }
+    
+    // MARK: - Deleted data from saveContext
+    
+    private func clearData() {
+        do {
+            let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CategoryList")
+            do {
+                let objects  = try context.fetch(fetchRequest) as? [NSManagedObject]
+                _ = objects.map{$0.map{context.delete($0)}}
+                CoreDataStack.sharedInstance.saveContext()
+            } catch let error {
+                print("ERROR DELETING : \(error)")
+            }
+        }
+    }
     // MARK: - Load VideoNavigation
     
    private func loadVideoNavigation() {
@@ -93,6 +115,7 @@ class CategoryMenuTableViewController: UITableViewController {
                 switch result {
                 case .success(let data):
                     print("Success:", data)
+                    self.clearData()
                     self.saveInCategotyList(array: [data])
                     
                     break
@@ -168,4 +191,23 @@ class CategoryMenuTableViewController: UITableViewController {
         categoryTableView.tableHeaderView = headerImageView
     }
 
+}
+extension CategoryMenuTableViewController: NSFetchedResultsControllerDelegate {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            self.tableView.insertRows(at: [newIndexPath!], with: .automatic)
+        case .delete:
+            self.tableView.deleteRows(at: [indexPath!], with: .automatic)
+        default:
+            break
+        }
+    }
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        self.tableView.endUpdates()
+    }
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
 }
