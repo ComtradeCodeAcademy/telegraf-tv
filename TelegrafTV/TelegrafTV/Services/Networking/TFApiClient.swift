@@ -9,13 +9,13 @@
 import Foundation
 
 protocol TFAPIProtocol {
-    func fetch(request: TFRequest, completion: @escaping (Result<[String: AnyObject]>) -> Void)
+    func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void)
 }
 
 class TFApiClient {
    
    
-    func fetch(request: TFRequest, completion: @escaping (Result<[String: AnyObject]>) -> Void) {
+    func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
         guard let url = URL(string: request.url) else {
             return completion(.error("Invalid URL"))
         }
@@ -39,22 +39,23 @@ class TFApiClient {
 
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
+                    guard let categoryJsonArray = json["navigation"] as? [[String: AnyObject]] else {  return completion(.error(error?.localizedDescription ?? "There are no new category to show")) }
                     DispatchQueue.main.async {
                         if httpResponse.statusCode > 299 {
                             completion(.errorWithDictionary(json))
                             return
                         }
-                        completion(.success(json))
+                        completion(.success(categoryJsonArray))
                     }
                 }
-                if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [AnyObject] {
-                    DispatchQueue.main.async {
-                        if httpResponse.statusCode > 299 {
-                            completion(.errorWithDictionary(["responseData": json as AnyObject]))
-                        }
-                        completion(.success(["responseData": json as  AnyObject]))
-                    }
-                }
+//                if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [AnyObject] {
+//                    DispatchQueue.main.async {
+//                        if httpResponse.statusCode > 299 {
+//                            completion(.errorWithDictionary(["responseData": json as AnyObject]))
+//                        }
+//                        completion(.success(["responseData": json as  AnyObject]))
+//                    }
+//                }
             } catch let error {
                 DispatchQueue.main.async {
                     completion(.error(error.localizedDescription))
