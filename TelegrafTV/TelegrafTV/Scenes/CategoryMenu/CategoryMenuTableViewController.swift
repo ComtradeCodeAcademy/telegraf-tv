@@ -24,8 +24,8 @@ class CategoryMenuTableViewController: UITableViewController {
         arrayDataCell = ["Uzivo", "Vesti","sport"]
         
        
-        loadVideoNavigation()
-        clearData()
+        
+       
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
         tableView.sectionIndexColor = UIColor.clear
@@ -34,6 +34,10 @@ class CategoryMenuTableViewController: UITableViewController {
         
        
     
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadVideoNavigation()
     }
     
     override func viewDidAppear(_ animated: Bool) {
