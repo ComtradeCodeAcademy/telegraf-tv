@@ -43,7 +43,7 @@ class CategoryMenuTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+//        self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,7 +54,7 @@ class CategoryMenuTableViewController: UITableViewController {
     
     lazy var fetchedhResultController: NSFetchedResultsController<NSFetchRequestResult> = {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: CategoryList.self))
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "url", ascending: true)]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.sharedInstance.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
          frc.delegate = self
         return frc
@@ -115,12 +115,14 @@ class CategoryMenuTableViewController: UITableViewController {
             apiManager.fetch(request: request, completion: { (result) in
                 
                 switch result {
+                
                 case .success(let data):
                     print("Success:", data)
                     self.clearData()
-                    self.saveInCategotyList(array: [data])
+                    self.saveInCategotyList(array: data)
                     
                     break
+                    
                 case .errorWithDictionary(let responseObj):
                     print("Error:", responseObj)
                     break
