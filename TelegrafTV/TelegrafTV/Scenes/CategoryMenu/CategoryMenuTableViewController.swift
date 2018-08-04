@@ -13,18 +13,18 @@ class CategoryMenuTableViewController: UITableViewController {
     
     @IBOutlet var categoryTableView: UITableView!
     
-    var showImageIndex : Int?
-    var arrayDataCell = [String]()
+ 
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         categoryTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "menuCell")
         
-        arrayDataCell = ["Uzivo", "Vesti","sport"]
+        
         
        
-        
+     
        
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
@@ -43,8 +43,8 @@ class CategoryMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .bottom)
+//         self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+//
     }
     
     override func didReceiveMemoryWarning() {
