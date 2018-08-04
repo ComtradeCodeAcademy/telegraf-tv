@@ -5,7 +5,9 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Video" representedClassName="Video" syncable="YES" codeGenerationType="class"/>
     <elements>
         <element name="CategoryList" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Video" positionX="-63" positionY="9" width="128" height="45"/>
     </elements>
 </model>
