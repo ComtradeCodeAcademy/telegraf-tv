@@ -49,8 +49,9 @@ class CategoryItemsViewController: UIViewController {
                     print("Success:", data)
                     self.categoryItemsView.updateVideos(videos: data)
                     DispatchQueue.main.async {
-                        let videoItem = VideoItem(id: 0)
-                        
+                        let videoItem = VideoItems.parseData(data: data)
+                        print(videoItem)
+                       
 
                     }
                     break

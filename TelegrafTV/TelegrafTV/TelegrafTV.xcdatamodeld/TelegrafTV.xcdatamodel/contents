@@ -4,9 +4,8 @@
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CategoryList" positionX="-65" positionY="-144" width="128" height="105"/>
+        <element name="CategoryList" positionX="-65" positionY="-144" width="128" height="90"/>
     </elements>
 </model>

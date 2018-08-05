@@ -22,8 +22,9 @@ struct VideoItem {
 struct VideoItems {
     var videos = [[VideoItem]]()
     
-    func parseData(data: [[String:AnyObject]]) -> [VideoItem] {
-        var videos: [VideoItem] = []
+    static func parseData(data: [[String:AnyObject]]) -> [[VideoItem]] {
+        let videos: [[VideoItem]] = []
+        
         return videos
     }
 }
