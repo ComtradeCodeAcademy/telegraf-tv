@@ -43,7 +43,7 @@ class CategoryMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//         self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+         self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
 //
     }
     
@@ -165,7 +165,26 @@ class CategoryMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
+        guard let category = fetchedhResultController.object(at: indexPath) as? CategoryList  else { return }
+        
+        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
+    }
+    
+    //MARK - Prepare data for cateogory videos listing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "openHomeView":
+            print("home section")
+            
+        default:
+            
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let categoryItemsVC = navController.viewControllers[0] as? CategoryItemsViewController else { return }
+            guard let category = sender as? CategoryList else { return }
+            
+            categoryItemsVC.category = category
+        }
     }
 
     

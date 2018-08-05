@@ -9,10 +9,9 @@
 import Foundation
 
 
-struct LoadVideoCategory {
+class LoadVideoCategory {
     
-    static func hiTechCategory(category: String) {
-      
+    static func hiTechCategory() {
         
             let apiManager = TFApiClient()
             
@@ -25,9 +24,11 @@ struct LoadVideoCategory {
                         
                     case .success(let data):
                         print("Success:", data)
+                    
 //                        self.clearData()
 //                        self.saveInCategotyList(array: data)
 //
+                       
                         break
                         
                     case .errorWithDictionary(let responseObj):
@@ -43,9 +44,10 @@ struct LoadVideoCategory {
             } catch let error {
                 print("Error \(error.localizedDescription)")
             }
+     
         }
 
-        
+
         
     
 }
