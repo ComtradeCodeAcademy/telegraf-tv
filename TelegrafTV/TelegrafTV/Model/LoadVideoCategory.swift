@@ -8,15 +8,16 @@
 
 import Foundation
 
+
 struct LoadVideoCategory {
     
-    static func loadVideoCategory(category: String) {
+    static func hiTechCategory(category: String) {
       
         
             let apiManager = TFApiClient()
             
             do {
-                let request = try TFRequest.init(path: .navigation)
+                let request = try TFRequest.init(path: .hitech)
                 
                 apiManager.fetch(request: request, completion: { (result) in
                     
@@ -24,7 +25,9 @@ struct LoadVideoCategory {
                         
                     case .success(let data):
                         print("Success:", data)
-                        
+//                        self.clearData()
+//                        self.saveInCategotyList(array: data)
+//
                         break
                         
                     case .errorWithDictionary(let responseObj):
