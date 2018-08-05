@@ -9,17 +9,22 @@
 import Foundation
 
 struct TFRequest {
-    var path: TFApiRoutes
+    var path: TFApiRoutes?
     var url: String
     var method: APIMethod = .get
 
     init(path: TFApiRoutes) throws {
         self.path = path
 
-        self.url = "http://tv.tf.rs/\(self.path)"
+        self.url = "http://tv.tf.rs/\(self.path!)"
         print("URL IS:  \(self.url)")
     }
-
+    
+    init(url: String, page: Int = 1) throws {
+    
+        self.url = "\(url)?page=\(page)"
+    }
+    
 }
 
 enum APIMethod: String {

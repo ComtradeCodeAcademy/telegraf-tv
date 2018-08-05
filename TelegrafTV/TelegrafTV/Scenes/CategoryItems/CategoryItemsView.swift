@@ -13,15 +13,16 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    
+    var videos = [[String: AnyObject]]()
   
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
-//    let baseURL = "http://tv.tf.rs/"
-//    var categorys = [[String: AnyObject]]()
-    
+    let categoryData = LoadVideoCategory.hiTechCategory()
+    func test() {
+        print(categoryData)
+    }
     //MARK: Registar UI CV item cell and SectionHeader
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +31,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
-        
+    
 
     }
     override init(frame:CGRect) {
@@ -83,8 +84,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
-//        let category = self.categorys[indexPath.row]
-        
+ 
+       
         cell.dateLbl.text = "28.Februar.2018"
         cell.timeLbl.text = "5:40"
         cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
@@ -99,7 +100,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
 
         headerView.frame.size.height = 60
-        headerView.headerLbl.text = "SPORT"
+      
+        headerView.headerLbl.text = "HI-TECH"
         headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
         headerView.headerLbl.textColor = .white
         return headerView
@@ -117,33 +119,9 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         
     }
-//    func loadApi() {
-//
-//        guard let url = URL.init(string: baseURL) else { return }
-//
-//        let urlRequest = URLRequest.init(url: url)
-//
-//        let task = URLSession.shared.dataTask(with: urlRequest) {(data, response, error) in
-//            if let usableData = data {
-//                do {
-//
-//
-//                    if let jsonData = try JSONSerialization.jsonObject(with: usableData, options: JSONSerialization.ReadingOptions.allowFragments) as? [[String: AnyObject]] {
-//
-//                        DispatchQueue.main.async {
-//                            self.categorys = jsonData
-//                            self.collectionView.reloadData()
-//
-//                        }
-//                    }
-//                } catch let myJSONError {
-//                    print(myJSONError)
-//                }
-//            }
-//
-//        }
-//        task.resume()
-//    }
-    
+
+    func updateVideos(videos: [[String: AnyObject]]) {
+        print(videos)
+    }
 
 }
