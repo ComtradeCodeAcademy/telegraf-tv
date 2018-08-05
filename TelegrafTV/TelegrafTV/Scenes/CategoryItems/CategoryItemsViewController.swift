@@ -48,7 +48,11 @@ class CategoryItemsViewController: UIViewController {
                 case .success(let data):
                     print("Success:", data)
                     self.categoryItemsView.updateVideos(videos: data)
-                    
+                    DispatchQueue.main.async {
+                        let videoItem = VideoItem(id: 0)
+                        
+
+                    }
                     break
                     
                 case .errorWithDictionary(let responseObj):
