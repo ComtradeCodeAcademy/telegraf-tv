@@ -13,16 +13,13 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var videos = [[String: AnyObject]]()
+    var videosCategory = [[String: AnyObject]]()
   
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
-    let categoryData = LoadVideoCategory.hiTechCategory()
-    func test() {
-        print(categoryData)
-    }
+   
     //MARK: Registar UI CV item cell and SectionHeader
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -100,8 +97,9 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
 
         headerView.frame.size.height = 60
-      
-        headerView.headerLbl.text = "HI-TECH"
+       
+        headerView.headerLbl.text = "mis"
+    
         headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
         headerView.headerLbl.textColor = .white
         return headerView
@@ -121,7 +119,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func updateVideos(videos: [[String: AnyObject]]) {
-        print(videos)
+        videosCategory = videos
     }
 
 }

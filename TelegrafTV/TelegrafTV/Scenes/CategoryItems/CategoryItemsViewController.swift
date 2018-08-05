@@ -24,7 +24,7 @@ class CategoryItemsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(category)
+        
         self.loadVideos()
     }
 
