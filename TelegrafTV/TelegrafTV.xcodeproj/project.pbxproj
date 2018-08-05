@@ -24,6 +24,7 @@
 		0EA30BA82113A7D600EC3325 /* CategoryList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */; };
 		0EA30BAA2113A84700EC3325 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BA92113A84700EC3325 /* CoreDataStack.swift */; };
 		0EA30BAD2113CF3200EC3325 /* UIImageView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA30BAC2113CF3200EC3325 /* UIImageView .swift */; };
+		0EABA19421167CCE007E85CE /* LoadVideoCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EABA19321167CCE007E85CE /* LoadVideoCategory.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
 		0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492720FA715700F2CCF2 /* HomeView.xib */; };
 		0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */; };
@@ -78,6 +79,7 @@
 		0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryList+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0EA30BA92113A84700EC3325 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		0EA30BAC2113CF3200EC3325 /* UIImageView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView .swift"; sourceTree = "<group>"; };
+		0EABA19321167CCE007E85CE /* LoadVideoCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadVideoCategory.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0EBD492720FA715700F2CCF2 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 			children = (
 				0EA30BA52113A7D600EC3325 /* CategoryList+CoreDataClass.swift */,
 				0EA30BA62113A7D600EC3325 /* CategoryList+CoreDataProperties.swift */,
+				0EABA19321167CCE007E85CE /* LoadVideoCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
 				0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
+				0EABA19421167CCE007E85CE /* LoadVideoCategory.swift in Sources */,
 				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
 				078A79C020FB55E400AB43ED /* TFApiRoutes.swift in Sources */,

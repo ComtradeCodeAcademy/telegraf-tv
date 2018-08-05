@@ -8,7 +8,16 @@
 
 import Foundation
 
-enum TFApiRoutes {
+enum TFApiRoutes: String {
     case navigation
+    case livestram
+    case recommended = "videos/recommended"
+    case vesti = "videos/vesti"
+    case sport = "videos/sport"
+    case jetset = "videos/jetset"
+    case hitech = "videos/hi-tech"
+    case zanimljivosti =  "videos/zanimljivosti"
+    case zivotIstil = "videos/zivot-i-stil"
+    case kuhinja = "videos/kuhinja"
     
 }
