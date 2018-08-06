@@ -81,10 +81,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
  
-       
-        cell.dateLbl.text = "28.Februar.2018"
-        cell.timeLbl.text = "5:40"
-        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
+        let videoItem = self.videos[indexPath.row]
+        
+        cell.dateLbl.text = videoItem.date
+        cell.timeLbl.text = videoItem.duration
+        cell.titleLbl.text = videoItem.title
         
         cell.itemImage.image = UIImage.init(named: "img1")
 
