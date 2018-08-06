@@ -87,7 +87,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         cell.timeLbl.text = videoItem.duration
         cell.titleLbl.text = videoItem.title
         
-        cell.itemImage.image = UIImage.init(named: "img1")
+        cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
 
         return cell
     }
