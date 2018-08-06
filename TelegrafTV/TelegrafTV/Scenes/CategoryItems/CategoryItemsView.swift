@@ -13,8 +13,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var videosCategory = [[String: AnyObject]]()
-    var videoItem = VideoItem(videoId: 0, videoTitle: " ", videoDuration: " ", videoImageURL: " ", videoDate: " ", video: " ")
+    var videos = [VideoItem]()
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
@@ -118,9 +117,10 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
     }
 
-    func updateVideos(videos: [[String: AnyObject]]) {
-        
+    func updateVideos(videos: [VideoItem]) {
         print(videos)
+        self.videos = videos
+        self.collectionView.reloadData()
     }
 
 }

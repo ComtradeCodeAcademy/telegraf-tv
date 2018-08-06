@@ -10,29 +10,28 @@ import Foundation
 
 struct VideoItem {
     
-    var id: Int?
-    var title: String?
-    var duration: String?
-    var imageURL: String?
-    var date: String?
-    var  videoURL: String?
+ var id: Int?,
+     title: String?,
+     duration: String?,
+     imageURL: String?,
+     date: String?,
+     videoURL: String?
     
-    init(videoId: Int?, videoTitle: String, videoDuration: String, videoImageURL: String, videoDate: String, video: String ) {
-        
-        id = videoId
-        title = videoTitle
-        duration = videoDuration
-        imageURL = videoImageURL
-        date = videoDate
-        videoURL = video
     }
-}
-
 struct VideoItems {
-    var videos = [[VideoItem]]()
+    var data = [[String:AnyObject]]()
     
-    static func parseData(data: [[String:AnyObject]]) -> [[VideoItem]] {
-        let videos: [[VideoItem]] = []
+    
+    static func parseData(_ data: [[String:AnyObject]]) -> [VideoItem]{
+        var videos = [VideoItem]()
+        
+        for  item in data {
+        var videoItem = VideoItem.init()
+        if let img = item["image"] as? [String: AnyObject] {
+            videoItem.imageURL = img["url"] != nil ? img["url"] as!String : ""
+        }
+         videos.append(videoItem)
+        }
         
         return videos
     }

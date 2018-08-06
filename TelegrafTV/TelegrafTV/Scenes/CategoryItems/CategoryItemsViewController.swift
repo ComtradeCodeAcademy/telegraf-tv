@@ -19,7 +19,6 @@ class CategoryItemsViewController: UIViewController {
         super.viewDidLoad()
 
         categoryItemsView.updateUI()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +33,7 @@ class CategoryItemsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
     
     // Call API for category videos
     private func loadVideos() {
@@ -48,10 +48,10 @@ class CategoryItemsViewController: UIViewController {
                     
                 case .success(let data):
                     print("Success:", data)
-                    self.categoryItemsView.updateVideos(videos: data)
+                   
                     DispatchQueue.main.async {
-                        let videoItem = VideoItems.parseData(data: data)
-                        print(videoItem)
+                        let videoItems = VideoItems.parseData(data)
+                         self.categoryItemsView.updateVideos(videos: videoItems)
                         
                        
 
