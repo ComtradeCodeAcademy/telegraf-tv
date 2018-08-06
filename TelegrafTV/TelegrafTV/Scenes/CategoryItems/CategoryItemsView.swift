@@ -14,7 +14,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var collectionView: UICollectionView!
 
     var videosCategory = [[String: AnyObject]]()
-  
+    var videoItem = VideoItem(videoId: 0, videoTitle: " ", videoDuration: " ", videoImageURL: " ", videoDate: " ", video: " ")
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
@@ -119,7 +119,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func updateVideos(videos: [[String: AnyObject]]) {
-        videosCategory = videos
+        
+        print(videos)
     }
 
 }
