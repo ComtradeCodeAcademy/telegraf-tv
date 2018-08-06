@@ -27,7 +27,7 @@ struct VideoItems {
         var videos = [VideoItem]()
         
         for  item in data {
-        var videoItem = VideoItem.init()
+        var videoItem = VideoItem()
         if let img = item["image"] as? [String: AnyObject] {
             videoItem.imageURL = img["url"] != nil ? img["url"] as!String : ""
             videoItem.title = item ["title"] as? String
