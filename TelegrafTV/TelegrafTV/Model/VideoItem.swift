@@ -10,13 +10,22 @@ import Foundation
 
 struct VideoItem {
     
-    let id: Int?,
-    title: String?,
-    duration: String?,
-    imageURL: String?,
-    data: String?,
-    videoURL: String?
+    var id: Int?
+    var title: String?
+    var duration: String?
+    var imageURL: String?
+    var date: String?
+    var  videoURL: String?
     
+    init(videoId: Int?, videoTitle: String, videoDuration: String, videoImageURL: String, videoDate: String, video: String ) {
+        
+        id = videoId
+        title = videoTitle
+        duration = videoDuration
+        imageURL = videoImageURL
+        date = videoDate
+        videoURL = video
+    }
 }
 
 struct VideoItems {

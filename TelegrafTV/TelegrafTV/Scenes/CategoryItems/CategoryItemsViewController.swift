@@ -19,6 +19,7 @@ class CategoryItemsViewController: UIViewController {
         super.viewDidLoad()
 
         categoryItemsView.updateUI()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +52,7 @@ class CategoryItemsViewController: UIViewController {
                     DispatchQueue.main.async {
                         let videoItem = VideoItems.parseData(data: data)
                         print(videoItem)
+                        
                        
 
                     }
