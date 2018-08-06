@@ -55,7 +55,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 30
+        return self.videos.count
     }
 
 
@@ -83,12 +83,15 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
  
         let videoItem = self.videos[indexPath.row]
         
-        cell.dateLbl.text = videoItem.date
-        cell.timeLbl.text = videoItem.duration
-        cell.titleLbl.text = videoItem.title
-        
-        cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
+        DispatchQueue.main.async {
+            cell.dateLbl.text = videoItem.date
+            cell.timeLbl.text = videoItem.duration
+            cell.titleLbl.text = videoItem.title
+            
+            cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
 
+        }
+       
         return cell
     }
     
@@ -98,7 +101,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         headerView.frame.size.height = 60
        
-        headerView.headerLbl.text = "mis"
+        
+        headerView.headerLbl.text = 
     
         headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
         headerView.headerLbl.textColor = .white
