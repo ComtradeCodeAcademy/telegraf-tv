@@ -17,14 +17,13 @@ class CategoryItemsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    
         categoryItemsView.updateUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        
+        print(category)
         self.loadVideos()
     }
 
@@ -48,14 +47,9 @@ class CategoryItemsViewController: UIViewController {
                     
                 case .success(let data):
                     print("Success:", data)
-                   
-                    DispatchQueue.main.async {
-                        let videoItems = VideoItems.parseData(data)
+                         let videoItems = VideoItems.parseData(data)
                          self.categoryItemsView.updateVideos(videos: videoItems)
-                        
-                       
-
-                    }
+                    
                     break
                     
                 case .errorWithDictionary(let responseObj):

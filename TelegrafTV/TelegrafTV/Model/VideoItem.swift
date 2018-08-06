@@ -20,7 +20,8 @@ struct VideoItem {
     }
 struct VideoItems {
     var data = [[String:AnyObject]]()
-    
+    var videoItems = [VideoItem]()
+
     
     static func parseData(_ data: [[String:AnyObject]]) -> [VideoItem]{
         var videos = [VideoItem]()
@@ -29,6 +30,11 @@ struct VideoItems {
         var videoItem = VideoItem.init()
         if let img = item["image"] as? [String: AnyObject] {
             videoItem.imageURL = img["url"] != nil ? img["url"] as!String : ""
+            videoItem.title = item ["title"] as? String
+            videoItem.duration = item ["duration"]!["human"] as? String
+            videoItem.date = item ["date"]!["human"] as? String
+            videoItem.videoURL = item["m3u8"] as? String
+            videoItem.id = item["_id"] as? Int
         }
          videos.append(videoItem)
         }
