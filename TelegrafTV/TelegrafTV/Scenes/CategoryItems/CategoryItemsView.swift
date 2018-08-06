@@ -101,9 +101,8 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         headerView.frame.size.height = 60
        
+       
         
-        headerView.headerLbl.text = 
-    
         headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
         headerView.headerLbl.textColor = .white
         return headerView
