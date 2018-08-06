@@ -15,8 +15,8 @@ struct VideoItem {
      duration: String?,
      imageURL: String?,
      date: String?,
-     videoURL: String?
-    
+     videoURL: String?,
+     category: String
     }
 struct VideoItems {
     var data = [[String:AnyObject]]()
