@@ -22,10 +22,6 @@ class CategoryMenuTableViewController: UITableViewController {
         categoryTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "menuCell")
         
         
-        
-       
-     
-       
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
         tableView.sectionIndexColor = UIColor.clear
@@ -43,8 +39,10 @@ class CategoryMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-         self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
-//
+        if self.categoryTableView.numberOfRows(inSection: 0) > 0 {
+            self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,8 +65,8 @@ class CategoryMenuTableViewController: UITableViewController {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
             categoryListEntity.name = categorys ["name"] as? String
-            categoryListEntity.url = categorys ["url"] as? String
-            categoryListEntity.image = categorys ["image"] as? String
+            categoryListEntity.url =  categorys ["url"] as? String
+            categoryListEntity.image? = (categorys ["image"] as? String)!
             return categoryListEntity
         }
         return nil
