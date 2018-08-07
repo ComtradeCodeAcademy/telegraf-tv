@@ -18,9 +18,4 @@ class MyCollectionReusableView: UICollectionReusableView {
         
     }
     
-    func setCategoryHeaderWith(category: CategoryList) {
-        DispatchQueue.main.async {
-            self.headerLbl.text = category.name
-        }
-    }
 }

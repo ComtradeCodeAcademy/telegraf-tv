@@ -9,10 +9,15 @@
 import UIKit
 
 class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout  {
-
+    
+    var category: CategoryList?
+   
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
+    @IBOutlet weak var headerTitle: UILabel!
+
+    
     var videos = [VideoItem]()
     
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
@@ -27,7 +32,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
-    
+   
 
     }
     override init(frame:CGRect) {
@@ -99,12 +104,18 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
 
-        headerView.frame.size.height = 60
-       
-       
-        
-        headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
-        headerView.headerLbl.textColor = .white
+             headerView.frame.size.height = 60
+
+
+        DispatchQueue.main.async {
+            
+            headerView.headerLbl.text = "HI-TECH"
+            headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
+            headerView.headerLbl.textColor = .white
+
+        }
+
+
         return headerView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -117,7 +128,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
         self.categoryItemsView.backgroundColor = .gray
         self.collectionView.backgroundColor = .clear
-
+        
         
     }
 
