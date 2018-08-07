@@ -16,7 +16,7 @@ struct VideoItem {
      imageURL: String?,
      date: String?,
      videoURL: String?,
-     category: String
+     category: String?
     }
 struct VideoItems {
     var data = [[String:AnyObject]]()
@@ -35,6 +35,7 @@ struct VideoItems {
             videoItem.date = item ["date"]!["human"] as? String
             videoItem.videoURL = item["m3u8"] as? String
             videoItem.id = item["_id"] as? Int
+            videoItem.category = item["category"]!["name"] as? String
         }
          videos.append(videoItem)
         }
