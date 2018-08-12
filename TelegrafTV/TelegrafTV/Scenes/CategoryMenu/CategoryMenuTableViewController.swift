@@ -14,7 +14,7 @@ class CategoryMenuTableViewController: UITableViewController {
     @IBOutlet var categoryTableView: UITableView!
     
  
-  
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class CategoryMenuTableViewController: UITableViewController {
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
         tableView.sectionIndexColor = UIColor.clear
-        
+     
         headerImage()
         
        
@@ -120,6 +120,7 @@ class CategoryMenuTableViewController: UITableViewController {
                     self.clearData()
                     self.saveInCategotyList(array: data)
                     
+                    
                     break
                     
                 case .errorWithDictionary(let responseObj):
@@ -155,6 +156,8 @@ class CategoryMenuTableViewController: UITableViewController {
         
         if let category = fetchedhResultController.object(at: indexPath) as? CategoryList {
             cell.setCategoryListCellWith(category:category)
+            let categoryItemsView = view as? CategoryItemsView
+            categoryItemsView?.updateCategoryData(category: [category])
         }
         
         return cell
@@ -179,9 +182,11 @@ class CategoryMenuTableViewController: UITableViewController {
             
             guard let navController = segue.destination as? UINavigationController else { return }
             guard let categoryItemsVC = navController.viewControllers[0] as? CategoryItemsViewController else { return }
+//            guard let categoryItemsView = view as? CategoryItemsView else { return }
             guard let category = sender as? CategoryList else { return }
-            
+//            categoryItemsView.updateCategoryData(category: [category])
             categoryItemsVC.category = category
+//            categoryItemsView.categoryTitle = category
         }
     }
 

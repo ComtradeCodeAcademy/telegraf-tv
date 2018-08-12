@@ -20,10 +20,11 @@ struct TFRequest {
         print("URL IS:  \(self.url)")
     }
     
-    init(url: String, page: Int = 1) throws {
+    init(url: String, page: Int) throws {
     
-        self.url = "\(url)?page=\(page)"
+        self.url = "\(url)?page=\(page))"
     }
+   
     
 }
 
