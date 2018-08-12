@@ -105,6 +105,16 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
     
        func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        
+        if(self.videos.count - indexPath.row > 3){
+            return
+        }
+        
+        let page = myController.page as? Int
+        
+        myController.page = page + 1
+        myController.loadVideos()
+        
         DispatchQueue.global().async {
             let lastItem = self.videos.count - 1
             if indexPath.row == lastItem {

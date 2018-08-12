@@ -217,6 +217,7 @@ class CategoryMenuTableViewController: UITableViewController {
         let image: UIImage = UIImage(named: "telegrafLogo")!
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
+        
     }
 
 }
