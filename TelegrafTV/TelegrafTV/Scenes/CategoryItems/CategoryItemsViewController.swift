@@ -13,8 +13,9 @@ class CategoryItemsViewController: UIViewController {
     @IBOutlet var categoryItemsView: CategoryItemsView!
     
     var category: CategoryList?
-    var page = 1
-    
+  
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -24,7 +25,9 @@ class CategoryItemsViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print(category)
-        self.loadVideos()
+        
+       self.loadVideos(page: 1, url: category?.url)
+       
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,40 +38,69 @@ class CategoryItemsViewController: UIViewController {
 
     
     // Call API for category videos
-    private func loadVideos() {
+    func loadVideos(page: Int, url: String?){
+        let myPage = page
+        let myURl = url
         let apiManager = TFApiClient()
-        
+
         do {
-            let request = try TFRequest.init(url: (category?.url)!, page: self.page)
-            
+            let request = try TFRequest.init(url: myURl!, page: myPage)
+
             apiManager.fetch(request: request, completion: { (result) in
-                
+
                 switch result {
-                    
+
                 case .success(let data):
                     print("Success:", data)
                          let videoItems = VideoItems.parseData(data)
                          self.categoryItemsView.updateVideos(videos: videoItems)
-                    
+
+//                         self.collectionView.reloadItems(at: [forIndex])
+
+//                         var newData = data
+//                         videoItems.append(newData)
+
+//                         let pageItems = Pages.parseData(data)
+//                         self.categoryItemsView.updatePage(pages: pageItems)
+
                     break
-                    
+
                 case .errorWithDictionary(let responseObj):
                     print("Error:", responseObj)
                     break
-                    
+
                 case .error(let message):
                     print("error: \(message)")
                     break
                 }
             })
-            
+
         } catch let error {
             print("Error \(error.localizedDescription)")
         }
+      
     }
-
-    // Update view title
-    // Display recevied videos in view
+   
+    
 
     
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        switch segue.identifier {
+//        case "openHomeView":
+//            print("home section")
+//
+//        default:
+//
+//            guard let navController = segue.destination as? UINavigationController else { return }
+//            guard let categoryItemsView = navController.view as? CategoryItemsView else { return }
+//            guard let category = sender as? CategoryList else { return }
+//
+//            categoryItemsView.category = category
+//
+//        }
+//    }
+    
 }
+
+

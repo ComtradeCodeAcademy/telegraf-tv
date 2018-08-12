@@ -41,6 +41,7 @@
                     <connections>
                         <outlet property="dataSource" destination="-1" id="SgW-wl-CZ1"/>
                         <outlet property="delegate" destination="-1" id="pwH-Gb-Gg6"/>
+                        <outlet property="prefetchDataSource" destination="-1" id="G3A-UN-Rsz"/>
                     </connections>
                 </collectionView>
             </subviews>
