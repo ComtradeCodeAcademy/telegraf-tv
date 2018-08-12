@@ -27,15 +27,14 @@
 		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
 		0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B3E2102E08600D3C955 /* itemData.swift */; };
-		0EDA6B422102F4F000D3C955 /* MyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */; };
-		0EDA6B432102F4F000D3C955 /* MyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */; };
-		200F75DE2110E17F003B9650 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */; };
-		0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */; };
 		0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */; };
-		0EDA6B452103009400D3C955 /* HeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA6B442103009400D3C955 /* HeaderLayout.swift */; };
+		200F75DE2110E17F003B9650 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */; };
 		690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */; };
 		690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
+		C903004C2120430C00D852AB /* MyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90300492120430B00D852AB /* MyCollectionReusableView.swift */; };
+		C903004D2120430C00D852AB /* MyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C903004A2120430B00D852AB /* MyCollectionReusableView.xib */; };
+		C903004E2120430C00D852AB /* SectionHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C903004B2120430B00D852AB /* SectionHeaderCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,15 +81,14 @@
 		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
 		0EDA6B3E2102E08600D3C955 /* itemData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = itemData.swift; sourceTree = "<group>"; };
-		0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionReusableView.swift; sourceTree = "<group>"; };
-		0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyCollectionReusableView.xib; sourceTree = "<group>"; };
-		200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		0EDA6B402102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
-		0EDA6B442103009400D3C955 /* HeaderLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLayout.swift; sourceTree = "<group>"; };
+		200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveCollectionViewCell.swift; sourceTree = "<group>"; };
 		690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = liveCollectionViewCell.xib; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
+		C90300492120430B00D852AB /* MyCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionReusableView.swift; sourceTree = "<group>"; };
+		C903004A2120430B00D852AB /* MyCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionReusableView.xib; sourceTree = "<group>"; };
+		C903004B2120430B00D852AB /* SectionHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,8 +206,10 @@
 				0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */,
 				0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */,
 				0EDA6B3E2102E08600D3C955 /* itemData.swift */,
-				0EDA6B402102F4F000D3C955 /* MyCollectionReusableView.swift */,
-				0EDA6B412102F4F000D3C955 /* MyCollectionReusableView.xib */,
+				0EDA6B412102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib */,
+				C90300492120430B00D852AB /* MyCollectionReusableView.swift */,
+				C903004A2120430B00D852AB /* MyCollectionReusableView.xib */,
+				C903004B2120430B00D852AB /* SectionHeaderCollectionReusableView.swift */,
 			);
 			path = CategoryItems;
 			sourceTree = "<group>";
@@ -382,13 +382,14 @@
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				200F75DE2110E17F003B9650 /* MenuTableViewCell.xib in Resources */,
-				0EDA6B432102F4F000D3C955 /* MyCollectionReusableView.xib in Resources */,
+				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
 				0EDA6B432102F4F000D3C955 /* SectionHeaderCollectionReusableView.xib in Resources */,
 				690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
 				0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */,
+				C903004D2120430C00D852AB /* MyCollectionReusableView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,17 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EDA6B422102F4F000D3C955 /* MyCollectionReusableView.swift in Sources */,
-				0EDA6B422102F4F000D3C955 /* SectionHeaderCollectionReusableView.swift in Sources */,
 				690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,
 				0E01BED22101080700504180 /* MyCollectionViewCell.swift in Sources */,
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
+				C903004E2120430C00D852AB /* SectionHeaderCollectionReusableView.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
+				C903004C2120430C00D852AB /* MyCollectionReusableView.swift in Sources */,
 				0EDA6B3F2102E08600D3C955 /* itemData.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
 				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
