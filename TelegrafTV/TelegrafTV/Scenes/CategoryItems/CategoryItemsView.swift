@@ -121,7 +121,6 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
             if let headerTitle = self.categoryVideosController?.category?.name{
             headerView.headerLbl.text = headerTitle
             }
-            headerView.headerLbl.text = "HI-tech"
             headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
             headerView.headerLbl.textColor = .white
         }
