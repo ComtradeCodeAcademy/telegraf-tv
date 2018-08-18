@@ -55,10 +55,6 @@ class CategoryItemsViewController: UIViewController {
                          let videoItems = VideoItems.parseData(data)
                          self.categoryItemsView.updateVideos(videos: videoItems)
 
-//                         self.collectionView.reloadItems(at: [forIndex])
-
-//                         var newData = data
-//                         videoItems.append(newData)
 
 //                         let pageItems = Pages.parseData(data)
 //                         self.categoryItemsView.updatePage(pages: pageItems)
