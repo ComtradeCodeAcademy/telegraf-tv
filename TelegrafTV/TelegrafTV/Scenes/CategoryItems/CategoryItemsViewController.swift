@@ -20,6 +20,7 @@ class CategoryItemsViewController: UIViewController {
         super.viewDidLoad()
     
         categoryItemsView.updateUI()
+        categoryItemsView.categoryVideosController = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
