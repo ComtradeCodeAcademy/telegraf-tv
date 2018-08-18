@@ -13,7 +13,7 @@ class CategoryItemsViewController: UIViewController {
     @IBOutlet var categoryItemsView: CategoryItemsView!
     
     var category: CategoryList?
-  
+    var page = 1
 
 
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class CategoryItemsViewController: UIViewController {
         super.viewWillAppear(animated)
         print(category ?? "nothing to show")
         
-       self.loadVideos(page: 1, url: category?.url)
+       self.loadVideos()
        
     }
 
@@ -38,13 +38,13 @@ class CategoryItemsViewController: UIViewController {
 
     
     // Call API for category videos
-    func loadVideos(page: Int, url: String?){
-        let myPage = page
-        let myURl = url
+    func loadVideos(){
+       guard let url = category?.url else { return }
+        
         let apiManager = TFApiClient()
 
         do {
-            let request = try TFRequest.init(url: myURl!, page: myPage)
+            let request = try TFRequest.init(url: url, page: self.page)
 
             apiManager.fetch(request: request, completion: { (result) in
 
