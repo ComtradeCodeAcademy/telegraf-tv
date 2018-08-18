@@ -15,9 +15,10 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
    
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-
-    var videos = [VideoItem]()
+    
     var categoryVideosController: CategoryItemsViewController?
+    var videos = [VideoItem]()
+    
 
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
@@ -118,7 +119,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
              headerView.frame.size.height = 60
 
         DispatchQueue.main.async {
-            if let headerTitle = self.categoryVideosController?.category?.name{
+            if let headerTitle = self.categoryVideosController?.category?.name {
             headerView.headerLbl.text = headerTitle
             }
             headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
