@@ -16,15 +16,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
-    @IBOutlet weak var headerTitle: UILabel!
+ 
 
     var videos = [VideoItem]()
     var categoryVideosController: CategoryItemsViewController?
 
-    
-    var page = 1
-    var isPageRefreshing:Bool = false
-    
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     

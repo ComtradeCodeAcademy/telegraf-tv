@@ -18,16 +18,6 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVp-SG-A1a">
                     <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-7p-B83">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" header="YES"/>
@@ -42,9 +32,6 @@
                 <constraint firstItem="YVp-SG-A1a" firstAttribute="top" secondItem="7wu-8X-Iab" secondAttribute="top" id="qPc-wr-Yzb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="OcR-fs-QSY"/>
-            <connections>
-                <outlet property="headerLbl" destination="aU7-7p-B83" id="hLE-1b-cI9"/>
-            </connections>
         </collectionReusableView>
     </objects>
 </document>
