@@ -150,7 +150,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     }
         func updateVideos(videos: [VideoItem]) {
             print(videos)
-            self.videos = videos
+            self.videos.append(contentsOf: videos)
             self.collectionView.reloadData()
 }
     
