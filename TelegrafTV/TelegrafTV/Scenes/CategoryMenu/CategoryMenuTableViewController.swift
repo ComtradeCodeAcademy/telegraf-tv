@@ -156,8 +156,8 @@ class CategoryMenuTableViewController: UITableViewController {
         
         if let category = fetchedhResultController.object(at: indexPath) as? CategoryList {
             cell.setCategoryListCellWith(category:category)
-            let categoryItemsView = view as? CategoryItemsView
-            categoryItemsView?.updateCategoryData(category: [category])
+           
+            
         }
         
         return cell

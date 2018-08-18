@@ -24,7 +24,7 @@ class CategoryItemsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print(category)
+        print(category ?? "nothing to show")
         
        self.loadVideos(page: 1, url: category?.url)
        
