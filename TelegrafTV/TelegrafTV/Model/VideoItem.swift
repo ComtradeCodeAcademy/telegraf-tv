@@ -19,32 +19,9 @@ struct VideoItem {
      category: String?
     }
 
-
-//struct Page {
-//    var page : Int?,
-//        title : String?
-//}
-//
-//struct Pages {
-//     var data = [[String:AnyObject]]()
-//    static func parseData(_ data: [[String:AnyObject]]) -> [Page] {
-//    
-//         var pages = [Page]()
-//          var headerAndPage = Page()
-//        for item in data {
-//         headerAndPage.page = item["page"] as? Int
-//        headerAndPage.title = item["title"] as? String
-//        pages.append(headerAndPage)
-//        }
-//   return pages
-//    }
-//    
-//}
 struct VideoItems {
     var data = [[String:AnyObject]]()
-//    var videoItems = [VideoItem]()
- 
-    
+
     static func parseData(_ data: [[String:AnyObject]]) -> [VideoItem]{
         var videos = [VideoItem]()
        
