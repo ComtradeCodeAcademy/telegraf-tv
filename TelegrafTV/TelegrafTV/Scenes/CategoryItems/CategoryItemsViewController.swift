@@ -54,11 +54,6 @@ class CategoryItemsViewController: UIViewController {
                     print("Success:", data)
                          let videoItems = VideoItems.parseData(data)
                          self.categoryItemsView.updateVideos(videos: videoItems)
-
-
-//                         let pageItems = Pages.parseData(data)
-//                         self.categoryItemsView.updatePage(pages: pageItems)
-
                     break
 
                 case .errorWithDictionary(let responseObj):
@@ -76,26 +71,6 @@ class CategoryItemsViewController: UIViewController {
         }
       
     }
-   
-    
-
-    
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        switch segue.identifier {
-//        case "openHomeView":
-//            print("home section")
-//
-//        default:
-//
-//            guard let navController = segue.destination as? UINavigationController else { return }
-//            guard let categoryItemsView = navController.view as? CategoryItemsView else { return }
-//            guard let category = sender as? CategoryList else { return }
-//
-//            categoryItemsView.category = category
-//
-//        }
-//    }
     
 }
 
