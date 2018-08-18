@@ -14,8 +14,6 @@ class CategoryMenuTableViewController: UITableViewController {
     @IBOutlet var categoryTableView: UITableView!
     
  
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -182,11 +180,8 @@ class CategoryMenuTableViewController: UITableViewController {
             
             guard let navController = segue.destination as? UINavigationController else { return }
             guard let categoryItemsVC = navController.viewControllers[0] as? CategoryItemsViewController else { return }
-//            guard let categoryItemsView = view as? CategoryItemsView else { return }
             guard let category = sender as? CategoryList else { return }
-//            categoryItemsView.updateCategoryData(category: [category])
             categoryItemsVC.category = category
-//            categoryItemsView.categoryTitle = category
         }
     }
 

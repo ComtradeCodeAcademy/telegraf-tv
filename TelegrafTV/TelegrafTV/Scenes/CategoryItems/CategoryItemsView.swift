@@ -16,8 +16,6 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
 
- 
-
     var videos = [VideoItem]()
     var categoryVideosController: CategoryItemsViewController?
 
