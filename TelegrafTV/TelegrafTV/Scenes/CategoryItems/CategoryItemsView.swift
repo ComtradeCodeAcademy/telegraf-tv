@@ -103,10 +103,19 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
-
-
+    //MARK: Pagination func, display new cell from API
     
-    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        DispatchQueue.global().async {
+            let lastItem = self.videos.count - 1
+            if indexPath.row == lastItem {
+                guard let page = self.categoryVideosController?.page else { return }
+                self.categoryVideosController?.page = page + 1
+                self.categoryVideosController?.loadVideos()
+            }
+        }
+    }
+
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
