@@ -19,7 +19,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     @IBOutlet weak var headerTitle: UILabel!
 
     var videos = [VideoItem]()
-   
+    var categoryVideosController: CategoryItemsViewController?
 
     
     var page = 1
@@ -146,6 +146,4 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
             self.collectionView.reloadData()
 }
     
-
-
 }
