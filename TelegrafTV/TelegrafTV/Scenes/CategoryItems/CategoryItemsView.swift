@@ -115,13 +115,13 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
             }
         }
     }
-
+    //MARK: Reusable header
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
 
              headerView.frame.size.height = 60
-
 
         DispatchQueue.main.async {
             if let headerTitle = self.categoryVideosController?.category?.name{
@@ -130,12 +130,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
             headerView.headerLbl.text = "HI-tech"
             headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
             headerView.headerLbl.textColor = .white
-
         }
-
-
         return headerView
     }
+    //MARK: Height of reusable header
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 
 
