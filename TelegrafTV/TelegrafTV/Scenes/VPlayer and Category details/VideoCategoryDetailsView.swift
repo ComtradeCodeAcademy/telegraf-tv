@@ -57,7 +57,7 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ videoCollectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let inset = 40
+        let inset = 50
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
     
@@ -69,10 +69,11 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         
         return CGFloat (minimumInserSpacing)
     }
+    
     func collectionView(_ videoCollectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 308 , height: 308)
+        return CGSize.init(width: 250 , height: 250)
     }
 
     func collectionView(_ videoCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -87,5 +88,7 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         
         return cell
     }
+    
+    
     
 }
