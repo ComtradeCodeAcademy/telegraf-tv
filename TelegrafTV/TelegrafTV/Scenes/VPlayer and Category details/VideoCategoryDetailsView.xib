@@ -43,7 +43,9 @@
                 <constraint firstItem="ziF-DK-qim" firstAttribute="bottom" secondItem="Pmt-tb-8Ig" secondAttribute="bottom" id="Xv6-kx-JsP"/>
                 <constraint firstItem="ziF-DK-qim" firstAttribute="leading" secondItem="Pmt-tb-8Ig" secondAttribute="leading" constant="50" id="bSY-vX-ajT"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
+            <point key="canvasLocation" x="-39" y="-28"/>
         </view>
     </objects>
 </document>
