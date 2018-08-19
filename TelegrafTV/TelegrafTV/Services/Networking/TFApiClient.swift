@@ -13,7 +13,8 @@ protocol TFAPIProtocol {
 }
 
 class TFApiClient {
-   
+    
+ 
    
     func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
         guard let url = URL(string: request.url) else {
@@ -39,6 +40,13 @@ class TFApiClient {
 
             do {
                 if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
+                    if let categoryVideos = json["videos"] as? [[String: AnyObject]] {
+                        DispatchQueue.main.async {
+                            completion(.success(categoryVideos))
+                            
+                        }
+                        return
+                    }
                     guard let categoryJsonArray = json["navigation"] as? [[String: AnyObject]] else {  return completion(.error(error?.localizedDescription ?? "There are no new category to show")) }
                     DispatchQueue.main.async {
                         if httpResponse.statusCode > 299 {
@@ -63,9 +71,9 @@ class TFApiClient {
             }
             }.resume()
     }
+    
    
 }
-
 enum Result<T> {
     case success(T)
     case error(String)
