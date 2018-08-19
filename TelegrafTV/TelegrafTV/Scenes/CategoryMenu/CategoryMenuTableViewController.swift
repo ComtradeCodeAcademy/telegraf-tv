@@ -194,10 +194,10 @@ class CategoryMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.row {
         case 0:
-            return 130
+            return 75
             
         default:
-            return 130
+            return 75
         }
     }
     
