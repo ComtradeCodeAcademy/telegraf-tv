@@ -14,22 +14,16 @@ class CategoryMenuTableViewController: UITableViewController {
     @IBOutlet var categoryTableView: UITableView!
     
  
-  
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         categoryTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "menuCell")
         
         
-        
-       
-     
-       
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
         tableView.sectionIndexColor = UIColor.clear
-        
+     
         headerImage()
         
        
@@ -43,8 +37,10 @@ class CategoryMenuTableViewController: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-//         self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
-//
+        if self.categoryTableView.numberOfRows(inSection: 0) > 0 {
+            self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
+        }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,8 +63,8 @@ class CategoryMenuTableViewController: UITableViewController {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
             categoryListEntity.name = categorys ["name"] as? String
-            categoryListEntity.url = categorys ["url"] as? String
-            categoryListEntity.image = categorys ["image"] as? String
+            categoryListEntity.url =  categorys ["url"] as? String
+            categoryListEntity.image? = (categorys ["image"] as? String)!
             return categoryListEntity
         }
         return nil
@@ -122,6 +118,7 @@ class CategoryMenuTableViewController: UITableViewController {
                     self.clearData()
                     self.saveInCategotyList(array: data)
                     
+                    
                     break
                     
                 case .errorWithDictionary(let responseObj):
@@ -157,6 +154,8 @@ class CategoryMenuTableViewController: UITableViewController {
         
         if let category = fetchedhResultController.object(at: indexPath) as? CategoryList {
             cell.setCategoryListCellWith(category:category)
+           
+            
         }
         
         return cell
@@ -165,8 +164,27 @@ class CategoryMenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: self)
+        guard let category = fetchedhResultController.object(at: indexPath) as? CategoryList  else { return }
+        
+        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
     }
+    
+    //MARK - Prepare data for cateogory videos listing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "openHomeView":
+            print("home section")
+            
+        default:
+            
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let categoryItemsVC = navController.viewControllers[0] as? CategoryItemsViewController else { return }
+            guard let category = sender as? CategoryList else { return }
+            categoryItemsVC.category = category
+        }
+    }
+
     
     override func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
@@ -194,6 +212,7 @@ class CategoryMenuTableViewController: UITableViewController {
         let image: UIImage = UIImage(named: "telegrafLogo")!
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
+        
     }
 
 }

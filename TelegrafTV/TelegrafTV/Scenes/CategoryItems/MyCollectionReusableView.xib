@@ -19,10 +19,8 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVp-SG-A1a">
                     <rect key="frame" x="0.0" y="0.0" width="1920" height="120"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mali covek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aU7-7p-B83">
-                            <rect key="frame" x="0.0" y="0.0" width="400" height="120"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGD-RG-4FW">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="120"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -32,6 +30,11 @@
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" header="YES"/>
                     </accessibility>
+                    <constraints>
+                        <constraint firstItem="dGD-RG-4FW" firstAttribute="top" secondItem="YVp-SG-A1a" secondAttribute="top" id="Zdh-Kd-Bw8"/>
+                        <constraint firstItem="dGD-RG-4FW" firstAttribute="leading" secondItem="YVp-SG-A1a" secondAttribute="leading" id="oHo-B6-ueV"/>
+                        <constraint firstAttribute="bottom" secondItem="dGD-RG-4FW" secondAttribute="bottom" id="rJP-Q0-4NU"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -43,7 +46,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="OcR-fs-QSY"/>
             <connections>
-                <outlet property="headerLbl" destination="aU7-7p-B83" id="hLE-1b-cI9"/>
+                <outlet property="headerLbl" destination="dGD-RG-4FW" id="xZl-3c-6aF"/>
             </connections>
         </collectionReusableView>
     </objects>

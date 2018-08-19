@@ -10,6 +10,7 @@ import UIKit
 
 class MyCollectionReusableView: UICollectionReusableView {
    
+ 
     @IBOutlet weak var headerLbl: UILabel!
     
     override func awakeFromNib() {
@@ -17,4 +18,5 @@ class MyCollectionReusableView: UICollectionReusableView {
     
         
     }
+    
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
-enum TFApiRoutes {
+enum TFApiRoutes: String {
     case navigation
+ 
 }
