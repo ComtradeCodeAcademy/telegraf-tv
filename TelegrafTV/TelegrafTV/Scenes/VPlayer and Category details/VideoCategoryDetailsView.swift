@@ -46,6 +46,7 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         
         self.videoCategoryDetailsView.backgroundColor = .clear
         self.videoCollectionView.backgroundColor = .clear
+        
     }
     
     func numberOfSections(in videoCollectionView: UICollectionView) -> Int {
