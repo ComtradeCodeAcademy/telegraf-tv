@@ -7,7 +7,10 @@
 //
 
 import UIKit
+
 import AVFoundation
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+
         CoreDataStack.sharedInstance.applicationDocumentsDirectory()
        
         let audioSession = AVAudioSession.sharedInstance()
@@ -25,6 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         catch {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
+
+       CoreDataStack.sharedInstance.applicationDocumentsDirectory()
+
         return true
     }
 
@@ -49,9 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+
         CoreDataStack.sharedInstance.saveContext()
     }
-
 
 
 }

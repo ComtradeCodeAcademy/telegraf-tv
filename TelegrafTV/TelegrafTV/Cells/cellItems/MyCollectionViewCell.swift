@@ -11,6 +11,7 @@ import UIKit
 class MyCollectionViewCell: UICollectionViewCell {
   
     @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var cellView: UIView!
     
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
@@ -22,4 +23,15 @@ class MyCollectionViewCell: UICollectionViewCell {
         itemImage.adjustsImageWhenAncestorFocused = true
         
     }
+    
+//    func setCollectionViewCellWith(videos: VideoItem) {
+//
+//        DispatchQueue.main.async {
+//            self.dateLbl.text = videos.date
+//            self.timeLbl.text = videos.duration
+//            self.titleLbl.text = videos.title
+//            self.itemImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
+//
+//        }
+//    }
 }
