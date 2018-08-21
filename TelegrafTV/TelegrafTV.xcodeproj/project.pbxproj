@@ -21,8 +21,6 @@
 		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
 		0E9DF287212CBA1000CD35FF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9DF286212CBA1000CD35FF /* CoreDataStack.swift */; };
-		0E9DF28B212CBCD700CD35FF /* MyCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9DF289212CBCD700CD35FF /* MyCollectionReusableView.swift */; };
-		0E9DF28C212CBCD700CD35FF /* MyCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9DF28A212CBCD700CD35FF /* MyCollectionReusableView.xib */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
 		0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492720FA715700F2CCF2 /* HomeView.xib */; };
 		0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */; };
@@ -74,8 +72,6 @@
 		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
 		0E9DF286212CBA1000CD35FF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		0E9DF289212CBCD700CD35FF /* MyCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionReusableView.swift; sourceTree = "<group>"; };
-		0E9DF28A212CBCD700CD35FF /* MyCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionReusableView.xib; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0EBD492720FA715700F2CCF2 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsView.swift; sourceTree = "<group>"; };
@@ -200,8 +196,6 @@
 		0E83AF0220FA610200D9518A /* CategoryItems */ = {
 			isa = PBXGroup;
 			children = (
-				0E9DF289212CBCD700CD35FF /* MyCollectionReusableView.swift */,
-				0E9DF28A212CBCD700CD35FF /* MyCollectionReusableView.xib */,
 				0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */,
 				0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */,
 				0EBD492B20FA7AD700F2CCF2 /* CategoryItemsView.xib */,
@@ -390,7 +384,6 @@
 				B319DAFD21052A6500D5C095 /* VideoCategoryDetailsView.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
 				071AFE8320C854B400F39009 /* Main.storyboard in Resources */,
-				0E9DF28C212CBCD700CD35FF /* MyCollectionReusableView.xib in Resources */,
 				0EBD493420FA80D700F2CCF2 /* MenuTableViewCell.xib in Resources */,
 				0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */,
 			);
@@ -428,7 +421,6 @@
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
-				0E9DF28B212CBCD700CD35FF /* MyCollectionReusableView.swift in Sources */,
 				0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */,
 				0E01BED5210188D200504180 /* SplitViewController.swift in Sources */,
 				0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */,
