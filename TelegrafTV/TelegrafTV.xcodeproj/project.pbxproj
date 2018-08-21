@@ -20,6 +20,7 @@
 		0E01BED5210188D200504180 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E01BED4210188D200504180 /* SplitViewController.swift */; };
 		0E83AF0C20FA635D00D9518A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0B20FA635D00D9518A /* HomeViewController.swift */; };
 		0E83AF0E20FA66AC00D9518A /* CategoryItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */; };
+		0E9DF287212CBA1000CD35FF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9DF286212CBA1000CD35FF /* CoreDataStack.swift */; };
 		0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492520FA714800F2CCF2 /* HomeView.swift */; };
 		0EBD492820FA715700F2CCF2 /* HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBD492720FA715700F2CCF2 /* HomeView.xib */; };
 		0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */; };
@@ -70,6 +71,7 @@
 		0E01BED4210188D200504180 /* SplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		0E83AF0B20FA635D00D9518A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E83AF0D20FA66AC00D9518A /* CategoryItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsViewController.swift; sourceTree = "<group>"; };
+		0E9DF286212CBA1000CD35FF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		0EBD492520FA714800F2CCF2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0EBD492720FA715700F2CCF2 /* HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeView.xib; sourceTree = "<group>"; };
 		0EBD492920FA7A6500F2CCF2 /* CategoryItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemsView.swift; sourceTree = "<group>"; };
@@ -234,9 +236,18 @@
 		0E83AF0A20FA627A00D9518A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0E9DF288212CBA2000CD35FF /* Persistence */,
 				078A79BC20FB549D00AB43ED /* Networking */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		0E9DF288212CBA2000CD35FF /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				0E9DF286212CBA1000CD35FF /* CoreDataStack.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 		0EF832A32102ABC3004451AD /* SplitVC */ = {
@@ -406,6 +417,7 @@
 				A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */,
 				0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */,
 				B319DAF721050F7A00D5C095 /* VPlayerViewController.swift in Sources */,
+				0E9DF287212CBA1000CD35FF /* CoreDataStack.swift in Sources */,
 				071AFE7B20C854B400F39009 /* AppDelegate.swift in Sources */,
 				0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */,
 				0EBD492A20FA7A6500F2CCF2 /* CategoryItemsView.swift in Sources */,
