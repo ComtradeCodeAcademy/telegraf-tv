@@ -80,6 +80,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
             <connections>
+                <outlet property="cellView" destination="Jjf-lD-teN" id="xSo-j6-6nB"/>
                 <outlet property="dateLbl" destination="rIj-fp-qrK" id="Mrc-Cv-KkO"/>
                 <outlet property="itemImage" destination="uMk-Vv-w9l" id="x40-l7-17X"/>
                 <outlet property="timeLbl" destination="xMT-Ut-bX6" id="WJZ-eg-8Gj"/>
