@@ -90,11 +90,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
 
        let videoItem = self.videos[indexPath.row]
      
-            cell.dateLbl.text = videoItem.date
-            cell.timeLbl.text = videoItem.duration
-            cell.titleLbl.text = videoItem.title
-            cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
-        
+//            cell.dateLbl.text = videoItem.date
+//            cell.timeLbl.text = videoItem.duration
+//            cell.titleLbl.text = videoItem.title
+//            cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
+        cell.setCollectionViewCellWith(videos: videoItem)
         return cell
     }
     
