@@ -24,14 +24,14 @@ class MyCollectionViewCell: UICollectionViewCell {
         
     }
     
-//    func setCollectionViewCellWith(videos: VideoItem) {
-//
-//        DispatchQueue.main.async {
-//            self.dateLbl.text = videos.date
-//            self.timeLbl.text = videos.duration
-//            self.titleLbl.text = videos.title
-//            self.itemImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
-//
-//        }
-//    }
+    func setCollectionViewCellWith(videos: VideoItem) {
+
+        DispatchQueue.main.async {
+            self.dateLbl.text = videos.date
+            self.timeLbl.text = videos.duration
+            self.titleLbl.text = videos.title
+            self.itemImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
+
+        }
+    }
 }
