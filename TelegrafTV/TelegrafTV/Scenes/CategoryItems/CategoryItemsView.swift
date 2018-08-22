@@ -59,17 +59,20 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         return 1
     }
-
+   //MARK: Number of rows UICollectionView cell
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
  
         return self.videos.count
     }
 
-
+    //MARK: Spacing beetwene edges UICollectionView cell
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let inset = 50
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
+    //MARK: Set size and spacing UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -84,17 +87,16 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize.init(width: 308 , height: 308)
     }
-
+    
+    //MARK: Update UICollectionView cell
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
 
-       let videoItem = self.videos[indexPath.row]
+        let videoItem = self.videos[indexPath.row]
      
-//            cell.dateLbl.text = videoItem.date
-//            cell.timeLbl.text = videoItem.duration
-//            cell.titleLbl.text = videoItem.title
-//            cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
         cell.setCollectionViewCellWith(videos: videoItem)
+        
         return cell
     }
     
