@@ -174,6 +174,10 @@ class CategoryMenuTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "openHomeView":
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let homeVC = navController.viewControllers[0] as? HomeViewController else { return }
+            guard let category = sender as? CategoryList else { return }
+            homeVC.category = category
             print("home section")
             
         default:
