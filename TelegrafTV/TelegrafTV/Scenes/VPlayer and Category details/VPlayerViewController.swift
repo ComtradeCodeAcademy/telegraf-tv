@@ -12,19 +12,22 @@ import AVKit
 
 
 class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
-
+    
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
-    let controller = AVPlayerViewController()
+//    let controller = AVPlayerViewController()
     var player: AVPlayer?
+    
+    var videoItem: VideoItem?
+    @IBOutlet weak var playerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        videoCategoryDetailsView.isHidden = true
-        videoCategoryDetailsView.updateUI()
+        
+        //videoCategoryDetailsView.isHidden = true
+        //videoCategoryDetailsView.updateUI()
         player = AVPlayer()
-
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -36,41 +39,44 @@ class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-//        NotificationCenter.default.removeObserver(self)
+        //NotificationCenter.default.removeObserver(self)
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    
     @IBAction func playVideo() {
         
         
-        guard let url = URL(string: "https://cdn.telegraf.tv/2018/07/21/316162f6c4/2107bezeodhrane.m3u8") else {
+        guard let url = URL(string: (self.videoItem?.videoURL)!) else {
             return
-    }
+        }
         
         self.player = AVPlayer(url: url)
-        controller.player = player
+//        controller.player = player
+        
+        let playerLayer = AVPlayerLayer.init(player: player)
+        playerLayer.frame = self.playerView.bounds
+        self.playerView.layer.addSublayer(playerLayer)
+        
+//        NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying),name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,object: controller.player?.currentItem)
+        
+        self.player?.play()
         
         
+        //present(controller, animated: true) {
+         //   self.player?.play()
+            
+            
+            
+        //}
         
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(playerDidFinishPlaying),
-                                               name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-                                               object: controller.player?.currentItem)
-        
-            present(controller, animated: true) {
-                self.player?.play()
-        }
-                    self.controller.view.addSubview(self.videoCategoryDetailsView)
-                    self.videoCategoryDetailsView.isUserInteractionEnabled = true
-    
     }
     @objc func playerDidFinishPlaying(note: NSNotification) {
-        self.controller.dismiss(animated: true)
+//        self.controller.dismiss(animated: true)
     }
     
 }
