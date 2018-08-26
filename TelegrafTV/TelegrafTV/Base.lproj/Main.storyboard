@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14306.4" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIz-hX-y8b">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14113" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sIz-hX-y8b">
     <device id="appleTV" orientation="landscape">
         <adaptation id="light"/>
     </device>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14278.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -75,6 +75,7 @@
                     <navigationItem key="navigationItem" id="E1h-LU-PL5"/>
                     <connections>
                         <outlet property="categoryItemsView" destination="TiR-2f-VBJ" id="ILa-aD-KSX"/>
+                        <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showVideo" id="AbF-nA-1BM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWF-bo-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -93,22 +94,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEf-YP-LSw">
-                                <rect key="frame" x="830" y="497" width="260" height="86"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Play Video"/>
-                                <connections>
-                                    <action selector="playVideo:" destination="tQ5-lh-0FK" eventType="primaryActionTriggered" id="TwF-6j-WBM"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-7Y-GLz">
+                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="wEf-YP-LSw" firstAttribute="centerX" secondItem="krV-pN-zTf" secondAttribute="centerX" id="Lrx-KG-T3K"/>
-                            <constraint firstItem="wEf-YP-LSw" firstAttribute="centerY" secondItem="krV-pN-zTf" secondAttribute="centerY" id="gAN-Fq-35c"/>
+                            <constraint firstItem="7fq-fD-r3i" firstAttribute="trailing" secondItem="PCM-7Y-GLz" secondAttribute="trailing" id="2cf-cA-dyc"/>
+                            <constraint firstItem="Ose-IP-yQM" firstAttribute="top" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="6ML-mj-byC"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="7fq-fD-r3i" secondAttribute="leading" id="Swm-YJ-e31"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="LGe-Wy-csV" secondAttribute="bottom" id="hyS-sD-GbR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
                     <connections>
+                        <outlet property="playerView" destination="PCM-7Y-GLz" id="Wto-HR-2pD"/>
                         <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
@@ -183,6 +183,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fmX-Wb-1zl"/>
+        <segue reference="uvW-Kb-lMG"/>
     </inferredMetricsTieBreakers>
 </document>
