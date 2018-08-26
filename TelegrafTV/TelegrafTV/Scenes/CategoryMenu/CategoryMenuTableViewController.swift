@@ -75,6 +75,7 @@ class CategoryMenuTableViewController: UITableViewController {
         _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
         do {
             try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+            
         } catch let error {
             print(error)
         }
@@ -117,7 +118,8 @@ class CategoryMenuTableViewController: UITableViewController {
                     print("Success:", data)
                     self.clearData()
                     self.saveInCategotyList(array: data)
-                    
+                    self.categoryTableView.reloadData()
+                    self.performSegue(withIdentifier: "openHomeView", sender: nil)
                     
                     break
                     
@@ -166,7 +168,7 @@ class CategoryMenuTableViewController: UITableViewController {
         
         guard let category = fetchedhResultController.object(at: indexPath) as? CategoryList  else { return }
         
-        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
+        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self.fetchedhResultController.fetchedObjects) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
     }
     
     //MARK - Prepare data for cateogory videos listing
@@ -176,8 +178,7 @@ class CategoryMenuTableViewController: UITableViewController {
         case "openHomeView":
             guard let navController = segue.destination as? UINavigationController else { return }
             guard let homeVC = navController.viewControllers[0] as? HomeViewController else { return }
-            guard let category = sender as? CategoryList else { return }
-            homeVC.category = category
+            homeVC.categories = self.fetchedhResultController.fetchedObjects as! [CategoryList]
             print("home section")
             
         default:
