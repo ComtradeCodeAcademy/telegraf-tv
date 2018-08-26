@@ -202,12 +202,12 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     
     func headerImage() {
-        let frame = CGRectMake(0, 0, self.view.frame.size.width , 200)
+        let frame = CGRectMake(0, 0, self.view.frame.size.width , 90)
         let headerImageView = UIImageView(frame: frame)
-        let image: UIImage = UIImage(named: "telegrafLogo")!
+        let image: UIImage = UIImage(named: "telegrafLogo2")!
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
-        
+   
     }
 
 }
