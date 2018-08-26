@@ -178,9 +178,13 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func updateUI(categories: [CategoryList], categoryData: [String: [VideoItem]]) {
         self.categories = categories
         self.categoryData = categoryData
-        self.homeView.backgroundColor = .gray
+        self.homeView.backgroundColor = .clear
         self.homeCollectionView.backgroundColor = .clear
-        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraDark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = homeView.bounds
+        homeView.addSubview(blurEffectView)
+        homeView.sendSubview(toBack: blurEffectView)
         self.homeCollectionView.reloadData()
     }
     func updateVideos(videos: [VideoItem], forCategory: String) {
