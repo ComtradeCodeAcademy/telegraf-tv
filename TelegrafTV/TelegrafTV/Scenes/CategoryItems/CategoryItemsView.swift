@@ -172,7 +172,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         self.collectionView.backgroundColor = .clear
         
         //        // Blur Effect
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraDark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = categoryItemsView.bounds
         categoryItemsView.addSubview(blurEffectView)
