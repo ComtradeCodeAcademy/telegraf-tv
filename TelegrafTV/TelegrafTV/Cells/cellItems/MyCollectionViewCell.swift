@@ -34,4 +34,20 @@ class MyCollectionViewCell: UICollectionViewCell {
 
         }
     }
-}
+    
+        func configureCell(videos: VideoItem) {
+            
+            DispatchQueue.main.async {
+                
+                self.dateLbl.text = videos.date
+                self.timeLbl.text = videos.duration
+                self.titleLbl.text = videos.title
+                self.itemImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
+                
+            }
+            
+            
+        }
+        
+    }
+

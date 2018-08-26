@@ -13,41 +13,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="liveCollectionViewCell" id="Rz2-K0-ksD" customClass="liveCollectionViewCell" customModule="TelegrafTV" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="612" height="315"/>
+            <rect key="frame" x="0.0" y="0.0" width="615" height="315"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="612" height="315"/>
+                <rect key="frame" x="0.0" y="0.0" width="615" height="315"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IlB-zb-NIY">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q05-6p-iLx">
                         <rect key="frame" x="0.0" y="0.0" width="385" height="315"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="385" id="HgD-pb-usT"/>
+                            <constraint firstAttribute="width" constant="385" id="gAl-0b-Ib9"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OaX-SN-vaD">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNj-IN-otz">
                         <rect key="frame" x="445" y="0.0" width="93" height="315"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="OaX-SN-vaD" secondAttribute="bottom" id="WJZ-k1-asH"/>
-                <constraint firstItem="OaX-SN-vaD" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="adW-FD-4Xt"/>
-                <constraint firstItem="IlB-zb-NIY" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="fO5-IL-Yqs"/>
-                <constraint firstAttribute="bottom" secondItem="IlB-zb-NIY" secondAttribute="bottom" id="keY-kn-opP"/>
-                <constraint firstItem="IlB-zb-NIY" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="kxr-kf-6w0"/>
-                <constraint firstItem="OaX-SN-vaD" firstAttribute="leading" secondItem="IlB-zb-NIY" secondAttribute="trailing" constant="60" id="oEh-Ha-Otx"/>
+                <constraint firstAttribute="bottom" secondItem="q05-6p-iLx" secondAttribute="bottom" id="1Cv-Xd-ggi"/>
+                <constraint firstAttribute="bottom" secondItem="aNj-IN-otz" secondAttribute="bottom" id="A6a-CQ-kNc"/>
+                <constraint firstItem="q05-6p-iLx" firstAttribute="leading" secondItem="Rz2-K0-ksD" secondAttribute="leading" id="Q2k-dv-LSb"/>
+                <constraint firstItem="q05-6p-iLx" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="V7y-lP-pEe"/>
+                <constraint firstItem="aNj-IN-otz" firstAttribute="top" secondItem="Rz2-K0-ksD" secondAttribute="top" id="e9y-ef-W3g"/>
+                <constraint firstItem="aNj-IN-otz" firstAttribute="leading" secondItem="q05-6p-iLx" secondAttribute="trailing" constant="60" id="jyA-xn-4NW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="7PP-Ag-gPX"/>
-            <size key="customSize" width="79" height="69"/>
             <connections>
-                <outlet property="liveImage" destination="IlB-zb-NIY" id="gD3-50-6Qg"/>
-                <outlet property="liveTitle" destination="OaX-SN-vaD" id="5tK-15-0eK"/>
+                <outlet property="liveImage" destination="q05-6p-iLx" id="svq-DP-XmO"/>
+                <outlet property="liveTitle" destination="aNj-IN-otz" id="uQa-7X-I9X"/>
             </connections>
-            <point key="canvasLocation" x="83.5" y="116.5"/>
+            <point key="canvasLocation" x="68.5" y="133.5"/>
         </collectionViewCell>
     </objects>
 </document>
