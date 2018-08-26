@@ -192,14 +192,9 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 130
-            
-        default:
-            return 130
+       
+            return 75
         }
-    }
     
     func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
         
@@ -207,12 +202,12 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     
     func headerImage() {
-        let frame = CGRectMake(0, 0, self.view.frame.size.width , 200)
+        let frame = CGRectMake(0, 0, self.view.frame.size.width , 90)
         let headerImageView = UIImageView(frame: frame)
-        let image: UIImage = UIImage(named: "telegrafLogo")!
+        let image: UIImage = UIImage(named: "telegrafLogo2")!
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
-        
+   
     }
 
 }

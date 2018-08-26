@@ -30,8 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Setting category to AVAudioSessionCategoryPlayback failed.")
         }
 
-       CoreDataStack.sharedInstance.applicationDocumentsDirectory()
-
         return true
     }
 
