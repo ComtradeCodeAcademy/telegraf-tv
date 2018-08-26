@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 
+
 class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
@@ -142,8 +143,16 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     
     func updateUI() {
         
-        self.categoryItemsView.backgroundColor = .gray
+        self.categoryItemsView.backgroundColor = .clear
         self.collectionView.backgroundColor = .clear
+        
+        //        // Blur Effect
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.extraDark)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = categoryItemsView.bounds
+        categoryItemsView.addSubview(blurEffectView)
+        categoryItemsView.sendSubview(toBack: blurEffectView)
+        
         
         
     }
@@ -185,5 +194,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         })
         redLine.layer.addSublayer(gradientView)
     }
+    
+    
     
 }
