@@ -13,8 +13,12 @@ import Foundation
 class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
+
+    
+
     @IBOutlet weak var lineFix: UIView!
     @IBOutlet weak var redLine: UIView!
+
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -34,9 +38,13 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
+
+        
+
         lineFix.backgroundColor = UIColor.red
         redLine.backgroundColor = UIColor.red
         lineAimated()
+
         
     }
     override init(frame:CGRect) {
@@ -63,14 +71,20 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         return 1
     }
+
+
     //MARK: Number of rows UICollectionView cell
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.videos.count
     }
     
+
+
     //MARK: Spacing beetwene edges UICollectionView cell
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let inset = 50
@@ -92,16 +106,26 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return CGSize.init(width: 308 , height: 308)
     }
     
+
+
     //MARK: Update UICollectionView cell
     
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
         
         let videoItem = self.videos[indexPath.row]
         
+
         cell.setCollectionViewCellWith(videos: videoItem)
+
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let videoItem = self.videos[indexPath.row]
+        self.categoryVideosController?.performSegue(withIdentifier: "showVideo", sender: videoItem)
     }
     
     //MARK: Pagination func, display new cell from API
@@ -116,6 +140,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
             }
         }
     }
+    
     //MARK: Reusable header
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -161,6 +186,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         self.videos.append(contentsOf: videos)
         self.collectionView.reloadData()
     }
+
     func lineAimated ()  {
         redLine.backgroundColor = UIColor.red
         lineFix.backgroundColor = UIColor.red
