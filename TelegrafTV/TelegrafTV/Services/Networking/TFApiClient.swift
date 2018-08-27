@@ -12,7 +12,7 @@ protocol TFAPIProtocol {
     func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void)
 }
 
-class TFApiClient {
+class TFApiClient: TFAPIProtocol {
     
  
    

@@ -12,7 +12,12 @@ import Foundation
 class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     
+
     
+
+    @IBOutlet weak var lineFix: UIView!
+    @IBOutlet weak var redLine: UIView!
+
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -32,7 +37,13 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
+
         
+
+        lineFix.backgroundColor = UIColor.red
+        redLine.backgroundColor = UIColor.red
+        lineAimated()
+
         
     }
     override init(frame:CGRect) {
@@ -59,17 +70,26 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         return 1
     }
+
+
+    //MARK: Number of rows UICollectionView cell
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return self.videos.count
     }
     
+
+
+    //MARK: Spacing beetwene edges UICollectionView cell
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let inset = 50
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
+    //MARK: Set size and spacing UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -85,15 +105,19 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return CGSize.init(width: 308 , height: 308)
     }
     
+
+
+    //MARK: Update UICollectionView cell
+    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
         
         let videoItem = self.videos[indexPath.row]
         
-        cell.dateLbl.text = videoItem.date
-        cell.timeLbl.text = videoItem.duration
-        cell.titleLbl.text = videoItem.title
-        cell.itemImage.loadImageUsingCacheWithURLString(videoItem.imageURL!, placeHolder: UIImage(named: "placeholder"))
+
+        cell.setCollectionViewCellWith(videos: videoItem)
+
         
         return cell
     }
@@ -152,6 +176,40 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         print(videos)
         self.videos.append(contentsOf: videos)
         self.collectionView.reloadData()
+    }
+
+    func lineAimated ()  {
+        redLine.backgroundColor = UIColor.red
+        lineFix.backgroundColor = UIColor.red
+        lineFix.alpha = 0.6
+        redLine.alpha = 0
+        
+        let gradientView = CAGradientLayer ()
+        gradientView.colors = [UIColor.clear.cgColor, UIColor.red.cgColor, UIColor.clear.cgColor, ]
+        gradientView.locations = [0, 0.5, 1]
+        gradientView.frame = redLine.frame
+        gradientView.frame.size.width = redLine.frame.size.width
+        gradientView.frame.size.height = redLine.frame.size.height
+        gradientView.startPoint = CGPoint(x:0.0, y:0.5)
+        gradientView.endPoint = CGPoint(x:1.0, y:0.5)
+        
+        
+        gradientView.transform = CATransform3DMakeRotation(redLine.transform.b, 0, 0, 0.5)
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            
+            self.redLine.alpha = 1
+            
+        }, completion: {(Completed: Bool) -> Void  in
+            
+            UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: {
+                self.redLine.alpha = 0
+            }, completion: { (Completed: Bool) -> Void  in
+                self.lineAimated()
+            })
+            
+        })
+        redLine.layer.addSublayer(gradientView)
     }
     
 }
