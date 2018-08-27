@@ -15,7 +15,8 @@ class VPlayerViewController: UIViewController {
     
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
-//    let controller = AVPlayerViewController()
+    @IBOutlet weak var progressBar: UIProgressView!
+    //    let controller = AVPlayerViewController()
     
     var player: AVPlayer?
     var playerStatus = false
@@ -27,6 +28,9 @@ class VPlayerViewController: UIViewController {
         
         //videoCategoryDetailsView.isHidden = true
         //videoCategoryDetailsView.updateUI()
+        progressBar.isHidden = true
+        progressBar.layer.cornerRadius = 5.0
+        progressBar.clipsToBounds = true
         player = AVPlayer()
         initializePlayButtonRecognition()
     }
@@ -49,10 +53,6 @@ class VPlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        print(presses)
-        
-    }
     @IBAction func playVideo() {
         guard let videoURL = videoItem?.videoURL, let url = URL(string: videoURL) else {
             return
@@ -108,11 +108,15 @@ class VPlayerViewController: UIViewController {
         if playerStatus {
             self.player?.pause()
             self.playerStatus = false
+            self.playerView.addSubview(progressBar)
+            progressBar.isHidden = false
+            
             return
         }
         
             self.player?.play()
             self.playerStatus = true
+            progressBar.isHidden = true
 //        if self.player?.currentItem?.status {
 //            player.pause() {
 //            } else do {

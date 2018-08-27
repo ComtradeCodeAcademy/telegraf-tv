@@ -96,7 +96,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-7Y-GLz">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="7rF-sD-a6e">
+                                        <rect key="frame" x="98" y="871" width="1724" height="5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="c40-5V-kSt"/>
+                                        </constraints>
+                                        <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="trackTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </progressView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7rF-sD-a6e" secondAttribute="trailing" constant="98" id="CM2-xG-Fzt"/>
+                                    <constraint firstAttribute="bottom" secondItem="7rF-sD-a6e" secondAttribute="bottom" constant="204" id="Wkf-VG-2x9"/>
+                                    <constraint firstItem="7rF-sD-a6e" firstAttribute="leading" secondItem="PCM-7Y-GLz" secondAttribute="leading" constant="98" id="ovM-xK-BtR"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
@@ -109,6 +124,7 @@
                     </view>
                     <connections>
                         <outlet property="playerView" destination="PCM-7Y-GLz" id="Wto-HR-2pD"/>
+                        <outlet property="progressBar" destination="7rF-sD-a6e" id="k7X-zM-ALH"/>
                         <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
