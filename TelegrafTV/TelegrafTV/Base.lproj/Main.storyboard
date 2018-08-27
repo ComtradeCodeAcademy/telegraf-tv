@@ -95,15 +95,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-7Y-GLz">
-                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7fq-fD-r3i" firstAttribute="trailing" secondItem="PCM-7Y-GLz" secondAttribute="trailing" id="2cf-cA-dyc"/>
-                            <constraint firstItem="Ose-IP-yQM" firstAttribute="top" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="6ML-mj-byC"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="7fq-fD-r3i" secondAttribute="leading" id="Swm-YJ-e31"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="LGe-Wy-csV" secondAttribute="bottom" id="hyS-sD-GbR"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="krV-pN-zTf" secondAttribute="leading" id="Gy5-E2-1ll"/>
+                            <constraint firstAttribute="bottom" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="YQF-gf-TQj"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="krV-pN-zTf" secondAttribute="top" id="app-0G-ymq"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="trailing" secondItem="krV-pN-zTf" secondAttribute="trailing" id="yUL-6h-Tp3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
