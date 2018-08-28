@@ -12,35 +12,29 @@ import AVKit
 
 
 class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
-    
+    @IBOutlet weak var playerView: UIView!
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
 //    let controller = AVPlayerViewController()
     var player: AVPlayer?
-    
     var videoItem: VideoItem?
-    @IBOutlet weak var playerView: UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //videoCategoryDetailsView.isHidden = true
-        //videoCategoryDetailsView.updateUI()
+        // videoCategoryDetailsView.isHidden = true
+        // videoCategoryDetailsView.updateUI()
         player = AVPlayer()
-        
-    }
+        }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         playVideo()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        //NotificationCenter.default.removeObserver(self)
-        
+        // NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,8 +43,6 @@ class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
     }
     
     @IBAction func playVideo() {
-        
-        
         guard let url = URL(string: (self.videoItem?.videoURL)!) else {
             return
         }
@@ -67,14 +59,15 @@ class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
         self.player?.play()
         
         
-        //present(controller, animated: true) {
+        // present(controller, animated: true) {
          //   self.player?.play()
             
             
             
-        //}
+        // }
         
     }
+    
     @objc func playerDidFinishPlaying(note: NSNotification) {
 //        self.controller.dismiss(animated: true)
     }

@@ -19,6 +19,7 @@ class liveCollectionViewCell: UICollectionViewCell {
      liveImage.adjustsImageWhenAncestorFocused = true
     }
     
+
 //    func configureCell(videos: VideoItem) {
 //        DispatchQueue.main.async {
 //            self.liveImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))

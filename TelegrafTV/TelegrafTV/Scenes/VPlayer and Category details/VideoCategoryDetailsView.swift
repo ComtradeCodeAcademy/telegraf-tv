@@ -10,7 +10,6 @@ import UIKit
 
 class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
     @IBOutlet var videoCategoryDetailsView: UIView!
     @IBOutlet weak var videoCollectionView: UICollectionView!
     
@@ -22,7 +21,7 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         videoCollectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         videoCollectionView.isHidden = true
     }
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -33,17 +32,14 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         commonInit()
     }
     
-    
     func commonInit() {
         Bundle.main.loadNibNamed("VideoCategoryDetailsView", owner: self, options: nil)
         addSubview(videoCategoryDetailsView)
         videoCategoryDetailsView.frame = self.bounds
         videoCategoryDetailsView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        
     }
     
     func updateUI() {
-        
         self.videoCategoryDetailsView.backgroundColor = .clear
         self.videoCollectionView.backgroundColor = .clear
     }
@@ -73,22 +69,18 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ videoCollectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 250 , height: 250)
+        return CGSize.init(width: 250, height: 250)
     }
-
+    
     func collectionView(_ videoCollectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = videoCollectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
+        let cell = videoCollectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as? MyCollectionViewCell
         //        let category = self.categorys[indexPath.row]
         
-        cell.dateLbl.text = "28.Februar.2018"
-        cell.timeLbl.text = "5:40"
-        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
-        
-        cell.itemImage.image = UIImage.init(named: "img1")
-        
-        return cell
+        cell?.dateLbl.text = "28.Februar.2018"
+        cell?.timeLbl.text = "5:40"
+        cell?.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
+        cell?.itemImage.image = UIImage.init(named: "img1")
+        return cell!
     }
-    
-    
     
 }
