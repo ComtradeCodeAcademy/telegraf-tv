@@ -19,10 +19,16 @@ class liveCollectionViewCell: UICollectionViewCell {
      liveImage.adjustsImageWhenAncestorFocused = true
     }
     
-    func configureCell() {
-        liveImage.image = UIImage.init(named: "img3")
-        liveTitle.text = "UŽIVO PRENOS UTAKMICE"
-        liveTitle.numberOfLines = 1
-    }
-    
+
+//    func configureCell(videos: VideoItem) {
+//        DispatchQueue.main.async {
+//            self.liveImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
+//            self.liveTitle.text = videos.title
+//            self.liveTitle.numberOfLines = 1
+//        }
+      func configureCell() {
+        self.liveImage.image = UIImage(named: "img1")
+        self.liveTitle.text = "PRENOS UTAKMICE"
+        self.liveTitle.numberOfLines = 1
+}
 }

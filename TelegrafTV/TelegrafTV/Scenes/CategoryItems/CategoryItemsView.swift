@@ -95,8 +95,10 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as? MyCollectionViewCell
         let videoItem = self.videos[indexPath.row]
+
         cell?.setCollectionViewCellWith(videos: videoItem)
         return cell!
+
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

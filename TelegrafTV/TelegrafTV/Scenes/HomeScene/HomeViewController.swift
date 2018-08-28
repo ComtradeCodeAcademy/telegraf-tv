@@ -22,6 +22,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView.categoryVideosController = self
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,7 +30,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
         for category in self.categories {
             print(category)
-            if let videosForCategory = categoryData[(category.name)!] as? [VideoItem] {
+            if categoryData[(category.name)!] != nil {
                 
             }else {
                 categoryData[(category.name)!] = [VideoItem]()
@@ -64,6 +65,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
                     print("Success:", data)
                     let videoItems = VideoItems.parseData(data)
                     self.categoryData[forCategory] = videoItems
+                    self.homeView.homeVideos = videoItems
                     self.homeView.updateUI(categories: self.categories, categoryData: self.categoryData)
                     break
 
