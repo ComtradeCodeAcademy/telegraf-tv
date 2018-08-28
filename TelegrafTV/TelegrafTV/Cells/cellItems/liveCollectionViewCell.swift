@@ -19,9 +19,9 @@ class liveCollectionViewCell: UICollectionViewCell {
      liveImage.adjustsImageWhenAncestorFocused = true
     }
     
-    func configureCell() {
-        liveImage.image = UIImage.init(named:"img3")
-        liveTitle.text = "UŽIVO PRENOS UTAKMICE"
+    func configureCell(videos: VideoItem) {
+        liveImage.loadImageUsingCacheWithURLString(videos.imageURL!, placeHolder: UIImage(named: "placeholder"))
+        liveTitle.text = videos.title
         liveTitle.numberOfLines = 1
     }
 }
