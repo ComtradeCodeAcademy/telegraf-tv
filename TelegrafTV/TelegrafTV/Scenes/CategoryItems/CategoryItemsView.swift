@@ -115,11 +115,9 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
         
         let videoItem = self.videos[indexPath.row]
-        
-
+    
         cell.setCollectionViewCellWith(videos: videoItem)
 
-        
         return cell
     }
     

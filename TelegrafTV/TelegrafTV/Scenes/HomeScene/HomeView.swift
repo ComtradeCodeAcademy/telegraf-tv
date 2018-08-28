@@ -11,18 +11,16 @@ import Foundation
 
 class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
-    var categories = [CategoryList?]()
-    //["UŽIVO", "HI-TECH","JETSET", "KUHINJA", "PREPORUČUJEMO", "SPORT", "VESTI", "ZANIMLJIVOSTI",  "ŽIVOT&STIL"]
+    @IBOutlet var homeView: UIView!
+    @IBOutlet weak var homeCollectionView: UICollectionView!
+    
     let liveCellID: String = "liveCollectionViewCell"
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
-    
-    @IBOutlet var homeView: UIView!
-    @IBOutlet weak var homeCollectionView: UICollectionView!
-    
+    var categories = [CategoryList?]()
     var categoryVideosController: HomeViewController?
-    var homeVideos = [VideoItem]()
+    var homeVideos = [VideoItem?]()
     var categoryData = [String: [VideoItem]]()
     
     // MARK: Register UI CV item cell and SectionHeader
@@ -69,7 +67,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
             
         default:
             let category = self.categories[section]
-            if let categoryVideos = self.categoryData[(category?.name)!] as? [VideoItem] {
+            if let categoryVideos = self.categoryData[(category?.name)!] {
                 if categoryVideos.count > 0 {
                     if categoryVideos.count >= 3 {
                     return 3
@@ -131,21 +129,11 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
             
             let category = self.categories[indexPath.section]
-            if let videoItems = categoryData[(category?.name)!] as? [VideoItem] {
+            if let videoItems = categoryData[(category?.name)!] {
                 let videoItem = videoItems[indexPath.row]
                 cell.setCollectionViewCellWith(videos: videoItem)
             }
-//            let videoItem = self.homeVideos[indexPath.row]
-//
-//            cell.setCollectionViewCellWith(videos: videoItem)
-            
-            
-//            cell.configureCell
-//                        cell.dateLbl.text = "date"
-//                        cell.timeLbl.text = "5:40"
-//                        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
-//
-//                        cell.itemImage.image = UIImage.init(named: "img1")
+
             return cell
         }
     }
@@ -191,7 +179,14 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         print(videos)
 //        self.homeVideos.append(contentsOf: videos)
 //        self.homeCollectionView.reloadData()
-        
     }
-}
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
 
+        if let videoItems = homeVideos as? [VideoItem] {
+            let videoItem = videoItems[indexPath.row]
+            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
+        }
+    }
+
+}
