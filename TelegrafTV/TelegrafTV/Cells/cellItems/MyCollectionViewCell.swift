@@ -26,7 +26,7 @@ class MyCollectionViewCell: UICollectionViewCell {
     
     func setCollectionViewCellWith(videos: VideoItem) {
 
-        DispatchQueue.global().async
+        DispatchQueue.main.async
             {
             self.dateLbl.text = videos.date
             self.timeLbl.text = videos.duration

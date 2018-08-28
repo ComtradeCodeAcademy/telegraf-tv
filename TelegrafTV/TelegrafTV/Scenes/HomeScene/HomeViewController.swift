@@ -13,7 +13,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     @IBOutlet var homeView: HomeView!
     
-    
+
     var categories = [CategoryList]()
     var categoryData = [String: [VideoItem]]()
     var page = 1
@@ -81,8 +81,17 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
             print("Error \(error.localizedDescription)")
         }
         
+        // MARK: Send data from HomeVC to VideoPlayer
+        
+        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "showHomeVideo" {
+                let destinationVC = segue.destination as! VPlayerViewController
+                if let videoItem = sender as? VideoItem {
+                    destinationVC.videoItem = videoItem
+                }
+            }
     }
 }
 
-
+}
 

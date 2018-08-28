@@ -27,6 +27,7 @@
                     <navigationItem key="navigationItem" id="eCc-eo-Jfi"/>
                     <connections>
                         <outlet property="homeView" destination="AlJ-6v-eba" id="qxd-7G-FoO"/>
+                        <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showHomeVideo" id="rL1-Ny-9nl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-M9-7d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -184,5 +185,6 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="uvW-Kb-lMG"/>
+        <segue reference="rL1-Ny-9nl"/>
     </inferredMetricsTieBreakers>
 </document>
