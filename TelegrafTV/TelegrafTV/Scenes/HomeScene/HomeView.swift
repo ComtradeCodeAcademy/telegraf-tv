@@ -185,12 +185,12 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
 
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let videoItems = homeVideos as? [VideoItem] {
-            let videoItem = videoItems[indexPath.row]
-            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
-        }
-        
-    }
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        if let videoItems = homeVideos as? [VideoItem] {
+//            let videoItem = videoItems[indexPath.row]
+//            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
+//        }
+//        
+//    }
     
 }
