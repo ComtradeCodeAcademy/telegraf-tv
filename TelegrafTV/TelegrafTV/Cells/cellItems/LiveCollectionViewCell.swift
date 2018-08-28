@@ -8,7 +8,7 @@
 
 import UIKit
 
-class liveCollectionViewCell: UICollectionViewCell {
+class LiveCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var liveImage: UIImageView!
     @IBOutlet weak var liveTitle: UILabel!

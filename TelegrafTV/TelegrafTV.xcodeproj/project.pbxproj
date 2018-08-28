@@ -32,8 +32,8 @@
 		0EBD493320FA80D700F2CCF2 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */; };
 		0ED14C2020FA6A47002368E8 /* CategoryMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */; };
 		200F75DE2110E17F003B9650 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */; };
-		690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */; };
-		690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */; };
+		690B8E1121077DB100F41C57 /* LiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B8E0F21077DB100F41C57 /* LiveCollectionViewCell.swift */; };
+		690B8E1221077DB100F41C57 /* LiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 690B8E1021077DB100F41C57 /* LiveCollectionViewCell.xib */; };
 		A69680EF20FB53BB00F13965 /* TFApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69680EE20FB53BB00F13965 /* TFApiClient.swift */; };
 		B319DAF721050F7A00D5C095 /* VPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319DAF621050F7A00D5C095 /* VPlayerViewController.swift */; };
 		B319DAF92105232900D5C095 /* VideoCategoryDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319DAF82105232900D5C095 /* VideoCategoryDetailsView.swift */; };
@@ -91,8 +91,8 @@
 		0EBD493120FA80D700F2CCF2 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		0ED14C1F20FA6A47002368E8 /* CategoryMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMenuTableViewController.swift; sourceTree = "<group>"; };
 		200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
-		690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = liveCollectionViewCell.swift; sourceTree = "<group>"; };
-		690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = liveCollectionViewCell.xib; sourceTree = "<group>"; };
+		690B8E0F21077DB100F41C57 /* LiveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		690B8E1021077DB100F41C57 /* LiveCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCollectionViewCell.xib; sourceTree = "<group>"; };
 		A69680EE20FB53BB00F13965 /* TFApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TFApiClient.swift; sourceTree = "<group>"; };
 		B319DAF621050F7A00D5C095 /* VPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPlayerViewController.swift; sourceTree = "<group>"; };
 		B319DAF82105232900D5C095 /* VideoCategoryDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCategoryDetailsView.swift; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 				0E01BED02101080700504180 /* MyCollectionViewCell.swift */,
 				0E01BED12101080700504180 /* MyCollectionViewCell.xib */,
 				200F75DD2110E17F003B9650 /* MenuTableViewCell.xib */,
-				690B8E0F21077DB100F41C57 /* liveCollectionViewCell.swift */,
-				690B8E1021077DB100F41C57 /* liveCollectionViewCell.xib */,
+				690B8E0F21077DB100F41C57 /* LiveCollectionViewCell.swift */,
+				690B8E1021077DB100F41C57 /* LiveCollectionViewCell.xib */,
 			);
 			path = cellItems;
 			sourceTree = "<group>";
@@ -422,7 +422,7 @@
 			files = (
 				071AFE8520C854B600F39009 /* Assets.xcassets in Resources */,
 				200F75DE2110E17F003B9650 /* MenuTableViewCell.xib in Resources */,
-				690B8E1221077DB100F41C57 /* liveCollectionViewCell.xib in Resources */,
+				690B8E1221077DB100F41C57 /* LiveCollectionViewCell.xib in Resources */,
 				0EBD492C20FA7AD700F2CCF2 /* CategoryItemsView.xib in Resources */,
 				B319DAFD21052A6500D5C095 /* VideoCategoryDetailsView.xib in Resources */,
 				0E01BED32101080700504180 /* MyCollectionViewCell.xib in Resources */,
@@ -470,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				690B8E1121077DB100F41C57 /* liveCollectionViewCell.swift in Sources */,
+				690B8E1121077DB100F41C57 /* LiveCollectionViewCell.swift in Sources */,
 				0EBD492620FA714800F2CCF2 /* HomeView.swift in Sources */,
 				0EA30BA72113A7D600EC3325 /* CategoryList+CoreDataClass.swift in Sources */,
 				071AFE8020C854B400F39009 /* TelegrafTV.xcdatamodeld in Sources */,

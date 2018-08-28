@@ -14,7 +14,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
 
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var homeCollectionView: UICollectionView!
-    let liveCellID: String = "liveCollectionViewCell"
+    let liveCellID: String = "LiveCollectionViewCell"
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
@@ -120,15 +120,15 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "liveCollectionViewCell", for: indexPath) as! liveCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiveCollectionViewCell", for: indexPath) as? LiveCollectionViewCell
 //            let category = self.categories[indexPath.section]
 //            if let videoItems = categoryData[(category?.name)!] {
 //                let videoItem = videoItems[indexPath.row]
 //                cell.configureCell(videos: videoItem)
 //            }
            
-            cell.configureCell()
-            return  cell
+            cell?.configureCell()
+            return  cell!
         default:
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as? MyCollectionViewCell
@@ -138,7 +138,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
                 let videoItem = videoItems[indexPath.row]
                 cell?.setCollectionViewCellWith(videos: videoItem)
             }
-            return cell
+            return cell!
         }
     }
     

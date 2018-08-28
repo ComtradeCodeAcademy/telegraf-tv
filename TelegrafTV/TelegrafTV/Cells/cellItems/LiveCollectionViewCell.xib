@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="liveCollectionViewCell" id="Rz2-K0-ksD" customClass="liveCollectionViewCell" customModule="TelegrafTV" customModuleProvider="target">
+        <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LiveCollectionViewCell" id="Rz2-K0-ksD" customClass="LiveCollectionViewCell" customModule="TelegrafTV" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="612" height="315"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
