@@ -16,7 +16,8 @@ class VPlayerViewController: UIViewController {
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
     @IBOutlet weak var progressBar: UIProgressView!
-    //    let controller = AVPlayerViewController()
+    
+    @IBOutlet weak var timeLabel: UILabel!
     
     var player: AVPlayer?
     var playerStatus = false
@@ -33,6 +34,7 @@ class VPlayerViewController: UIViewController {
         progressBar.isHidden = false
         progressBar.layer.cornerRadius = 5.0
         progressBar.clipsToBounds = true
+    
         player = AVPlayer()
         initializePlayButtonRecognition()
     }
@@ -63,9 +65,6 @@ class VPlayerViewController: UIViewController {
         playerItem = AVPlayerItem.init(url: url)
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
-        //        self.player = AVPlayer(url: url)
-        //        controller.player = player
-        
         
         playerItem.addObserver(self, forKeyPath: "status", options: [], context: nil)
         self.player?.replaceCurrentItem(with: playerItem)
@@ -76,13 +75,11 @@ class VPlayerViewController: UIViewController {
         
         self.playerView.layer.addSublayer(playerLayer)
         self.playerView.addSubview(progressBar)
+        self.playerView.addSubview(timeLabel)
         
         self.player?.play()
         self.playerStatus = true
-        
-        //present(controller, animated: true) {
-        //   self.player?.play()
-        //}
+        //videoCategoryDetailsView.isUserInteractionEnabled = true
         
     }
     
@@ -111,7 +108,11 @@ class VPlayerViewController: UIViewController {
                 player?.addPeriodicTimeObserver(forInterval: interval, queue: mainQueue, using: { (time) in
                     let duration = self.playerItem.duration
                     let position = time.seconds / duration.seconds
+                    let seconds = CMTimeGetSeconds(time)
+                    let secondsString = String(format: "%02d", Int(seconds) % 60)
+                    let minutesString = String(format: "%02d", Int(seconds / 60))
                     self.progressBar.progress = Float(position)
+                    self.timeLabel.text = "\(minutesString):\(secondsString)"
                 })
             }
         }
