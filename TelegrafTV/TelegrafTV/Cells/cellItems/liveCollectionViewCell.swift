@@ -20,8 +20,9 @@ class liveCollectionViewCell: UICollectionViewCell {
     }
     
     func configureCell() {
-        liveImage.image = UIImage.init(named:"img3")
+        liveImage.image = UIImage.init(named: "img3")
         liveTitle.text = "UŽIVO PRENOS UTAKMICE"
         liveTitle.numberOfLines = 1
     }
+    
 }

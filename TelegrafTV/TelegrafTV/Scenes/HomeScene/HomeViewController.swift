@@ -31,7 +31,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
             print(category)
             if let videosForCategory = categoryData[(category.name)!] as? [VideoItem] {
                 
-            }else{
+            }else {
                 categoryData[(category.name)!] = [VideoItem]()
                 self.loadVideos(forURL: category.url!, forCategory: category.name!)
             }
@@ -49,7 +49,7 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
     // Call API for category videos
     
-    func loadVideos(forURL: String, forCategory: String){
+    func loadVideos(forURL: String, forCategory: String) {
 
         let apiManager = TFApiClient()
 
@@ -85,13 +85,13 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
         func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if segue.identifier == "showHomeVideo" {
-                let destinationVC = segue.destination as! VPlayerViewController
+                let destinationVC = segue.destination as? VPlayerViewController
                 if let videoItem = sender as? VideoItem {
-                    destinationVC.videoItem = videoItem
+                    destinationVC?.videoItem = videoItem
                 }
             }
     }
+        
 }
 
 }
-

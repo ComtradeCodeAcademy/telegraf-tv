@@ -15,10 +15,8 @@ class CategoryItemsViewController: UIViewController {
     var category: CategoryList?
     var page = 1
 
-
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
-    
         categoryItemsView.updateUI()
         categoryItemsView.categoryVideosController = self
     }
@@ -28,18 +26,15 @@ class CategoryItemsViewController: UIViewController {
         print(category ?? "nothing to show")
         
        self.loadVideos()
-       
-    }
+       }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // Call API for category videos
-    func loadVideos(){
+    func loadVideos() {
        guard let url = category?.url else { return }
         
         let apiManager = TFApiClient()
@@ -75,12 +70,11 @@ class CategoryItemsViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showVideo" {
-            let destinationVC = segue.destination as! VPlayerViewController
+            let destinationVC = segue.destination as? VPlayerViewController
             if let videoItem = sender as? VideoItem {
-                destinationVC.videoItem = videoItem
+                destinationVC?.videoItem = videoItem
             }
         }
     }
+    
 }
-
-

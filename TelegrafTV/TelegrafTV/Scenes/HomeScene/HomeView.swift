@@ -9,10 +9,10 @@
 import UIKit
 import Foundation
 
-class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var categories = [CategoryList?]()
-    //["UŽIVO", "HI-TECH","JETSET", "KUHINJA", "PREPORUČUJEMO", "SPORT", "VESTI", "ZANIMLJIVOSTI",  "ŽIVOT&STIL"]
+    // ["UŽIVO", "HI-TECH","JETSET", "KUHINJA", "PREPORUČUJEMO", "SPORT", "VESTI", "ZANIMLJIVOSTI",  "ŽIVOT&STIL"]
     let liveCellID: String = "liveCollectionViewCell"
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
@@ -72,10 +72,10 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
             if let categoryVideos = self.categoryData[(category?.name)!] as? [VideoItem] {
                 if categoryVideos.count > 0 {
                     if categoryVideos.count >= 3 {
-                    return 3
+                        return 3
                     }
                 }
-                    return categoryVideos.count
+                return categoryVideos.count
             }
             
             return 0
@@ -87,7 +87,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
             let lastItem = self.homeVideos.count
             if indexPath.row == lastItem {
                 
-//                self.categoryVideosController?.loadVideos()
+                //                self.categoryVideosController?.loadVideos()
             }
         }
     }
@@ -114,7 +114,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         case 0:
             return CGSize.init(width: 600, height: 350)
         default:
-            return CGSize.init(width: 308 , height: 308)
+            return CGSize.init(width: 308, height: 308)
             
         }
     }
@@ -122,31 +122,31 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "liveCollectionViewCell", for: indexPath) as! liveCollectionViewCell
-            cell.configureCell()
-            return  cell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "liveCollectionViewCell", for: indexPath) as? liveCollectionViewCell
+            cell?.configureCell()
+            return  cell!
             
         default:
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as? MyCollectionViewCell
             
             let category = self.categories[indexPath.section]
             if let videoItems = categoryData[(category?.name)!] as? [VideoItem] {
                 let videoItem = videoItems[indexPath.row]
-                cell.setCollectionViewCellWith(videos: videoItem)
+                cell?.setCollectionViewCellWith(videos: videoItem)
             }
-//            let videoItem = self.homeVideos[indexPath.row]
-//
-//            cell.setCollectionViewCellWith(videos: videoItem)
+            //            let videoItem = self.homeVideos[indexPath.row]
+            //
+            //            cell.setCollectionViewCellWith(videos: videoItem)
             
             
-//            cell.configureCell
-//                        cell.dateLbl.text = "date"
-//                        cell.timeLbl.text = "5:40"
-//                        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
-//
-//                        cell.itemImage.image = UIImage.init(named: "img1")
-            return cell
+            //            cell.configureCell
+            //                        cell.dateLbl.text = "date"
+            //                        cell.timeLbl.text = "5:40"
+            //                        cell.titleLbl.text = "NOLE DRHTAVIM GLASOM pred srpskim novinarima rekao ono ČEGA SE SVI PLAŠE: Ne mogu više ovako, od danas do sutra!"
+            //
+            //                        cell.itemImage.image = UIImage.init(named: "img1")
+            return cell!
         }
     }
     
@@ -155,20 +155,20 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
+        let sectionHeaderView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as? MyCollectionReusableView
         
         let category = self.categories[indexPath.section]
         
         print(categoryData)
-    
-        sectionHeaderView.headerLbl.text = "test"
-        sectionHeaderView.frame.size.height = 60
-//        sectionHeaderView.headerLbl.text = self.categories[indexPath.section]
-        sectionHeaderView.headerLbl.text = category?.name
-        sectionHeaderView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
-        sectionHeaderView.headerLbl.textColor = .white
         
-        return sectionHeaderView
+        sectionHeaderView?.headerLbl.text = "test"
+        sectionHeaderView?.frame.size.height = 60
+        //        sectionHeaderView.headerLbl.text = self.categories[indexPath.section]
+        sectionHeaderView?.headerLbl.text = category?.name
+        sectionHeaderView?.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
+        sectionHeaderView?.headerLbl.textColor = .white
+        
+        return sectionHeaderView!
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
@@ -187,11 +187,12 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         homeView.sendSubview(toBack: blurEffectView)
         self.homeCollectionView.reloadData()
     }
+    
     func updateVideos(videos: [VideoItem], forCategory: String) {
         print(videos)
-//        self.homeVideos.append(contentsOf: videos)
-//        self.homeCollectionView.reloadData()
+        //        self.homeVideos.append(contentsOf: videos)
+        //        self.homeCollectionView.reloadData()
         
     }
+    
 }
-

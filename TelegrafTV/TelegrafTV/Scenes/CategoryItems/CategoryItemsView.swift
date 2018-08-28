@@ -12,25 +12,18 @@ import Foundation
 
 class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    
-    
-    
-    
     @IBOutlet weak var lineFix: UIView!
     @IBOutlet weak var redLine: UIView!
-    
     @IBOutlet var categoryItemsView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var categoryVideosController: CategoryItemsViewController?
     var videos = [VideoItem]()
-    
-    
     let MyCollectionViewCellId: String = "MyCollectionViewCell"
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
+    // MARK: Registar UI CV item cell and SectionHeader
     
-    //MARK: Registar UI CV item cell and SectionHeader
     override func awakeFromNib() {
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
@@ -38,16 +31,12 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         collectionView.register(nibHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: MyColectionViewHeaderId)
-        
-        
-        
         lineFix.backgroundColor = UIColor.red
         redLine.backgroundColor = UIColor.red
         lineAimated()
-        
-        
     }
-    override init(frame:CGRect) {
+    
+    override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
         
@@ -68,29 +57,23 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
         return 1
     }
     
-    
-    //MARK: Number of rows UICollectionView cell
-    
+    // MARK: Number of rows UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return self.videos.count
     }
     
-    
-    
-    //MARK: Spacing beetwene edges UICollectionView cell
-    
+    // : Spacing beetwene edges UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let inset = 50
         return UIEdgeInsetsMake(CGFloat(inset), CGFloat(inset), CGFloat(inset), CGFloat(inset))
     }
-    //MARK: Set size and spacing UICollectionView cell
+    
+    // MARK: Set size and spacing UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
@@ -100,27 +83,20 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         
         return CGFloat (minimumInserSpacing)
     }
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 308 , height: 308)
+        return CGSize.init(width: 308, height: 308)
     }
     
-    
-    
-    //MARK: Update UICollectionView cell
-    
+    // MARK: Update UICollectionView cell
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as! MyCollectionViewCell
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MyCollectionViewCellId, for: indexPath) as? MyCollectionViewCell
         let videoItem = self.videos[indexPath.row]
-        
-        
-        cell.setCollectionViewCellWith(videos: videoItem)
-        
-        
-        return cell
+        cell?.setCollectionViewCellWith(videos: videoItem)
+        return cell!
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -128,7 +104,7 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         self.categoryVideosController?.performSegue(withIdentifier: "showVideo", sender: videoItem)
     }
     
-    //MARK: Pagination func, display new cell from API
+    // MARK: Pagination func, display new cell from API
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         DispatchQueue.global().async {
@@ -141,53 +117,47 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         }
     }
     
-    //MARK: Reusable header
+    // MARK: Reusable header
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as! MyCollectionReusableView
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "MyCollectionReusableView", for: indexPath as IndexPath) as? MyCollectionReusableView
         
-        headerView.frame.size.height = 60
-        
+        headerView?.frame.size.height = 60
         DispatchQueue.main.async {
             if let headerTitle = self.categoryVideosController?.category?.name {
-                headerView.headerLbl.text = headerTitle
+                headerView?.headerLbl.text = headerTitle
             }
-            headerView.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
-            headerView.headerLbl.textColor = .white
+            headerView?.headerLbl.font = UIFont(name: "SFFrancisco-Bold", size: 60)
+            headerView?.headerLbl.textColor = .white
         }
-        return headerView
+        return headerView!
     }
-    //MARK: Height of reusable header
+    // MARK: Height of reusable header
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        
-        
-        return CGSize.init(width: 120 , height: 60)
+        return CGSize.init(width: 120, height: 60)
     }
     
     func updateUI() {
         
         self.categoryItemsView.backgroundColor = .clear
         self.collectionView.backgroundColor = .clear
-        
         //        // Blur Effect
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = categoryItemsView.bounds
         categoryItemsView.addSubview(blurEffectView)
         categoryItemsView.sendSubview(toBack: blurEffectView)
-        
-        
-        
-    }
+        }
+    
     func updateVideos(videos: [VideoItem]) {
         print(videos)
         self.videos.append(contentsOf: videos)
         self.collectionView.reloadData()
     }
     
-    func lineAimated ()  {
+    func lineAimated() {
         redLine.backgroundColor = UIColor.red
         lineFix.backgroundColor = UIColor.red
         lineFix.alpha = 0.6
@@ -199,28 +169,24 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         gradientView.frame = redLine.frame
         gradientView.frame.size.width = redLine.frame.size.width
         gradientView.frame.size.height = redLine.frame.size.height
-        gradientView.startPoint = CGPoint(x:0.0, y:0.5)
-        gradientView.endPoint = CGPoint(x:1.0, y:0.5)
-        
+        gradientView.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientView.endPoint = CGPoint(x: 1.0, y: 0.5)
         
         gradientView.transform = CATransform3DMakeRotation(redLine.transform.b, 0, 0, 0.5)
         
         UIView.animate(withDuration: 1.0, animations: {
-            
             self.redLine.alpha = 1
             
-        }, completion: {(Completed: Bool) -> Void  in
+        }, completion: { (completed: Bool) -> Void in
             
             UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: {
                 self.redLine.alpha = 0
-            }, completion: { (Completed: Bool) -> Void  in
+            }, completion: { (completed: Bool) -> Void  in
                 self.lineAimated()
             })
             
         })
         redLine.layer.addSublayer(gradientView)
     }
-    
-    
     
 }

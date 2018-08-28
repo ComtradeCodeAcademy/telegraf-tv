@@ -22,7 +22,8 @@ class liveCollectionViewCell: UICollectionViewCell {
     
     func configureCell() {
         
-        self.liveImage.image = UIImage.init(named:"img3")
+        self.liveImage.image = UIImage.init(named: "img3")
         self.liveTitle.text = "UŽIVO PRENOS UTAKMICE"
     }
+    
 }
