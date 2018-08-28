@@ -26,9 +26,11 @@ class LiveCollectionViewCell: UICollectionViewCell {
 //            self.liveTitle.text = videos.title
 //            self.liveTitle.numberOfLines = 1
 //        }
+    
       func configureCell() {
         self.liveImage.image = UIImage(named: "img1")
         self.liveTitle.text = "PRENOS UTAKMICE"
         self.liveTitle.numberOfLines = 1
 }
+    
 }
