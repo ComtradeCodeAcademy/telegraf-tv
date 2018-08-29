@@ -68,8 +68,6 @@ class VPlayerViewController: UIViewController {
         
         playerItem = AVPlayerItem.init(url: url)
         
-        //        NotificationCenter.default.addObserver(self, selector: #selector(videoStarted), name: NSNotification.Name., object: playerItem)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
         
         playerItem.addObserver(self, forKeyPath: "status", options: [], context: nil)
