@@ -117,11 +117,8 @@ class VPlayerViewController: UIViewController {
                     let seconds = CMTimeGetSeconds(time)
                     let secondsString = String(format: "%02d", Int(seconds) % 60)
                     let minutesString = String(format: "%02d", Int(seconds / 60))
-                    let secondsText = Int(seconds) % 60
-                    let minutesText = String(format: "%02d", Int(seconds / 60))
                     self.progressBar.progress = Float(position)
                     self.timeLabel.text = "\(minutesString):\(secondsString)"
-                    self.totalTimeLabel.text = "\(minutesText):\(secondsText)"
                     
                     if let duration = self.player?.currentItem?.duration {
                         let seconds = CMTimeGetSeconds(duration)
