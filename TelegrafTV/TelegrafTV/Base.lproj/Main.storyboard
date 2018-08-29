@@ -76,7 +76,11 @@
                     <navigationItem key="navigationItem" id="E1h-LU-PL5"/>
                     <connections>
                         <outlet property="categoryItemsView" destination="TiR-2f-VBJ" id="ILa-aD-KSX"/>
-                        <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showVideo" id="AbF-nA-1BM"/>
+
+                        <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showVideo" id="Ted-x7-CqW"/>
+
+                     
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWF-bo-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -95,21 +99,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-7Y-GLz">
-                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-h9-R1r" userLabel="Player View">
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vsc-zQ-qMx" userLabel="Progress View">
+                                        <rect key="frame" x="0.0" y="900" width="1920" height="180"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I4B-jx-sE0" userLabel="Progress Bar">
+                                                <rect key="frame" x="98" y="88" width="1724" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1724" id="aMT-bU-Fsd"/>
+                                                    <constraint firstAttribute="height" constant="5" id="g3J-dM-AZy"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duc-4o-gno" userLabel="Time Label">
+                                                <rect key="frame" x="98" y="101" width="92" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="rEu-Le-BHF"/>
+                                                    <constraint firstAttribute="width" constant="92" id="raY-Qn-1fH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6MC-58-Mis" userLabel="Total Time">
+                                                <rect key="frame" x="1730" y="101" width="92" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="92" id="85u-Sc-oNQ"/>
+                                                    <constraint firstAttribute="height" constant="48" id="rwF-sQ-5ZV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="6MC-58-Mis" firstAttribute="top" secondItem="I4B-jx-sE0" secondAttribute="bottom" constant="8" id="7Fe-0I-4H4"/>
+                                            <constraint firstAttribute="height" constant="180" id="H4V-1t-1ha"/>
+                                            <constraint firstItem="I4B-jx-sE0" firstAttribute="centerX" secondItem="vsc-zQ-qMx" secondAttribute="centerX" id="X2x-mr-OyY"/>
+                                            <constraint firstItem="I4B-jx-sE0" firstAttribute="centerY" secondItem="vsc-zQ-qMx" secondAttribute="centerY" id="Yt5-Yz-rs8"/>
+                                            <constraint firstItem="duc-4o-gno" firstAttribute="leading" secondItem="I4B-jx-sE0" secondAttribute="leading" id="Zyi-Ml-Qwd"/>
+                                            <constraint firstItem="6MC-58-Mis" firstAttribute="trailing" secondItem="I4B-jx-sE0" secondAttribute="trailing" id="giI-Pb-XfL"/>
+                                            <constraint firstItem="duc-4o-gno" firstAttribute="top" secondItem="I4B-jx-sE0" secondAttribute="bottom" constant="8" id="vhG-7U-G3y"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vsc-zQ-qMx" secondAttribute="trailing" id="7uZ-Zd-Eus"/>
+                                    <constraint firstAttribute="bottom" secondItem="vsc-zQ-qMx" secondAttribute="bottom" id="OfV-Tv-wMC"/>
+                                    <constraint firstItem="vsc-zQ-qMx" firstAttribute="leading" secondItem="3TA-h9-R1r" secondAttribute="leading" id="fCT-j1-N9m"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7fq-fD-r3i" firstAttribute="trailing" secondItem="PCM-7Y-GLz" secondAttribute="trailing" id="2cf-cA-dyc"/>
-                            <constraint firstItem="Ose-IP-yQM" firstAttribute="top" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="6ML-mj-byC"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="7fq-fD-r3i" secondAttribute="leading" id="Swm-YJ-e31"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="LGe-Wy-csV" secondAttribute="bottom" id="hyS-sD-GbR"/>
+                            <constraint firstItem="3TA-h9-R1r" firstAttribute="top" secondItem="krV-pN-zTf" secondAttribute="top" id="Ayn-ZG-9qI"/>
+                            <constraint firstItem="3TA-h9-R1r" firstAttribute="leading" secondItem="krV-pN-zTf" secondAttribute="leading" id="EeH-yS-W9c"/>
+                            <constraint firstAttribute="trailing" secondItem="3TA-h9-R1r" secondAttribute="trailing" id="Mak-9Q-90a"/>
+                            <constraint firstAttribute="bottom" secondItem="3TA-h9-R1r" secondAttribute="bottom" id="jjW-d1-WmJ"/>
+
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
                     <connections>
-                        <outlet property="playerView" destination="PCM-7Y-GLz" id="Wto-HR-2pD"/>
+
+                        <outlet property="playerView" destination="3TA-h9-R1r" id="8I1-ln-nnT"/>
+                        <outlet property="progressBar" destination="I4B-jx-sE0" id="nD0-aM-O2z"/>
+                        <outlet property="progressView" destination="vsc-zQ-qMx" id="jtF-9F-HET"/>
+                        <outlet property="timeLabel" destination="duc-4o-gno" id="Ttg-Uz-I7g"/>
+                        <outlet property="totalTimeLabel" destination="6MC-58-Mis" id="3tX-UU-iOr"/>
+
                         <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
