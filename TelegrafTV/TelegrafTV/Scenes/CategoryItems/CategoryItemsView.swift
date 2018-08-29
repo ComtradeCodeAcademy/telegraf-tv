@@ -98,6 +98,11 @@ class CategoryItemsView: UIView, UICollectionViewDelegate, UICollectionViewDataS
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let videoItem = self.videos[indexPath.row]
+        self.categoryVideosController?.performSegue(withIdentifier: "showVideo", sender: videoItem)
+    }
+    
     //MARK: Pagination func, display new cell from API
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

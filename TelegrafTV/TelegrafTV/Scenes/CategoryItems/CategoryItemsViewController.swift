@@ -72,7 +72,14 @@ class CategoryItemsViewController: UIViewController {
         }
       
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showVideo" {
+            let destinationVC = segue.destination as! VPlayerViewController
+            if let videoItem = sender as? VideoItem {
+                destinationVC.videoItem = videoItem
+            }
+        }
+    }
 }
 
 

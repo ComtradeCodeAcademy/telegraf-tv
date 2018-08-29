@@ -20,7 +20,7 @@ class VideoCategoryDetailsView: UIView, UICollectionViewDelegate, UICollectionVi
         super.awakeFromNib()
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
         videoCollectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
-        
+        videoCollectionView.isHidden = true
     }
 
     override init(frame: CGRect) {
