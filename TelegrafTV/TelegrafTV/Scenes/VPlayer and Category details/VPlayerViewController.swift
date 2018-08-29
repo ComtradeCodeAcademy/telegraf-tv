@@ -15,9 +15,13 @@ class VPlayerViewController: UIViewController {
     
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
     
+    
+    @IBOutlet weak var progressView: UIView!
+    
     @IBOutlet weak var progressBar: UIProgressView!
     
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var totalTimeLabel: UILabel!
     
     var player: AVPlayer?
     var playerStatus = false
@@ -34,7 +38,7 @@ class VPlayerViewController: UIViewController {
         progressBar.isHidden = false
         progressBar.layer.cornerRadius = 5.0
         progressBar.clipsToBounds = true
-    
+        
         player = AVPlayer()
         initializePlayButtonRecognition()
     }
@@ -48,7 +52,7 @@ class VPlayerViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        //NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
         
     }
     
@@ -64,6 +68,8 @@ class VPlayerViewController: UIViewController {
         
         playerItem = AVPlayerItem.init(url: url)
         
+        //        NotificationCenter.default.addObserver(self, selector: #selector(videoStarted), name: NSNotification.Name., object: playerItem)
+        
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
         
         playerItem.addObserver(self, forKeyPath: "status", options: [], context: nil)
@@ -74,8 +80,8 @@ class VPlayerViewController: UIViewController {
         //        print(playerLayer.frame, playerView.bounds, view.frame)
         
         self.playerView.layer.addSublayer(playerLayer)
-        self.playerView.addSubview(progressBar)
-        self.playerView.addSubview(timeLabel)
+        self.playerView.addSubview(progressView)
+        //self.playerView.addSubview(timeLabel)
         
         self.player?.play()
         self.playerStatus = true
@@ -111,8 +117,18 @@ class VPlayerViewController: UIViewController {
                     let seconds = CMTimeGetSeconds(time)
                     let secondsString = String(format: "%02d", Int(seconds) % 60)
                     let minutesString = String(format: "%02d", Int(seconds / 60))
+                    let secondsText = Int(seconds) % 60
+                    let minutesText = String(format: "%02d", Int(seconds / 60))
                     self.progressBar.progress = Float(position)
                     self.timeLabel.text = "\(minutesString):\(secondsString)"
+                    self.totalTimeLabel.text = "\(minutesText):\(secondsText)"
+                    
+                    if let duration = self.player?.currentItem?.duration {
+                        let seconds = CMTimeGetSeconds(duration)
+                        let secondsText = Int(seconds) % 60
+                        let minutesText = String(format: "%02d", Int(seconds / 60))
+                        self.totalTimeLabel.text = "\(minutesText):\(secondsText)"
+                    }
                 })
             }
         }
@@ -122,8 +138,8 @@ class VPlayerViewController: UIViewController {
         if playerStatus {
             self.player?.pause()
             self.playerStatus = false
-            //            self.playerView.addSubview(progressBar)
-            //            progressBar.isHidden = false
+            //self.playerView.addSubview(progressBar)
+            //progressBar.isHidden = false
             
             return
         }
