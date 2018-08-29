@@ -21,12 +21,13 @@
                     <view key="view" contentMode="scaleToFill" id="AlJ-6v-eba" customClass="HomeView" customModule="TelegrafTV" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1285" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="f5a-e3-m64"/>
                     </view>
                     <navigationItem key="navigationItem" id="eCc-eo-Jfi"/>
                     <connections>
                         <outlet property="homeView" destination="AlJ-6v-eba" id="qxd-7G-FoO"/>
+                        <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showHomeVideo" id="rL1-Ny-9nl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ff-M9-7d6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,7 +76,11 @@
                     <navigationItem key="navigationItem" id="E1h-LU-PL5"/>
                     <connections>
                         <outlet property="categoryItemsView" destination="TiR-2f-VBJ" id="ILa-aD-KSX"/>
+
                         <segue destination="tQ5-lh-0FK" kind="presentation" identifier="showVideo" id="Ted-x7-CqW"/>
+
+                     
+
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWF-bo-23J" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -94,6 +99,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3TA-h9-R1r" userLabel="Player View">
                                 <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                                 <subviews>
@@ -155,15 +161,18 @@
                             <constraint firstItem="3TA-h9-R1r" firstAttribute="leading" secondItem="krV-pN-zTf" secondAttribute="leading" id="EeH-yS-W9c"/>
                             <constraint firstAttribute="trailing" secondItem="3TA-h9-R1r" secondAttribute="trailing" id="Mak-9Q-90a"/>
                             <constraint firstAttribute="bottom" secondItem="3TA-h9-R1r" secondAttribute="bottom" id="jjW-d1-WmJ"/>
+
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
                     <connections>
+
                         <outlet property="playerView" destination="3TA-h9-R1r" id="8I1-ln-nnT"/>
                         <outlet property="progressBar" destination="I4B-jx-sE0" id="nD0-aM-O2z"/>
                         <outlet property="progressView" destination="vsc-zQ-qMx" id="jtF-9F-HET"/>
                         <outlet property="timeLabel" destination="duc-4o-gno" id="Ttg-Uz-I7g"/>
                         <outlet property="totalTimeLabel" destination="6MC-58-Mis" id="3tX-UU-iOr"/>
+
                         <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
@@ -238,6 +247,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fmX-Wb-1zl"/>
+        <segue reference="uvW-Kb-lMG"/>
+        <segue reference="AbF-nA-1BM"/>
     </inferredMetricsTieBreakers>
 </document>

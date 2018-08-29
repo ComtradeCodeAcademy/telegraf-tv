@@ -14,6 +14,8 @@
             <connections>
                 <outlet property="categoryItemsView" destination="iN0-l3-epB" id="v3Q-G1-cPx"/>
                 <outlet property="collectionView" destination="8Ux-Dn-3Y9" id="Xw8-pi-YBF"/>
+                <outlet property="lineFix" destination="3w0-Ur-YvJ" id="EUP-QT-M2W"/>
+                <outlet property="redLine" destination="kXk-Cf-2yh" id="KqO-Ew-Ew8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,6 +23,20 @@
             <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3w0-Ur-YvJ">
+                    <rect key="frame" x="0.0" y="0.0" width="7" height="1080"/>
+                    <color key="backgroundColor" red="1" green="0.97174597807151541" blue="0.31958287891609427" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="7" id="AtB-90-iJy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXk-Cf-2yh">
+                    <rect key="frame" x="0.0" y="0.0" width="7" height="1080"/>
+                    <color key="backgroundColor" red="1" green="0.037429042764917875" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="7" id="69o-i8-3dY"/>
+                    </constraints>
+                </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" prefetchingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Ux-Dn-3Y9">
                     <rect key="frame" x="90" y="60" width="1740" height="1020"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,9 +56,15 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="60" id="0EH-gn-l9g"/>
+                <constraint firstItem="3w0-Ur-YvJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="27i-zM-ZkZ"/>
                 <constraint firstAttribute="bottom" secondItem="8Ux-Dn-3Y9" secondAttribute="bottom" id="3l8-av-GV8"/>
+                <constraint firstAttribute="bottom" secondItem="kXk-Cf-2yh" secondAttribute="bottom" id="HOR-qu-lYu"/>
+                <constraint firstAttribute="bottom" secondItem="3w0-Ur-YvJ" secondAttribute="bottom" id="KCE-ff-bjb"/>
+                <constraint firstItem="kXk-Cf-2yh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PeX-iZ-0Bm"/>
+                <constraint firstItem="3w0-Ur-YvJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="era-oS-9MH"/>
                 <constraint firstAttribute="trailing" secondItem="8Ux-Dn-3Y9" secondAttribute="trailing" constant="90" id="jsO-HG-Tvp"/>
                 <constraint firstItem="8Ux-Dn-3Y9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="90" id="q9u-eJ-bVF"/>
+                <constraint firstItem="kXk-Cf-2yh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="s6u-y7-Zqq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Pmt-tb-8Ig"/>
         </view>

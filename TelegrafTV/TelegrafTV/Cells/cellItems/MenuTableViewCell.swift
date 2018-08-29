@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var selectionImg: UIImageView!
     
@@ -23,12 +23,13 @@ class MenuTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
-        
         self.selectionImg.isHidden = !selected
     }
+    
     func setCategoryListCellWith(category: CategoryList) {
         DispatchQueue.main.async {
             self.titleLbl.text = category.name
         }
     }
+    
 }

@@ -13,22 +13,17 @@ class CategoryMenuTableViewController: UITableViewController {
     
     @IBOutlet var categoryTableView: UITableView!
     
- 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         categoryTableView.register(UINib(nibName: "MenuTableViewCell", bundle: nil), forCellReuseIdentifier: "menuCell")
-        
-        
         categoryTableView.reloadData()
         tableView.backgroundColor = .black
         tableView.sectionIndexColor = UIColor.clear
-     
         headerImage()
-        
-       
-    
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loadVideoNavigation()
@@ -40,7 +35,7 @@ class CategoryMenuTableViewController: UITableViewController {
         if self.categoryTableView.numberOfRows(inSection: 0) > 0 {
             self.categoryTableView.selectRow(at: IndexPath.init(row: 0, section: 0), animated: true, scrollPosition: .top)
         }
-
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,13 +48,13 @@ class CategoryMenuTableViewController: UITableViewController {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: String(describing: CategoryList.self))
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "url", ascending: true)]
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: CoreDataStack.sharedInstance.persistentContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
-         frc.delegate = self
+        frc.delegate = self
         return frc
     }()
     
     // MARK: - Create CategoryList Entity
     
-   private func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject?  {
+    private func createCategoryListEntityFrom(categorys: [String: AnyObject]) -> NSObject? {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         if let categoryListEntity = NSEntityDescription.insertNewObject(forEntityName: "CategoryList", into: context) as? CategoryList {
             categoryListEntity.name = categorys ["name"] as? String
@@ -71,10 +66,11 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     // MARK: - SaveCategoryList
     
-     private func saveInCategotyList(array: [[String: AnyObject]]) {
-        _ = array.map{self.createCategoryListEntityFrom(categorys: $0)}
+    private func saveInCategotyList(array: [[String: AnyObject]]) {
+        _ = array.map {self.createCategoryListEntityFrom(categorys: $0)}
         do {
             try CoreDataStack.sharedInstance.persistentContainer.viewContext.save()
+            
         } catch let error {
             print(error)
         }
@@ -88,7 +84,7 @@ class CategoryMenuTableViewController: UITableViewController {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "CategoryList")
             do {
                 let objects  = try context.fetch(fetchRequest) as? [NSManagedObject]
-                _ = objects.map{$0.map{context.delete($0)}}
+                _ = objects.map {$0.map {context.delete($0)}}
                 CoreDataStack.sharedInstance.saveContext()
             } catch let error {
                 print("ERROR DELETING : \(error)")
@@ -97,13 +93,13 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     // MARK: - Load VideoNavigation
     
-   private func loadVideoNavigation() {
-    do {
-        try self.fetchedhResultController.performFetch()
-        print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
-    } catch let error  {
-        print("ERROR: \(error)")
-    }
+    private func loadVideoNavigation() {
+        do {
+            try self.fetchedhResultController.performFetch()
+            print("COUNT FETCHED FIRST: \(String(describing: self.fetchedhResultController.sections?[0].numberOfObjects))")
+        } catch let error  {
+            print("ERROR: \(error)")
+        }
         let apiManager = TFApiClient()
         
         do {
@@ -112,12 +108,13 @@ class CategoryMenuTableViewController: UITableViewController {
             apiManager.fetch(request: request, completion: { (result) in
                 
                 switch result {
-                
+                    
                 case .success(let data):
                     print("Success:", data)
                     self.clearData()
                     self.saveInCategotyList(array: data)
-                    
+                    self.categoryTableView.reloadData()
+                    self.performSegue(withIdentifier: "openHomeView", sender: nil)
                     
                     break
                     
@@ -135,7 +132,7 @@ class CategoryMenuTableViewController: UITableViewController {
             print("Error \(error.localizedDescription)")
         }
     }
-
+    
     
     // MARK: - Table view data source
     
@@ -150,55 +147,45 @@ class CategoryMenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as? MenuTableViewCell
         
         if let category = fetchedhResultController.object(at: indexPath) as? CategoryList {
-            cell.setCategoryListCellWith(category:category)
-           
-            
+            cell?.setCategoryListCellWith(category: category)
         }
-        
-        return cell
+        return cell!
     }
     
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         guard let category = fetchedhResultController.object(at: indexPath) as? CategoryList  else { return }
         
-        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self) :  self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
+        indexPath.row == 0 ? self.performSegue(withIdentifier: "openHomeView", sender: self.fetchedhResultController.fetchedObjects) : self.performSegue(withIdentifier: "openCategoryItemsView", sender: category as Any)
     }
     
-    //MARK - Prepare data for cateogory videos listing
+    // MARK - Prepare data for cateogory videos listing
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "openHomeView":
+            guard let navController = segue.destination as? UINavigationController else { return }
+            guard let homeVC = navController.viewControllers[0] as? HomeViewController else { return }
+            homeVC.categories = (self.fetchedhResultController.fetchedObjects as? [CategoryList])!
             print("home section")
             
         default:
-            
             guard let navController = segue.destination as? UINavigationController else { return }
             guard let categoryItemsVC = navController.viewControllers[0] as? CategoryItemsViewController else { return }
             guard let category = sender as? CategoryList else { return }
             categoryItemsVC.category = category
         }
     }
-
     
     override func tableView(_ tableView: UITableView, didUnhighlightRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as! MenuTableViewCell
-        cell.selectionImg.isHidden = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell") as? MenuTableViewCell
+        cell?.selectionImg.isHidden = true
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.row {
-        case 0:
-            return 130
-            
-        default:
-            return 130
-        }
+        return 80
     }
     
     func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
@@ -207,16 +194,16 @@ class CategoryMenuTableViewController: UITableViewController {
     }
     
     func headerImage() {
-        let frame = CGRectMake(0, 0, self.view.frame.size.width , 200)
+        let frame = CGRectMake(0, 0, self.view.frame.size.width, 90)
         let headerImageView = UIImageView(frame: frame)
-        let image: UIImage = UIImage(named: "telegrafLogo")!
+        let image: UIImage = UIImage(named: "telegrafLogo2")!
         headerImageView.image = image
         categoryTableView.tableHeaderView = headerImageView
-        
     }
-
+    
 }
 extension CategoryMenuTableViewController: NSFetchedResultsControllerDelegate {
+    
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .insert:
@@ -227,6 +214,7 @@ extension CategoryMenuTableViewController: NSFetchedResultsControllerDelegate {
             break
         }
     }
+    
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         self.tableView.endUpdates()
     }
@@ -234,4 +222,5 @@ extension CategoryMenuTableViewController: NSFetchedResultsControllerDelegate {
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
+    
 }

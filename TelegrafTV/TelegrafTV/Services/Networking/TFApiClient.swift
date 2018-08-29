@@ -12,11 +12,9 @@ protocol TFAPIProtocol {
     func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void)
 }
 
-class TFApiClient {
+class TFApiClient: TFAPIProtocol {
     
- 
-   
-    func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
+ func fetch(request: TFRequest, completion: @escaping (Result<[[String: AnyObject]]>) -> Void) {
         guard let url = URL(string: request.url) else {
             return completion(.error("Invalid URL"))
         }
@@ -72,12 +70,9 @@ class TFApiClient {
             }.resume()
     }
     
-   
 }
 enum Result<T> {
     case success(T)
     case error(String)
     case errorWithDictionary([String: AnyObject])
 }
-
-

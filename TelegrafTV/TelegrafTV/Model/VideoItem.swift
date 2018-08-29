@@ -20,15 +20,15 @@ struct VideoItem {
     }
 
 struct VideoItems {
-    var data = [[String:AnyObject]]()
+    var data = [[String: AnyObject]]()
 
-    static func parseData(_ data: [[String:AnyObject]]) -> [VideoItem]{
+    static func parseData(_ data: [[String: AnyObject]]) -> [VideoItem] {
         var videos = [VideoItem]()
        
         for  item in data {
         var videoItem = VideoItem()
         if let img = item["image"] as? [String: AnyObject] {
-            videoItem.imageURL = img["url"] != nil ? img["url"] as!String : ""
+            videoItem.imageURL = img["url"] != nil ? img["url"] as? String : ""
         }
             videoItem.title = item ["title"] as? String
             videoItem.duration = item ["duration"]!["human"] as? String

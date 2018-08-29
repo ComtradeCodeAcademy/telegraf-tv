@@ -11,6 +11,7 @@ import AVFoundation
 import AVKit
 
 
+
 class VPlayerViewController: UIViewController {
 
     @IBOutlet var videoCategoryDetailsView: VideoCategoryDetailsView!
@@ -39,26 +40,27 @@ class VPlayerViewController: UIViewController {
         player = AVPlayer()
         initializePlayButtonRecognition()
     }
+
+
+
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         playVideo()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-//        NotificationCenter.default.removeObserver(self)
-        
+        // NotificationCenter.default.removeObserver(self)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+    
     @IBAction func playVideo() {
+
         
         guard let videoURL = videoItem?.videoURL, let url = URL(string: videoURL) else {
             return
@@ -86,11 +88,14 @@ class VPlayerViewController: UIViewController {
         //videoCategoryDetailsView.isUserInteractionEnabled = true
     
     }
+    
     @objc func playerDidFinishPlaying(note: NSNotification) {
+
         self.dismiss(animated: true)
     }
     func initializePlayButtonRecognition() {
         addPlayButtonRecognizer(#selector(handlePlayButton(_:)))
+
     }
     
     func addPlayButtonRecognizer(_ selector: Selector) {
