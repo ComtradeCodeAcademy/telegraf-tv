@@ -19,6 +19,7 @@ class VPlayerViewController: UIViewController, AVPlayerViewControllerDelegate {
     var player: AVPlayer?
     
     var videoItem: VideoItem?
+ 
     @IBOutlet weak var playerView: UIView!
     
     override func viewDidLoad() {

@@ -19,8 +19,8 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     let MyColectionViewHeaderId: String = "MyCollectionReusableView"
     
     var categories = [CategoryList?]()
-    var categoryVideosController: HomeViewController?
-    var homeVideos = [VideoItem?]()
+    var homeVideosController: HomeViewController?
+    var homeVideos = [VideoItem]()
     var categoryData = [String: [VideoItem]]()
     
     // MARK: Register UI CV item cell and SectionHeader
@@ -181,18 +181,17 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         homeView.sendSubview(toBack: blurEffectView)
         self.homeCollectionView.reloadData()
     }
-    func updateVideos(videos: [VideoItem], forCategory: String) {
+    func updateVideos(videos: [VideoItem]) {
         print(videos)
-//        self.homeVideos.append(contentsOf: videos)
-//        self.homeCollectionView.reloadData()
+        self.homeVideos.append(contentsOf: videos)
+        self.homeCollectionView.reloadData()
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-
-        if let videoItems = homeVideos as? [VideoItem] {
-            let videoItem = videoItems[indexPath.row]
-            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
+            let videoItem = self.homeVideos[indexPath.row]
+            self.homeVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
+       
         }
     }
 
-}
+
