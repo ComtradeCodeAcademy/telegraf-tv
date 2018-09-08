@@ -16,8 +16,11 @@ struct VideoItem {
      imageURL: String?,
      date: String?,
      videoURL: String?,
-     category: String?
+     category: String?,
+     liveURL: String?,
+     liveActive: Int?
     }
+
 
 struct VideoItems {
     var data = [[String:AnyObject]]()
@@ -34,8 +37,11 @@ struct VideoItems {
             videoItem.duration = item ["duration"]!["human"] as? String
             videoItem.date = item ["date"]!["human"] as? String
             videoItem.videoURL = item["m3u8"] as? String
+            videoItem.liveURL = item["url"] as? String
+            videoItem.liveActive = item["active"] as? Int
             videoItem.id = item["_id"] as? Int
             videoItem.category = item["category"]!["name"] as? String
+            
             videos.append(videoItem)
         }
         
