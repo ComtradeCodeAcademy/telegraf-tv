@@ -96,20 +96,75 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-7Y-GLz">
-                                <rect key="frame" x="90" y="60" width="1740" height="960"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imn-F7-RR7" userLabel="Progress View">
+                                        <rect key="frame" x="0.0" y="900" width="1920" height="180"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fss-fS-fM4" userLabel="Progress Bar">
+                                                <rect key="frame" x="98" y="88" width="1724" height="5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="KhE-Mj-7e0"/>
+                                                    <constraint firstAttribute="width" constant="1724" id="ngQ-3x-x2O"/>
+                                                </constraints>
+                                                <color key="progressTintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c88-Ve-gTR" userLabel="Time Label">
+                                                <rect key="frame" x="98" y="101" width="92" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="92" id="Hk0-n5-EV5"/>
+                                                    <constraint firstAttribute="height" constant="48" id="dZZ-MS-zXO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8y4-qX-hC2" userLabel="Total Time">
+                                                <rect key="frame" x="1730" y="101" width="92" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="92" id="Ag1-Sl-h1c"/>
+                                                    <constraint firstAttribute="height" constant="48" id="Rgl-MA-STr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
+                                                <color key="textColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="8y4-qX-hC2" firstAttribute="top" secondItem="fss-fS-fM4" secondAttribute="bottom" constant="8" id="6F1-Ff-bLh"/>
+                                            <constraint firstItem="fss-fS-fM4" firstAttribute="centerX" secondItem="Imn-F7-RR7" secondAttribute="centerX" id="Hcx-XG-BEO"/>
+                                            <constraint firstItem="fss-fS-fM4" firstAttribute="centerY" secondItem="Imn-F7-RR7" secondAttribute="centerY" id="VDR-uY-XiN"/>
+                                            <constraint firstAttribute="height" constant="180" id="dsm-jk-jAa"/>
+                                            <constraint firstItem="8y4-qX-hC2" firstAttribute="trailing" secondItem="fss-fS-fM4" secondAttribute="trailing" id="hlt-Qi-PQL"/>
+                                            <constraint firstItem="c88-Ve-gTR" firstAttribute="leading" secondItem="fss-fS-fM4" secondAttribute="leading" id="kay-0n-Wg0"/>
+                                            <constraint firstItem="c88-Ve-gTR" firstAttribute="top" secondItem="fss-fS-fM4" secondAttribute="bottom" constant="8" id="zII-a3-Sxd"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Imn-F7-RR7" firstAttribute="leading" secondItem="PCM-7Y-GLz" secondAttribute="leading" id="78e-ii-c9j"/>
+                                    <constraint firstAttribute="bottom" secondItem="Imn-F7-RR7" secondAttribute="bottom" id="aYv-UI-Zi6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Imn-F7-RR7" secondAttribute="trailing" id="jci-SK-ygh"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7fq-fD-r3i" firstAttribute="trailing" secondItem="PCM-7Y-GLz" secondAttribute="trailing" id="2cf-cA-dyc"/>
-                            <constraint firstItem="Ose-IP-yQM" firstAttribute="top" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="6ML-mj-byC"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="7fq-fD-r3i" secondAttribute="leading" id="Swm-YJ-e31"/>
-                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="LGe-Wy-csV" secondAttribute="bottom" id="hyS-sD-GbR"/>
+                            <constraint firstAttribute="trailing" secondItem="PCM-7Y-GLz" secondAttribute="trailing" id="2cf-cA-dyc"/>
+                            <constraint firstAttribute="bottom" secondItem="PCM-7Y-GLz" secondAttribute="bottom" id="6ML-mj-byC"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="leading" secondItem="krV-pN-zTf" secondAttribute="leading" id="Swm-YJ-e31"/>
+                            <constraint firstItem="PCM-7Y-GLz" firstAttribute="top" secondItem="krV-pN-zTf" secondAttribute="top" id="hyS-sD-GbR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7fq-fD-r3i"/>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="PCM-7Y-GLz" id="Wto-HR-2pD"/>
+                        <outlet property="progressBar" destination="fss-fS-fM4" id="pAs-hz-JT1"/>
+                        <outlet property="progressView" destination="Imn-F7-RR7" id="eB9-QO-JAR"/>
+                        <outlet property="timeLabel" destination="c88-Ve-gTR" id="oJW-ag-mIx"/>
+                        <outlet property="totalTimeLabel" destination="8y4-qX-hC2" id="s2s-16-8Ug"/>
                         <outlet property="videoCategoryDetailsView" destination="krV-pN-zTf" id="q6l-B7-if8"/>
                     </connections>
                 </viewController>
