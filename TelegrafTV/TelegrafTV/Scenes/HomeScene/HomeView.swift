@@ -183,7 +183,6 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     func updateVideos(videos: [VideoItem]) {
         self.homeVideos.append(contentsOf: videos)
-        self.homeCollectionView.reloadData()
         print(videos)
 
     }
