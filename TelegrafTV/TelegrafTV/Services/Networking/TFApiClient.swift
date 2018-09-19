@@ -45,6 +45,14 @@ class TFApiClient: TFAPIProtocol {
                         }
                         return
                     }
+                    if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [String: AnyObject] {
+                        if let liveStream = json["liveStream"] as? [[String: AnyObject]] {
+                            DispatchQueue.main.async {
+                                completion(.success(liveStream))
+                            }
+                            return
+                        }
+                    }
                     guard let categoryJsonArray = json["navigation"] as? [[String: AnyObject]] else {  return completion(.error(error?.localizedDescription ?? "There are no new category to show")) }
                     DispatchQueue.main.async {
                         if httpResponse.statusCode > 299 {
@@ -54,14 +62,7 @@ class TFApiClient: TFAPIProtocol {
                         completion(.success(categoryJsonArray))
                     }
                 }
-//                if let json = try JSONSerialization.jsonObject(with: data, options: [.mutableContainers]) as? [AnyObject] {
-//                    DispatchQueue.main.async {
-//                        if httpResponse.statusCode > 299 {
-//                            completion(.errorWithDictionary(["responseData": json as AnyObject]))
-//                        }
-//                        completion(.success(["responseData": json as  AnyObject]))
-//                    }
-//                }
+
             } catch let error {
                 DispatchQueue.main.async {
                     completion(.error(error.localizedDescription))

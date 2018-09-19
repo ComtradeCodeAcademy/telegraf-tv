@@ -38,7 +38,6 @@ struct VideoItems {
             videoItem.category = item["category"]!["name"] as? String
             videos.append(videoItem)
         }
-        
         return videos
     }
     
