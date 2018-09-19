@@ -181,18 +181,21 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     }
     
     
-    func updateVideos(videos: [VideoItem]) {
-        self.homeVideos.append(contentsOf: videos)
-        print(videos)
-
-    }
+//    func updateVideos(videos: [VideoItem],forCategory: String) {
+//        self.homeVideos.append(contentsOf: videos)
+//        print(videos)
+//
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-            let videoItem = homeVideos[indexPath.row]
+        let category = self.categories[indexPath.section]
+        if let videoItems = categoryData[(category?.name)!] {
+            let videoItem = videoItems[indexPath.row]
             self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
         }
         
     
     
+}
 }

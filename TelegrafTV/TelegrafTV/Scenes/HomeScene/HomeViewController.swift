@@ -65,7 +65,6 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
                     print("Success:", data)
                     let videoItems = VideoItems.parseData(data)
                     self.categoryData[forCategory] = videoItems
-                    self.homeView.updateVideos(videos: videoItems)
                     self.homeView.updateUI(categories: self.categories, categoryData: self.categoryData)
                     break
 
