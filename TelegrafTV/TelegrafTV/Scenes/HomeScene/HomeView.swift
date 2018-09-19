@@ -20,7 +20,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     var categories = [CategoryList?]()
     var categoryVideosController: HomeViewController?
-    var homeVideos = [VideoItem?]()
+    var homeVideos = [VideoItem]()
     var categoryData = [String: [VideoItem]]()
     
     // MARK: Register UI CV item cell and SectionHeader
@@ -180,17 +180,22 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         self.homeCollectionView.reloadData()
     }
     
-    func updateVideos(videos: [VideoItem], forCategory: String) {
-        print(videos)
-
-    }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let videoItems = homeVideos as? [VideoItem] {
-//            let videoItem = videoItems[indexPath.row]
-//            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
-//        }
-//        
+//    func updateVideos(videos: [VideoItem],forCategory: String) {
+//        self.homeVideos.append(contentsOf: videos)
+//        print(videos)
+//
 //    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let category = self.categories[indexPath.section]
+        if let videoItems = categoryData[(category?.name)!] {
+            let videoItem = videoItems[indexPath.row]
+            self.categoryVideosController?.performSegue(withIdentifier: "showHomeVideo", sender: videoItem)
+        }
+        
+    
+    
+}
 }
