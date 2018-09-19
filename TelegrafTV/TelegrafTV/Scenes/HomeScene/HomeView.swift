@@ -20,7 +20,7 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     
     var categories = [CategoryList?]()
     var categoryVideosController: HomeViewController?
-    var homeVideos = [VideoItem?]()
+    var homeVideos = [VideoItem]()
     var categoryData = [String: [VideoItem]]()
     
     // MARK: Register UI CV item cell and SectionHeader
@@ -180,7 +180,10 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         self.homeCollectionView.reloadData()
     }
     
-    func updateVideos(videos: [VideoItem], forCategory: String) {
+    
+    func updateVideos(videos: [VideoItem]) {
+        self.homeVideos.append(contentsOf: videos)
+        self.homeCollectionView.reloadData()
         print(videos)
 
     }

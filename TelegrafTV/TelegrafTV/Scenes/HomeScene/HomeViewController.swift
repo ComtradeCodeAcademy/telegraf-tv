@@ -82,12 +82,8 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
         } catch let error {
             print("Error \(error.localizedDescription)")
         }
-        
-      
-        
-    
-        
 }
+    
       // MARK: Send data from HomeVC to VideoPlayer
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showHomeVideo" {
