@@ -213,13 +213,6 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         redLine.layer.addSublayer(gradientView)
     }
     
-
-    
-//    func updateVideos(videos: [VideoItem],forCategory: String) {
-//        self.homeVideos.append(contentsOf: videos)
-//        print(videos)
-//
-//    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
