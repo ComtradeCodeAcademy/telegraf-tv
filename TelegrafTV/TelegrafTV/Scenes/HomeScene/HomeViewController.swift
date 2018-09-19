@@ -17,11 +17,15 @@ class HomeViewController: UIViewController, NSFetchedResultsControllerDelegate {
     var categories = [CategoryList]()
     var categoryData = [String: [VideoItem]]()
     var page = 1
+    var categoryItem: CategoryItemsView?
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         homeView.categoryVideosController = self
+         homeView.lineAimated()
+        
     
     }
     

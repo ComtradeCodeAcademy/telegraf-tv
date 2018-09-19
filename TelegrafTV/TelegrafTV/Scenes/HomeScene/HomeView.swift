@@ -12,6 +12,8 @@ import Foundation
 class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
 
+    @IBOutlet weak var lineFix: UIView!
+    @IBOutlet weak var redLine: UIView!
     @IBOutlet var homeView: UIView!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     let liveCellID: String = "LiveCollectionViewCell"
@@ -22,7 +24,6 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
     var categoryVideosController: HomeViewController?
     var homeVideos = [VideoItem?]()
     var categoryData = [String: [VideoItem]]()
-    
     // MARK: Register UI CV item cell and SectionHeader
     
     override func awakeFromNib() {
@@ -184,6 +185,38 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         print(videos)
 
     }
+    func lineAimated() {
+        redLine.backgroundColor = UIColor.red
+        lineFix.backgroundColor = UIColor.red
+        lineFix.alpha = 0.6
+        redLine.alpha = 0
+        
+        let gradientView = CAGradientLayer ()
+        gradientView.colors = [UIColor.clear.cgColor, UIColor.red.cgColor, UIColor.clear.cgColor, ]
+        gradientView.locations = [0, 0.5, 1]
+        gradientView.frame = redLine.frame
+        gradientView.frame.size.width = redLine.frame.size.width
+        gradientView.frame.size.height = redLine.frame.size.height
+        gradientView.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientView.endPoint = CGPoint(x: 1.0, y: 0.5)
+        
+        gradientView.transform = CATransform3DMakeRotation(redLine.transform.b, 0, 0, 0.5)
+        
+        UIView.animate(withDuration: 1.0, animations: {
+            self.redLine.alpha = 1
+            
+        }, completion: { (completed: Bool) -> Void in
+            
+            UIView.animate(withDuration: 1.0, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: {
+                self.redLine.alpha = 0
+            }, completion: { (completed: Bool) -> Void  in
+                self.lineAimated()
+            })
+            
+        })
+        redLine.layer.addSublayer(gradientView)
+    }
+    
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        if let videoItems = homeVideos as? [VideoItem] {
