@@ -33,8 +33,8 @@ class VPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //videoCategoryDetailsView.isHidden = true
-        //videoCategoryDetailsView.updateUI()
+        // videoCategoryDetailsView.isHidden = true
+        // videoCategoryDetailsView.updateUI()
         progressBar.isHidden = false
         progressBar.layer.cornerRadius = 5.0
         progressBar.clipsToBounds = true
