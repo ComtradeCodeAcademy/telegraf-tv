@@ -17,7 +17,9 @@ struct VideoItem {
      date: String?,
      videoURL: String?,
      category: String?,
-     liveURL: String?,
+     liveVideoURL: String?,
+     liveImageURL: String?,
+     liveTitle: String?,
      liveActive: Int?
     }
 
@@ -36,9 +38,11 @@ struct VideoItems {
             videoItem.title = item ["title"] as? String
             videoItem.duration = item ["duration"]!["human"] as? String
             videoItem.date = item ["date"]!["human"] as? String
-            videoItem.videoURL = item["m3u8"] as? String
-            videoItem.liveURL = item["url"] as? String
-            videoItem.liveActive = item["active"] as? Int
+            videoItem.videoURL = item["livestream"]!["m3u8"] as? String
+            videoItem.liveVideoURL = item["livestream"]!["url"] as? String
+            videoItem.liveImageURL = item["livestream"]!["image"] as? String
+            videoItem.liveTitle = item["livestream"]!["title"] as? String
+            videoItem.liveActive = item["livestream"]!["active"] as? Int
             videoItem.id = item["_id"] as? Int
             videoItem.category = item["category"]!["name"] as? String
             
