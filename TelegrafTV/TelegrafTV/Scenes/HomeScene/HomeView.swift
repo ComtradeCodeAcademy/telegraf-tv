@@ -181,11 +181,6 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         self.homeCollectionView.reloadData()
     }
     
-
-    func updateVideos(videos: [VideoItem], forCategory: String) {
-        print(videos)
-
-    }
     func lineAimated() {
         redLine.backgroundColor = UIColor.red
         lineFix.backgroundColor = UIColor.red
