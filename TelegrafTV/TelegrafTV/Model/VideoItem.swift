@@ -16,7 +16,10 @@ struct VideoItem {
      imageURL: String?,
      date: String?,
      videoURL: String?,
-     category: String?
+     category: String?,
+     liveURL: String?,
+     liveImage: String?,
+     liveActive: Int
     }
 
 struct VideoItems {
