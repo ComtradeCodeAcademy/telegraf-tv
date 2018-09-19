@@ -23,7 +23,7 @@ class LiveCollectionViewCell: UICollectionViewCell {
     func configureCell(videos: VideoItem) {
         DispatchQueue.main.async {
             self.liveImage.loadImageUsingCacheWithURLString(videos.liveImage!, placeHolder: UIImage(named: "placeholder"))
-            self.liveTitle.text = videos.title
+            self.liveTitle.text = videos.liveTitle
             self.liveTitle.numberOfLines = 1
         }
 }
