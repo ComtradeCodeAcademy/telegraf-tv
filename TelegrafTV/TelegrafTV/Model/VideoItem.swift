@@ -19,7 +19,7 @@ struct VideoItem {
      category: String?,
      liveURL: String?,
      liveImage: String?,
-     liveActive: Int
+     liveActive: Int?
     }
 
 struct VideoItems {
@@ -29,10 +29,12 @@ struct VideoItems {
         var videos = [VideoItem]()
        
         for  item in data {
-        var videoItem = VideoItem()
+            var videoItem = VideoItem()
         if let img = item["image"] as? [String: AnyObject] {
             videoItem.imageURL = img["url"] != nil ? img["url"] as? String : ""
         }
+            videoItem.liveURL = item["liveStream"]!["url"] as? String
+            videoItem.liveImage = item["liveStream"]!["image"] as? String
             videoItem.title = item ["title"] as? String
             videoItem.duration = item ["duration"]!["human"] as? String
             videoItem.date = item ["date"]!["human"] as? String
