@@ -33,14 +33,14 @@ class VPlayerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //videoCategoryDetailsView.isHidden = true
-        //videoCategoryDetailsView.updateUI()
-        progressBar.isHidden = false
+        videoCategoryDetailsView.updateUI()
+        progressView.isHidden = true
         progressBar.layer.cornerRadius = 5.0
         progressBar.clipsToBounds = true
         
         player = AVPlayer()
         initializePlayButtonRecognition()
+        initializeMenuButtonRecognition()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,8 +68,6 @@ class VPlayerViewController: UIViewController {
         
         playerItem = AVPlayerItem.init(url: url)
         
-        //        NotificationCenter.default.addObserver(self, selector: #selector(videoStarted), name: NSNotification.Name., object: playerItem)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
         
         playerItem.addObserver(self, forKeyPath: "status", options: [], context: nil)
@@ -77,11 +75,9 @@ class VPlayerViewController: UIViewController {
         
         let playerLayer = AVPlayerLayer.init(player: player)
         playerLayer.frame = self.playerView.bounds
-        //        print(playerLayer.frame, playerView.bounds, view.frame)
         
         self.playerView.layer.addSublayer(playerLayer)
         self.playerView.addSubview(progressView)
-        //self.playerView.addSubview(timeLabel)
         
         self.player?.play()
         self.playerStatus = true
@@ -103,6 +99,16 @@ class VPlayerViewController: UIViewController {
         self.view?.addGestureRecognizer(playButtonRecognizer)
     }
     
+    func initializeMenuButtonRecognition() {
+        addMenuButtonRecognizer(#selector(handleMenuButton(_:)))
+    }
+    
+    func addMenuButtonRecognizer(_ selector: Selector) {
+        let menuButtonRecognizer = UITapGestureRecognizer(target: self, action:selector)
+        menuButtonRecognizer.allowedPressTypes = [NSNumber(value: UIPressType.menu.rawValue as Int)]
+        self.view?.addGestureRecognizer(menuButtonRecognizer)
+        
+    }
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "status" {
             if playerItem.status == .readyToPlay {
@@ -135,13 +141,41 @@ class VPlayerViewController: UIViewController {
         if playerStatus {
             self.player?.pause()
             self.playerStatus = false
-            //self.playerView.addSubview(progressBar)
-            //progressBar.isHidden = false
-            
+            moveProgressBar()
+            moveCollectionView()
             return
         }
         
         self.player?.play()
         self.playerStatus = true
+        progressView.isHidden = true
+        progressView.center = CGPoint(x: 960, y: 900)
+        videoCategoryDetailsView.videoCollectionView.isHidden = true
+        videoCategoryDetailsView.videoCollectionView.center = CGPoint(x: 960, y: 1011)
+        
+    }
+    
+    @objc func handleMenuButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
+        self.player?.pause()
+        self.player = nil
+        
+    }
+    
+    func moveProgressBar() {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .allowUserInteraction, animations: {
+            self.progressView.isHidden = false
+            self.progressView.center = CGPoint(x: 960, y: 750)
+        }, completion: {finished in
+            print("Moved up")})
+    }
+    
+    func moveCollectionView() {
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .allowUserInteraction, animations: {
+            self.videoCategoryDetailsView.videoCollectionView.isHidden = false
+            //self.videoCategoryDetailsView.videoCollectionView.isUserInteractionEnabled = true
+            self.videoCategoryDetailsView.videoCollectionView.center = CGPoint(x: 960, y: 850)
+        }, completion: {finished in
+            print("Moved up")})
     }
 }
