@@ -122,13 +122,13 @@ class HomeView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UI
         switch indexPath.section {
         case 0:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LiveCollectionViewCell", for: indexPath) as? LiveCollectionViewCell
-//            let category = self.categories[indexPath.section]
-//            if let videoItems = categoryData[(category?.name)!] {
-//                let videoItem = videoItems[indexPath.row]
-//                cell.configureCell(videos: videoItem)
-//            }
+            let category = self.categories[indexPath.section]
+            if let videoItems = categoryData[(category?.name)!] {
+                let videoItem = videoItems[indexPath.row]
+                cell?.configureCell(videos: videoItem)
+            }
            
-            cell?.configureCell()
+          
             return  cell!
         default:
             
